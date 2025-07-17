@@ -1,46 +1,63 @@
-#main_login{
+#main_login {
     width: 100%;
-    height:100vh;
+    height: 100vh;
 }
 
-#main_login .login{
+#main_login .login {
     width: 100%;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background-color:#2b2b2b;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b2b2b;
+    font-size:16px;
 }
+
 #main_login .login .foto_login {
-    margin-bottom:4em;
-}
-#main_login .login .foto_login i{
-    color:#ffffff;
-    font-size:150px;
+    margin-bottom: 4em;
 }
 
-#main_login .login form > div:not(:nth-child(3)){
+#main_login .login .foto_login i {
+    color: #ffffff;
+    font-size: 150px;
+}
+
+#main_login .login form>div:not(:nth-child(3)) {
     width: 30em;
     height: 4em;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#main_login .login form > div input[type="email"],
-#main_login .login form > div input[type="password"]{
+
+#main_login .login form>div input[type="text"],
+#main_login .login form>div input[type="password"] {
 
     height: 3em;
-    padding:0 2em;
+    padding: 0 2em;
 
 }
-.mgr{
-    margin:0 1em 0 0;
+
+.mgr {
+    margin: 0 1em 0 0;
 }
-#main_login .login form button[type="submit"]{
+
+#main_login .login form button[type="submit"] {
     width: 100%;
-    height:3em;
-    margin:3em 0;
-    cursor:pointer;
+    height: 3em;
+    margin: 3em 0;
+    cursor: pointer;
+}
+
+@media(max-width:610px) {
+
+    #main_login .login{
+        font-size:15px !important;
+    }
+
+    #main_login .login form>div:not(:nth-child(3)) {
+        width: 20em !important;
+    }
 }

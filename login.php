@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html>
 
@@ -19,17 +20,23 @@
             <div class="foto_login">
                 <i class="bi bi-person-circle"></i>
             </div>
-            <form>
+            <?php
+            if (isset($_SESSION['erro_login'])) {
+                echo "<p style='color:red'>" . $_SESSION['erro_login'] . "</p>";
+                unset($_SESSION['erro_login']);
+            }
+            ?>
+            <form method="post" action="login.php">
 
-                <div class="mb-5">           
-                    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="plugin@hotmail.com" required />
+                <div class="mb-5">
+                    <input name="email" type="text" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="plugin@hotmail.com" required />
                 </div>
                 <div class="mb-5">
-                    <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Senha" required />
+                    <input name="senha" type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Senha" required />
                 </div>
                 <div class="flex items-start mb-5">
                     <div class="flex items-center h-5 mgr">
-                        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+                        <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" />
                     </div>
                     <label for="remember" class="text-sm font-medium text-gray-900 dark:text-gray-300"> Lembrar conta</label>
                 </div>
@@ -37,8 +44,30 @@
 
             </form>
         </div>
-    </main>
 
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $usuarios = [
+                "Admin" => "123456789",
+                "Vitor" => "senhaSegura",
+                "Admin" => "codigo10"
+            ];
+
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+
+            if (isset($usuarios[$email]) && $usuarios[$email] === $senha) {
+                $_SESSION['email'] = $email;
+                header('Location: index.php');
+                exit;
+            } else {
+                $_SESSION['erro_login'] = "Usuário ou senha inválidos";
+                header('Location: login.php');
+                exit;
+            }
+        }
+        ?>
+    </main>
 
 </body>
 
