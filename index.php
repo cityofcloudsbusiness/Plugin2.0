@@ -48,7 +48,7 @@ $menu = require 'navbar/menu.php';
 
                 <div class="barra_progresso">
                     <div class="skills">
-                        <span class="Name">Carregando...</span>
+                        <span class="Name">UPLOADING</span>
                         <div class="percent">
                             <div class="progress" style="width: 0%;"></div>
                         </div>
