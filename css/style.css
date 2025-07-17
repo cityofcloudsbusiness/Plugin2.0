@@ -128,7 +128,7 @@ main#principal #right .barra_progresso .skills .percent {
     margin: 0 10px;
 }
 
-main#principal #right .barra_progresso .skills .percent .progress{
+main#principal #right .barra_progresso .skills .percent .progress {
     background-color: rgb(116 129 107);
     height: 100%;
 
@@ -212,7 +212,7 @@ main#principal #right .barra_progresso .skills span {
     width: 150px;
     color: grey;
     font-size: 12px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 .area_home .container1 .section1>div input::placeholder {
@@ -247,6 +247,7 @@ main#principal #right .barra_progresso .skills span {
     height: 80px;
     width: 100%;
     overflow-y: auto;
+    scrollbar-gutter: stable; /* <-- ESSENCIAL */
 }
 
 .area_home .container1 .section1>div .campos div {
@@ -278,3 +279,22 @@ main#principal #right .barra_progresso .skills span {
 }
 
 /* SISTEMAS CONECTADOS - HOME - */
+
+
+@media(max-width:1366px) {
+    main#principal #right>nav h1{
+        font-size: 14px;
+    }
+    .area_home .box1 {
+        width: 100%;
+        height: auto;
+    }
+
+    main#principal #left .foto_login i{
+        font-size: 100px;
+    }
+
+    main#principal #left li{
+        font-size: 13px;
+    }
+}
