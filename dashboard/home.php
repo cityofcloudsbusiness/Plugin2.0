@@ -50,7 +50,14 @@
         <div class="sun_box3 sunform">
             <span class="square"></span>
             <div class="container1">
-                <p class="titulo_green">teste</p>
+                <p class="titulo_green">Conversão Categoria</p>
+                <div class="container1">
+                    <div class="section1">
+                        <div class="texto_title text-center">Conversão em Produto Destaque</div>
+                        <span>Esse processo visa tranformar categorias em produtos destaques</span>
+                        <button class="btn_convert_cdprod">CONVERTER</button>
+                    </div>
+                </div>
             </div>
         </div>
 

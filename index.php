@@ -1,6 +1,8 @@
 <?php
 require 'auth.php';
 $menu = require 'navbar/menu.php';
+
+$baseUrl = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 ?>
 <!doctype html>
 <html>
@@ -11,6 +13,11 @@ $menu = require 'navbar/menu.php';
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css" />
+
+    <script>
+        window.BASE_URL = '<?= $baseUrl ?>';
+    </script>
+
 </head>
 
 <body>
@@ -61,9 +68,8 @@ $menu = require 'navbar/menu.php';
 
         </section>
     </main>
-    
+
     <script>
-        
         function loadPage(url, linkElement, titulo) {
             const li = linkElement.closest('li');
 
@@ -93,7 +99,6 @@ $menu = require 'navbar/menu.php';
                 loadPage(firstLink.getAttribute('href'), firstLink, titulo);
             }
         });
-
     </script>
 
     <script src="js/metags.js"></script>

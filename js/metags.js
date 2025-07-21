@@ -30,6 +30,56 @@ document.addEventListener('click', function (e) {
     }
 });
 
+
+
+//AO CLICAR EM TRANSFORMAR CATEGORIAS EM PRODUTOS DESTAQUES
+
+// Delegated click para o botão de destaques
+// usa event delegation pra capturar o clique mesmo se #area_apresent for trocado por AJAX
+$(document).on('click', '#area_apresent .btn_convert_cdprod', function (e) {
+    e.preventDefault();
+    runCategoriaDestaqueSSE();
+});
+
+function runCategoriaDestaqueSSE() {
+    const btn = $('.btn_convert_cdprod').prop('disabled', true);
+
+    // zera UI
+    $('.progress').css('width', '0%');
+    $('.Value').text('0%');
+
+    // monta a URL absoluta com base dinâmica
+    const url = window.location.origin
+        + window.BASE_URL
+        + '/backend/metaTags/processConfigCatDestaque.php';
+    console.log('SSE endpoint:', url);
+
+    const evt = new EventSource(url);
+
+    evt.onopen = () => console.log('SSE conectado');
+    evt.onerror = err => {
+        console.error('SSE erro de conexão', err);
+        alert('Falha na conexão SSE. Veja console → Network.');
+        evt.close();
+        btn.prop('disabled', false);
+    };
+
+    evt.addEventListener('progress', e => {
+        const p = parseInt(e.data, 10);
+        $('.progress').css('width', p + '%');
+        $('.Value').text(p + '%');
+    });
+
+    evt.addEventListener('complete', () => {
+        $('.progress').css('width', '100%');
+        $('.Value').text('100%');
+        evt.close();
+        btn.prop('disabled', false);
+        alert('Produtos destaque criados com sucesso!');
+    });
+}
+
+
 // AO CLICAR EM SEC2 CADASTRAR TITULO DE PRODUTO E CATEGORIA
 
 
@@ -116,7 +166,7 @@ $(document).on('click', '#area_apresent .botaodesc', function (e) {
         $('main#principal #right .progress').css('width', '100%');
         $('main#principal #right .Value').text('100%');
         evt.close();
-        
+
         alert('Operação concluída!');
     });
     evt.addEventListener('error', () => {
@@ -162,7 +212,7 @@ $(document).on('click', '#area_apresent .botaoprod', function (e) {
         $('main#principal #right .Value').text('100%');
         evt.close();
         $btn.prop('disabled', false);
-        
+
         alert('Operação concluída!');
     });
     evt.addEventListener('error', e => {
@@ -208,7 +258,7 @@ $(document).on('click', '#area_apresent .botaocat', function (e) {
         $('main#principal #right .Value').text('100%');
         evt.close();
         $btn.prop('disabled', false);
-        
+
         alert('Operação concluída!');
     });
     evt.addEventListener('error', () => {
