@@ -64,7 +64,7 @@
     </div>
 
     <div class="box1 box2">
-       <div class="sun_box1 sunform">
+        <div class="sun_box1 sunform">
             <span class="square"></span>
             <div class="container1">
                 <p class="titulo_green">Atualizando titulo de Categorias e Produtos</p>
@@ -98,7 +98,26 @@
             <div class="area_sun">
                 <span class="square"></span>
                 <div class="container1">
-                 
+
+                    <form id="formUpload" enctype="multipart/form-data" onsubmit="return false;">
+                        <p class="titulo_green">Selecione a planilha</p>
+                        <div class="container1">
+                            <div class="texto_title">Cadastro de Banco de Dado Excel</div>
+                            <div class="sq_right">
+                                <label for="arquivoExcel">
+                                    <img id="imgExcel" src="img/exelupload.png" alt="">
+                                    <input type="file" id="arquivoExcel">
+                                </label>
+                            </div>
+                            <div class="res"></div>
+                            <div class="ctn2">
+                                <button type="button" class="btn btn_excel_up">CADASTRAR PLANILHA</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+
                 </div>
             </div>
         </div>
@@ -109,10 +128,10 @@
                 <p class="titulo_green">teste</p>
             </div>
         </div>
-        
-</div>
 
-<?php
-include(__DIR__ . '/../backend/conexao.php');
-$qtde_prods = mysqli_num_rows(mysqli_query($con, "SELECT * FROM isc_categories"));
-?>
+    </div>
+
+    <?php
+    include(__DIR__ . '/../backend/conexao.php');
+    $qtde_prods = mysqli_num_rows(mysqli_query($con, "SELECT * FROM isc_categories"));
+    ?>

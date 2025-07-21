@@ -168,7 +168,7 @@ main#principal #right .barra_progresso .skills span {
     padding: 0 40px;
 }
 
-.area_home .box1 .sun_box2 .container1>div {
+.area_home div:nth-child(1) .sun_box2 .container1>div {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
@@ -246,7 +246,6 @@ main#principal #right .barra_progresso .skills span {
     width: 150px;
     color: grey;
     font-size: 12px;
-    margin-bottom: 10px;
 }
 
 .area_home .container1 .section1>div input::placeholder {
@@ -315,7 +314,7 @@ main#principal #right .barra_progresso .skills span {
 
 .area_home .sun_box2 .container1>div textarea {
     width: 100%;
-    height: 110px;
+    height: 120px;
     padding: 2%;
 }
 
@@ -331,7 +330,7 @@ main#principal #right .barra_progresso .skills span {
     padding-top: 10px;
 }
 
-.area_home .sun_box3 .section1 .texto_title{
+.area_home .sun_box3 .section1 .texto_title {
     margin-bottom: 0 !important;
 }
 
@@ -341,25 +340,71 @@ main#principal #right .barra_progresso .skills span {
     background-color: var(--ver_pad_strong);
     color: white;
     box-shadow: 4px 4px 5px #00000075;
-    transition:0.3s;
+    transition: 0.3s;
 
 }
 
-.area_home .sun_box3 .btn_convert_cdprod:hover{
+.area_home .sun_box3 .btn_convert_cdprod:hover {
     background-color: #8b7947a3;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.area_home .section1 > span{
+.area_home .section1>span {
     font-family: 'Courier New', Courier, monospace;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.397);
-    text-align:center;
-    padding:0 10px;
+    text-align: center;
+    padding: 0 10px;
 }
 
 /* SEGUNDA SECTION DO HOME */
+.area_home .box2 .sun_box2 .texto_title {
+    text-align: center;
+    margin-top: 15px;
+}
 
+.area_home .sun_box2 .sq_right {
+    width: 100%;
+    height: 100%;
+}
+
+.area_home .sun_box2 .sq_right label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.area_home .sun_box2 .sq_right label img {
+    width: 70px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.53));
+    transition: 0.3s;
+    cursor:pointer;
+}
+
+.area_home .sun_box2 .sq_right label img:hover{
+    opacity: 0.5;
+}
+.area_home .box2 .sun_box2 .btn_excel_up{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    transition: 0.3s;
+}
+.area_home .box2 .sun_box2 .btn_excel_up:hover {
+    color: var(--ver_pad_vintage);
+    cursor:pointer;
+}
+
+#arquivoExcel{
+    color: #83838373;
+    font-size: 14px; 
+}
 
 /* SEGUNDA SECTION DO HOME */
 

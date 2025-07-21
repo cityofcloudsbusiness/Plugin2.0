@@ -266,3 +266,69 @@ $(document).on('click', '#area_apresent .botaocat', function (e) {
         $btn.prop('disabled', false);
     });
 });
+
+
+// AO CLICAR EM UPLOAD PLANILHA EXCEL
+
+$(function () {
+    document.addEventListener('change', function (e) {
+        // “e.target” é o elemento que disparou o change
+        if (e.target && e.target.id === 'arquivoExcel') {
+            const imgIcon = document.getElementById('imgExcel');
+            if (e.target.files && e.target.files.length > 0) {
+                imgIcon.src = 'img/pla.png';
+            } else {
+                imgIcon.src = 'img/exelupload.png';
+            }
+        }
+    });
+
+
+    $(document).on('click', '.btn_excel_up', function(){
+    const file = $('#arquivoExcel')[0].files[0];
+    if (!file) { alert('Selecione um arquivo.'); return; }
+    $('.load1').show();
+
+    const fd = new FormData();
+    fd.append('arquivo', file);
+
+    $.ajax({
+      url: window.BASE_URL + '/backend/metaTags/processUpload.php',
+      method: 'POST',
+      data: fd,
+      contentType: false,
+      processData: false,
+      success() { runSSE(); },
+      error() {
+        alert('Falha no upload.');
+        $('.load1').hide();
+      }
+    });
+  });
+
+  function runSSE() {
+     const url = window.BASE_URL + '/backend/metaTags/processImportExcel.php';
+    console.log('SSE →', url);
+    const evt = new EventSource(
+      window.BASE_URL + '/backend/metaTags/processImportExcel.php'
+    );
+    evt.onopen = ()=>console.log('SSE conectado');
+    evt.onerror = e=>{
+      console.error('SSE erro', e);
+      alert('Erro na conexão SSE.');
+      evt.close();
+      $('.load1').hide();
+    };
+    evt.addEventListener('progress', e=>{
+      const p = parseInt(e.data, 10);
+      $('.progress').css('width', p+'%');
+      $('.Value').text(p+'%');
+    });
+    evt.addEventListener('complete', ()=>{
+      $('.progress').css('width','100%');
+      $('.Value').text('100%');
+      evt.close();
+      $('.load1 p').text('Concluído');
+    });
+  }
+});
