@@ -162,7 +162,7 @@ main#principal #right .barra_progresso .skills span {
     justify-content:space-between;
 }
 
-.area_home .box1 .sun_box2 .area_sun{
+.area_home .box1 .area_sun{
     width: 100%;
     padding:0 40px;
 }
@@ -175,22 +175,26 @@ main#principal #right .barra_progresso .skills span {
     width: 250px;
 }
 
-.area_home .box1 .sunform {
+.area_home .box1 .sunform,
+.area_home .box2 .sunbox2,
+.area_home .box2 .sunbox3{
     background-color: white;
     position: relative;
     padding: 16px 0 16px 0;
     box-shadow: 2px 2px 5px #00000059;
     max-height: 284px;
     min-height: 284px;
+    height: 284px;
 }
 
 .area_home .box1 {
     width: 100%;
-    height: 35%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items:center;
+    margin-bottom: 30px;
 
 }
 
@@ -201,7 +205,6 @@ main#principal #right .barra_progresso .skills span {
     flex-direction: column;
     justify-content: space-between;
     padding: 2%;
-    height: 100%;
 }
 
 .area_home .titulo_green {
@@ -252,7 +255,7 @@ main#principal #right .barra_progresso .skills span {
     outline: none;
 }
 
-.area_home .sunform .square {
+.area_home .square {
     width: 40px;
     height: 30px;
     background-color: #b2adad;
@@ -315,8 +318,16 @@ main#principal #right .barra_progresso .skills span {
     outline:1px solid var(--ver_pad_vintage);
     
 }
+          
+            /* SEGUNDA SECTION DO HOME */
+               
+
+            /* SEGUNDA SECTION DO HOME */
 
 /* SISTEMAS CONECTADOS - HOME - */
+
+
+
 
 
 @media(max-width:1366px) {

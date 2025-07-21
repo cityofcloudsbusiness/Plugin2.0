@@ -55,6 +55,54 @@
         </div>
 
     </div>
+
+    <div class="box1 box2">
+       <div class="sun_box1 sunform">
+            <span class="square"></span>
+            <div class="container1">
+                <p class="titulo_green">Atualizando titulo de Categorias e Produtos</p>
+                <div class="section1">
+                    <div id="cidade">
+                        <div class="texto_title">Caracter a ser substituido</div>
+                        <div class="campos">
+                            <div>
+                                <input id="oldTitle" type="text" name="oldTitle" placeholder="Digite titulo a substituir">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="numero">
+                        <div class="texto_title">Caracter a substituir</div>
+                        <div class="campos">
+                            <div>
+                                <input id="newTitle" type="text" name="newTitle" placeholder="Digite titulo substituto">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="botoes">
+                    <button type="button" class="btn botaosec2prod">ATUALIZAR PRODUTOS</button>
+                    <button type="button" class="btn botaosec2cat">ATUALIZAR CATEGORIAS</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="sun_box2 sunform">
+            <div class="area_sun">
+                <span class="square"></span>
+                <div class="container1">
+                 
+                </div>
+            </div>
+        </div>
+
+        <div class="sun_box3 sunform">
+            <span class="square"></span>
+            <div class="container1">
+                <p class="titulo_green">teste</p>
+            </div>
+        </div>
+        
 </div>
 
 <?php
