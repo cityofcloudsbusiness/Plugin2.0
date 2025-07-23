@@ -393,7 +393,8 @@ main#principal #right .barra_progresso .skills span {
     opacity: 0.5;
 }
 
-.area_home .box2 .sun_box2 .btn_excel_up {
+.area_home .box2 .sun_box2 .btn_excel_up,
+.area_home .btnfin{
     display: flex;
     justify-content: center;
     text-align: center;
@@ -401,7 +402,8 @@ main#principal #right .barra_progresso .skills span {
     transition: 0.3s;
 }
 
-.area_home .box2 .sun_box2 .btn_excel_up:hover {
+.area_home .box2 .sun_box2 .btn_excel_up:hover,
+.area_home .btnfin:hover {
     color: var(--ver_pad_vintage);
     cursor: pointer;
 }
@@ -423,6 +425,29 @@ main#principal #right .barra_progresso .skills span {
     min-height: 116px !important;
     max-height: 116px !important;
     height: 100px;
+}
+
+.area_home .ajust1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.area_home .forminput {
+    width: 150px;
+    color: grey;
+    font-size: 12px;
+    outline: none;
+    border-top: 1px solid var(--ver_pad);
+    border-bottom: 1px solid var(--ver_pad);
+}
+
+.area_home .box3 .container1 {
+    padding: 0;
 }
 
 /* TERCEIRA SECTION DO HOME */

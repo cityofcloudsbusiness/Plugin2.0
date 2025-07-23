@@ -142,7 +142,19 @@
 
         <div class="sun_box1 sunform">
             <span class="square"></span>
-            
+            <div class="container1">
+                <div class="titulo_green">Codificando Produto</div>
+                <div class="ajust1">
+                    <div>
+                        <input type="text" class="forminput" placeholder="Cidade" id="renamecidade">
+                    </div>
+                    <div>
+                       <input type="text" class="forminput" placeholder="Telefone" id="renametelefone">
+                    </div>
+                    
+                </div>
+                <button type="button" class="btn btn_rename_img btnfin">RENOMEAR IMAGENS</button>
+            </div>
         </div>
 
         <div class="sun_box2 sunform">

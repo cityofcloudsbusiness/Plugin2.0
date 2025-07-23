@@ -371,3 +371,75 @@ $(document).on('click', '#area_apresent .btn_codifica', function(e) {
     alert('Todos os códigos foram gerados!');
   });
 });
+
+// AO CLICAR EM RENOMEAR IMAGENS
+
+$(document).on("click", ".btn_rename_img", function () {
+    const cidade = $("#renamecidade").val().trim();
+    const telefone = $("#renametelefone").val().trim();
+    const barra = $("#barra-real");
+    const valor = $("#valor-real");
+    const status = $("#status");
+
+    if (!cidade || !telefone) {
+        alert("Preencha os campos de cidade e telefone.");
+        return;
+    }
+
+    $.getJSON("backend/metaTags/get_images.php", function (data) {
+        if (data.status === "ok") {
+            const imagens = data.imagens;
+            if (imagens.length === 0) {
+                status.text("Nenhuma imagem encontrada.");
+                return;
+            }
+            processarImagens(imagens, cidade, telefone, barra, valor, status);
+        } else {
+            status.text("Erro ao buscar imagens.");
+            console.error(data.mensagem);
+        }
+    }).fail(function (err) {
+        console.error("Erro ao buscar imagens:", err);
+        status.text("Erro na requisição.");
+    });
+});
+
+function processarImagens(imagens, cidade, telefone, barra, valor, status) {
+    let total = imagens.length;
+    let processadas = 0;
+
+    function processarProxima() {
+        if (processadas >= total) {
+            status.text("Processo concluído!");
+            barra.css("width", "100%");
+            valor.text("100%");
+            return;
+        }
+
+        const imagemAtual = imagens[processadas];
+
+        $.post("backend/metaTags/renomear.php", {
+            "imagem[caminho]": imagemAtual.caminho,
+            "imagem[campo]": imagemAtual.campo,
+            "cidade": cidade,
+            "telefone": telefone
+        }, function (response) {
+            if (response.status === "ok") {
+                processadas++;
+                const percent = Math.ceil((processadas / total) * 100);
+                barra.css("width", percent + "%");
+                valor.text(percent + "%");
+                status.text(`Renomeadas ${processadas} de ${total} imagens`);
+                processarProxima();
+            } else {
+                status.text("Erro ao renomear imagens.");
+                console.error(response.mensagem);
+            }
+        }, "json").fail(function (err) {
+            console.error("Erro de comunicação:", err);
+            status.text("Erro ao renomear imagens.");
+        });
+    }
+
+    processarProxima();
+}

@@ -1,4 +1,4 @@
 <?php
-    $con = mysqli_connect("localhost","root","","portao2_bancodedadosver17");
+    $con = mysqli_connect("localhost","root","","portao2_infohouse");
 	mysqli_set_charset($con, 'utf8mb4');
 ?>
