@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(E_ERROR); // Apenas erros fatais visíveis
 header('Content-Type: application/json');
 include "../conexao.php";
 
@@ -53,9 +53,32 @@ $caminhoNovoFisico = str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $basePath . $
 // Caminho RELATIVO a ser salvo no banco (sem basePath)
 $caminhoBanco = str_replace(['\\', '/'], DIRECTORY_SEPARATOR, $novoNome);
 
+$caminhoAntigo = str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $basePath . $imagem);
+$caminhoNovoFisico = str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $basePath . $novoNome);
+$caminhoBanco = str_replace(['\\', '/'], DIRECTORY_SEPARATOR, $novoNome);
 
+
+// Tenta localizar o caminho correto mesmo com possíveis problemas de acentuação ou codificação
+$tentativas = [
+    $caminhoAntigo,
+    str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $basePath . iconv('UTF-8', 'ISO-8859-1//TRANSLIT//IGNORE', $imagem)),
+    str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $basePath . utf8_decode($imagem)),
+];
+
+foreach ($tentativas as $tentativa) {
+    if (file_exists($tentativa)) {
+        $caminhoAntigo = $tentativa;
+        break;
+    }
+}
+
+if (!file_exists($caminhoAntigo)) {
+    echo json_encode(["status" => "pulado", "mensagem" => "Imagem não encontrada no disco."]);
+    return; // apenas retorna o controle sem encerrar o loop principal
+}
 
 if (rename($caminhoAntigo, $caminhoNovoFisico)) {
+
     redimensionarImagem($caminhoNovoFisico, 800);
 
     $sql = "UPDATE isc_product_images SET $campo = ? WHERE $campo = ?";

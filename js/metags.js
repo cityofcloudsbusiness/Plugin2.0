@@ -284,92 +284,92 @@ $(function () {
     });
 
 
-    $(document).on('click', '.btn_excel_up', function(){
-    const file = $('#arquivoExcel')[0].files[0];
-    if (!file) { alert('Selecione um arquivo.'); return; }
-    $('.load1').show();
+    $(document).on('click', '.btn_excel_up', function () {
+        const file = $('#arquivoExcel')[0].files[0];
+        if (!file) { alert('Selecione um arquivo.'); return; }
+        $('.load1').show();
 
-    const fd = new FormData();
-    fd.append('arquivo', file);
+        const fd = new FormData();
+        fd.append('arquivo', file);
 
-    $.ajax({
-      url: window.BASE_URL + '/backend/metaTags/processUpload.php',
-      method: 'POST',
-      data: fd,
-      contentType: false,
-      processData: false,
-      success() { runSSE(); },
-      error() {
-        alert('Falha no upload.');
-        $('.load1').hide();
-      }
+        $.ajax({
+            url: window.BASE_URL + '/backend/metaTags/processUpload.php',
+            method: 'POST',
+            data: fd,
+            contentType: false,
+            processData: false,
+            success() { runSSE(); },
+            error() {
+                alert('Falha no upload.');
+                $('.load1').hide();
+            }
+        });
     });
-  });
 
-  function runSSE() {
-     const url = window.BASE_URL + '/backend/metaTags/processImportExcel.php';
-    console.log('SSE →', url);
-    const evt = new EventSource(
-      window.BASE_URL + '/backend/metaTags/processImportExcel.php'
-    );
-    evt.onopen = ()=>console.log('SSE conectado');
-    evt.onerror = e=>{
-      console.error('SSE erro', e);
-      alert('Erro na conexão SSE.');
-      evt.close();
-      $('.load1').hide();
-    };
-    evt.addEventListener('progress', e=>{
-      const p = parseInt(e.data, 10);
-      $('.progress').css('width', p+'%');
-      $('.Value').text(p+'%');
-    });
-    evt.addEventListener('complete', ()=>{
-      $('.progress').css('width','100%');
-      $('.Value').text('100%');
-      evt.close();
-      $('.load1 p').text('Concluído');
-    });
-  }
+    function runSSE() {
+        const url = window.BASE_URL + '/backend/metaTags/processImportExcel.php';
+        console.log('SSE →', url);
+        const evt = new EventSource(
+            window.BASE_URL + '/backend/metaTags/processImportExcel.php'
+        );
+        evt.onopen = () => console.log('SSE conectado');
+        evt.onerror = e => {
+            console.error('SSE erro', e);
+            alert('Erro na conexão SSE.');
+            evt.close();
+            $('.load1').hide();
+        };
+        evt.addEventListener('progress', e => {
+            const p = parseInt(e.data, 10);
+            $('.progress').css('width', p + '%');
+            $('.Value').text(p + '%');
+        });
+        evt.addEventListener('complete', () => {
+            $('.progress').css('width', '100%');
+            $('.Value').text('100%');
+            evt.close();
+            $('.load1 p').text('Concluído');
+        });
+    }
 });
 
 
 // AO CLICAR NO BOTÃO CODIFICAR
-$(document).on('click', '#area_apresent .btn_codifica', function(e) {
-  e.preventDefault();
-  const btn = $(this).prop('disabled', true);
+$(document).on('click', '#area_apresent .btn_codifica', function (e) {
+    e.preventDefault();
+    const btn = $(this).prop('disabled', true);
 
-  // reset UI
-  $('.progress').css('width','0%');
-  $('.Value').text('0%');
+    // reset UI
+    $('.progress').css('width', '0%');
+    $('.Value').text('0%');
 
-  // monta URL absoluta
-  const url = window.location.origin
-            + window.BASE_URL
-            + '/backend/metaTags/processGenerateCodes.php';
+    // monta URL absoluta
+    const url = window.location.origin
+        + window.BASE_URL
+        + '/backend/metaTags/processGenerateCodes.php';
 
-  const es = new EventSource(url);
-  es.onopen  = () => console.log('SSE conectado');
-  es.onerror = ev => {
-    console.error('SSE erro', ev);
-    alert('Falha na conexão SSE.');
-    es.close();
-    btn.prop('disabled', false);
-  };
+    const es = new EventSource(url);
+    es.onopen = () => console.log('SSE conectado');
+    es.onerror = ev => {
+        console.error('SSE erro', ev);
+        alert('Falha na conexão SSE.');
+        es.close();
+        btn.prop('disabled', false);
+    };
 
-  es.addEventListener('progress', e => {
-    const p = parseInt(e.data, 10);
-    $('.progress').css('width', p + '%');
-    $('.Value').text(p + '%');
-  });
+    es.addEventListener('progress', e => {
+        const p = parseInt(e.data, 10);
+        $('.progress').css('width', p + '%');
+        $('.Value').text(p + '%');
+    });
 
-  es.addEventListener('complete', () => {
-    $('.progress').css('width','100%');
-    $('.Value').text('100%');
-    es.close();
-    btn.prop('disabled', false);
-    alert('Todos os códigos foram gerados!');
-  });
+    es.addEventListener('complete', () => {
+        $('.progress').css('width', '100%');
+        $('.Value').text('100%');
+        es.close();
+        btn.prop('disabled', false);
+        alert('Todos os códigos foram gerados!');
+    });
 });
 
 // AO CLICAR EM RENOMEAR IMAGENS
@@ -377,8 +377,8 @@ $(document).on('click', '#area_apresent .btn_codifica', function(e) {
 $(document).on("click", ".btn_rename_img", function () {
     const cidade = $("#renamecidade").val().trim();
     const telefone = $("#renametelefone").val().trim();
-    const barra = $("#barra-real");
-    const valor = $("#valor-real");
+    const barra = $(".progress");
+    const valor = $(".Value");
     const status = $("#status");
 
     if (!cidade || !telefone) {
@@ -424,17 +424,24 @@ function processarImagens(imagens, cidade, telefone, barra, valor, status) {
             "cidade": cidade,
             "telefone": telefone
         }, function (response) {
-            if (response.status === "ok") {
+            if (response.status === "ok" || response.status === "pulado") {
                 processadas++;
-                const percent = Math.ceil((processadas / total) * 100);
+                const percentFloat = (processadas / total) * 100;
+                const percent = Math.ceil(percentFloat);
                 barra.css("width", percent + "%");
-                valor.text(percent + "%");
-                status.text(`Renomeadas ${processadas} de ${total} imagens`);
+                valor.text(percentFloat.toFixed(2) + "%");
+
+                const msg = response.status === "ok"
+                    ? `✅ Renomeada ${processadas} de ${total}`
+                    : `⚠️ Pulada ${processadas} de ${total} (${response.mensagem})`;
+
+                status.text(msg);
                 processarProxima();
             } else {
-                status.text("Erro ao renomear imagens.");
+                status.text("❌ Erro ao renomear imagem.");
                 console.error(response.mensagem);
             }
+
         }, "json").fail(function (err) {
             console.error("Erro de comunicação:", err);
             status.text("Erro ao renomear imagens.");
