@@ -125,12 +125,35 @@
         <div class="sun_box3 sunform">
             <span class="square"></span>
             <div class="container1">
-                <p class="titulo_green">teste</p>
+                <p class="titulo_green">Codificando Produto</p>
+                <div class="container1">
+                    <div class="section1">
+                        <div class="texto_title text-center">Adicionando codigo de <br> Identificação ao Produto</div>
+                        <span>Esse processo adiciona um código unico ao Produto para identifica-lo</span>
+                        <button class="btn_codifica btncanto">CODIFICAR</button>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 
+     <div class="box1 box3">
+
+        <div class="sun_box1 sunform">
+            <span class="square"></span>
+            
+        </div>
+
+        <div class="sun_box2 sunform">
+            <span class="square"></span>
+        </div>
+
+        <div class="sun_box3 sunform">
+            <span class="square"></span>
+        </div>
+
+     </div>
     <?php
     include(__DIR__ . '/../backend/conexao.php');
     $qtde_prods = mysqli_num_rows(mysqli_query($con, "SELECT * FROM isc_categories"));

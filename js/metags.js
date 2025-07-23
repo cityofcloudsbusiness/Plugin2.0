@@ -332,3 +332,42 @@ $(function () {
     });
   }
 });
+
+
+// AO CLICAR NO BOTÃO CODIFICAR
+$(document).on('click', '#area_apresent .btn_codifica', function(e) {
+  e.preventDefault();
+  const btn = $(this).prop('disabled', true);
+
+  // reset UI
+  $('.progress').css('width','0%');
+  $('.Value').text('0%');
+
+  // monta URL absoluta
+  const url = window.location.origin
+            + window.BASE_URL
+            + '/backend/metaTags/processGenerateCodes.php';
+
+  const es = new EventSource(url);
+  es.onopen  = () => console.log('SSE conectado');
+  es.onerror = ev => {
+    console.error('SSE erro', ev);
+    alert('Falha na conexão SSE.');
+    es.close();
+    btn.prop('disabled', false);
+  };
+
+  es.addEventListener('progress', e => {
+    const p = parseInt(e.data, 10);
+    $('.progress').css('width', p + '%');
+    $('.Value').text(p + '%');
+  });
+
+  es.addEventListener('complete', () => {
+    $('.progress').css('width','100%');
+    $('.Value').text('100%');
+    es.close();
+    btn.prop('disabled', false);
+    alert('Todos os códigos foram gerados!');
+  });
+});

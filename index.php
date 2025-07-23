@@ -40,7 +40,7 @@ $baseUrl = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
                     <ul>
                         <?php $i = 0;
                         foreach ($menu as $items): ?>
-                            <li class="flex flex-row font-sans text-white justify-around items-center <?= $i === 0 ? 'active' : ''; ?> menu-item"><i><?= $items['icon']; ?></i><a href="<?= $items['route'] ?>" onclick="loadPage('<?= $items['route'] ?>', this,this.dataset.titulo); return false;" data-titulo="<?= $items['titulo'] ?>"><?= $items['label']; ?></a></li>
+                            <li class="flex flex-row font-sans text-white justify-start items-center <?= $i === 0 ? 'active' : ''; ?> menu-item"><i style="margin-right: 15px;"><?= $items['icon']; ?></i><a href="<?= $items['route'] ?>" onclick="loadPage('<?= $items['route'] ?>', this,this.dataset.titulo); return false;" data-titulo="<?= $items['titulo'] ?>"><?= $items['label']; ?></a></li>
                         <?php $i++;
                         endforeach; ?>
                     </ul>

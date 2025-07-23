@@ -56,7 +56,7 @@ main#principal #left li {
     border-top: 1px solid rgba(255, 255, 255, 0.242);
     height: 55px;
     width: 100%;
-    padding: 0 10% 0 10%;
+    padding: 0 0 0 10%;
     display: flex;
     flex-direction: row;
 
@@ -88,7 +88,8 @@ main#principal #right {
 
 main#principal #right>nav {
     width: 100%;
-    height: 50px;
+    min-height: 40px;
+    height: 40px;
     background: linear-gradient(45deg, #8b7947 50%, var(--ver_pad_strong) 50%);
     display: flex;
     flex-direction: row;
@@ -149,7 +150,7 @@ main#principal #right .barra_progresso .skills span {
 }
 
 .area_home {
-    padding: 2%;
+    padding: 1.3%;
 }
 
 .area_home .box1 .sun_box1 {
@@ -334,7 +335,8 @@ main#principal #right .barra_progresso .skills span {
     margin-bottom: 0 !important;
 }
 
-.area_home .sun_box3 .btn_convert_cdprod {
+.area_home .sun_box3 .btn_convert_cdprod,
+.btncanto {
     width: 200px;
     height: 60px;
     background-color: var(--ver_pad_strong);
@@ -344,7 +346,8 @@ main#principal #right .barra_progresso .skills span {
 
 }
 
-.area_home .sun_box3 .btn_convert_cdprod:hover {
+.area_home .sun_box3 .btn_convert_cdprod:hover,
+.btncanto:hover {
     background-color: #8b7947a3;
     cursor: pointer;
 }
@@ -383,30 +386,46 @@ main#principal #right .barra_progresso .skills span {
     width: 70px;
     filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.53));
     transition: 0.3s;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.area_home .sun_box2 .sq_right label img:hover{
+.area_home .sun_box2 .sq_right label img:hover {
     opacity: 0.5;
 }
-.area_home .box2 .sun_box2 .btn_excel_up{
+
+.area_home .box2 .sun_box2 .btn_excel_up {
     display: flex;
     justify-content: center;
     text-align: center;
     width: 100%;
     transition: 0.3s;
 }
+
 .area_home .box2 .sun_box2 .btn_excel_up:hover {
     color: var(--ver_pad_vintage);
-    cursor:pointer;
+    cursor: pointer;
 }
 
-#arquivoExcel{
+#arquivoExcel {
     color: #83838373;
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 /* SEGUNDA SECTION DO HOME */
+
+/* TERCEIRA SECTION DO HOME */
+
+.area_home .box1.box3 {
+    margin-bottom: 0;
+}
+
+.area_home .box3 .sunform {
+    min-height: 116px !important;
+    max-height: 116px !important;
+    height: 100px;
+}
+
+/* TERCEIRA SECTION DO HOME */
 
 /* SISTEMAS CONECTADOS - HOME - */
 
