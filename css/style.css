@@ -12,7 +12,23 @@
 body {
     width: 100%;
     min-height: 100vh;
-    height: 90vh;
+    height: 110vh;
+    overflow: transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 1px;              /* Largura da barra vertical */
+  height: 10px;             /* Altura da barra horizontal */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--ver_pad_strong);      /* Cor do fundo da barra */
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--ver_pad_strong);      /* Cor da "alça" da barra */
+  border-radius: 10px;
 }
 
 main#principal {
@@ -394,7 +410,7 @@ main#principal #right .barra_progresso .skills span {
 }
 
 .area_home .box2 .sun_box2 .btn_excel_up,
-.area_home .btnfin{
+.area_home .btnfin {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -448,8 +464,35 @@ main#principal #right .barra_progresso .skills span {
 
 .area_home .box3 .container1 {
     padding: 0;
+    align-items: center;
 }
 
+.area_home .box3 .container1 .section1{
+    padding-top:0;
+}
+
+.area_home .box3 .sun_box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area_home .box3 .sun_box2 .container1 button{
+    width: 200px;
+    height: 120px;
+    background-color: var(--ver_pad_strong);
+    color: white;
+    box-shadow: 4px 4px 5px #00000075;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area_home .box3 .sun_box2 .container1 button:hover{
+    background-color: #8b7947a3;
+    cursor: pointer;
+}
 /* TERCEIRA SECTION DO HOME */
 
 /* SISTEMAS CONECTADOS - HOME - */
@@ -459,6 +502,15 @@ main#principal #right .barra_progresso .skills span {
 
 
 @media(max-width:1366px) {
+
+    .area_home {
+        zoom: 71% !important;
+    }
+
+    .area_home .box1 .sun_box1 {
+        width: 626px;
+    }
+
     main#principal #right>nav h1 {
         font-size: 14px;
     }

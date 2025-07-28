@@ -138,7 +138,7 @@
 
     </div>
 
-     <div class="box1 box3">
+    <div class="box1 box3">
 
         <div class="sun_box1 sunform">
             <span class="square"></span>
@@ -149,9 +149,9 @@
                         <input type="text" class="forminput" placeholder="Cidade" id="renamecidade">
                     </div>
                     <div>
-                       <input type="text" class="forminput" placeholder="Telefone" id="renametelefone">
+                        <input type="text" class="forminput" placeholder="Telefone" id="renametelefone">
                     </div>
-                    
+
                 </div>
                 <button type="button" class="btn btn_rename_img btnfin">RENOMEAR IMAGENS</button>
             </div>
@@ -159,13 +159,23 @@
 
         <div class="sun_box2 sunform">
             <span class="square"></span>
+
+            <div class="container1">
+                <div class="titulo_green">Limpeza de Imagens Orfans</div>
+                <div class="section1">
+                    <span>Esse sistema apaga as imagens Orfans</span>
+
+                </div>
+                <button type="button" class="btn btn_limpar btnfin">LIMPAR IMG'S ORFANS</button>
+            </div>
         </div>
 
         <div class="sun_box3 sunform">
             <span class="square"></span>
+
         </div>
 
-     </div>
+    </div>
     <?php
     include(__DIR__ . '/../backend/conexao.php');
     $qtde_prods = mysqli_num_rows(mysqli_query($con, "SELECT * FROM isc_categories"));
