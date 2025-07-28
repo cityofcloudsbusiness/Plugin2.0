@@ -455,14 +455,14 @@ function processarImagens(imagens, cidade, telefone, barra, valor, status) {
 // AO CLICAR EM LIMPAR IMAGENS ORFANS
 
 $(document).on("click", "#area_apresent .btn_limpar", function () {
-    // Obtém a lista de imagens na pasta
     $.post("backend/metaTags/get_images_folder.php", function (response) {
         if (response.status === "ok" && response.imagens.length > 0) {
             verificarImagens(response.imagens);
-        } 
-    }, "json").fail(function (jqXHR, textStatus, errorThrown) {
-        console.log("Erro na requisição:", textStatus, errorThrown);
-        $("#status2").text("Erro ao buscar imagens.");
+        } else {
+            alert("Nenhuma imagem encontrada.");
+        }
+    }, "json").fail(function () {
+        alert("Erro ao buscar imagens da pasta.");
     });
 });
 
@@ -472,23 +472,25 @@ function verificarImagens(imagens2) {
 
     function verificarProxima() {
         if (processadas2 >= total2) {
-             $('.progress').css('width', '100%');
-            $('.Value').text('100%');
+            $('.progress').css('width', '100%');
+            $('.Value').text('100.000%');
             return;
         }
 
         let imagemAtual = imagens2[processadas2];
 
         $.post("backend/metaTags/verificar_apagar.php", { imagem: imagemAtual }, function (response) {
-           
-
             processadas2++;
-            let P = Math.ceil((processadas2 / total2) * 100);
+            let p = ((processadas2 / total2) * 100).toFixed(3); // ← exibe com 3 casas decimais
             $('.progress').css('width', p + '%');
-            $('.Value').text(p + '%');;
+            $('.Value').text(p + '%');
             verificarProxima();
-        }, "json").fail(function (jqXHR, textStatus, errorThrown) {
-           
+        }, "json").fail(function () {
+            processadas2++;
+            let p = ((processadas2 / total2) * 100).toFixed(3); // ← garante precisão mesmo em erro
+            $('.progress').css('width', p + '%');
+            $('.Value').text(p + '%');
+            verificarProxima();
         });
     }
 

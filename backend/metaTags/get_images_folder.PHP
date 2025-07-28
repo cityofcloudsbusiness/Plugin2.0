@@ -1,24 +1,27 @@
 <?php
 header('Content-Type: application/json');
 
-// Caminho da pasta onde as imagens estão armazenadas
-$basePath = realpath(__DIR__ . "/../../../../product_images") . '/';
+$basePath = realpath(__DIR__ . "/../../../../product_images");
 
-function listarImagens($diretorio) {
+if (!$basePath || !is_dir($basePath)) {
+    echo json_encode(["status" => "erro", "mensagem" => "Pasta de imagens não encontrada."]);
+    exit;
+}
+
+function listarImagens($diretorioBase) {
     $imagens = [];
-    $arquivos = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($diretorio));
+    $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($diretorioBase));
 
-    foreach ($arquivos as $arquivo) {
+    foreach ($iterator as $arquivo) {
         if ($arquivo->isFile() && preg_match('/\.(jpg|jpeg|png)$/i', $arquivo->getFilename())) {
-            // Caminho relativo a partir de product_images/
-            $caminhoRelativo = str_replace($diretorio, "", $arquivo->getPathname());
-            $caminhoRelativo = ltrim(str_replace("\\", "/", $caminhoRelativo), "/");
+            $caminhoRelativo = str_replace($diretorioBase . DIRECTORY_SEPARATOR, '', $arquivo->getPathname());
+            $caminhoRelativo = str_replace("\\", "/", $caminhoRelativo); // compatível Windows
             $imagens[] = $caminhoRelativo;
         }
     }
+
     return $imagens;
 }
 
 $imagens = listarImagens($basePath);
 echo json_encode(["status" => "ok", "imagens" => $imagens]);
-?>
