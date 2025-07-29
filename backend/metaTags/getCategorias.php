@@ -1,62 +1,32 @@
 <?php
-include '../conexao.php';
+// continua sendo getCategorias.php
+include __DIR__ . '/../conexao.php';
 
-$page = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
-$perPage = 300;
-$offset = ($page - 1) * $perPage;
-
-// Conta total
-$totalRes = $con->query("SELECT COUNT(*) as total FROM isc_categories");
-$totalRow = $totalRes->fetch_assoc();
-$total = intval($totalRow['total']);
-$pages = ceil($total / $perPage);
-
-// Carrega categorias paginadas
-$res = $con->query("SELECT * FROM isc_categories ORDER BY catparentid, catname LIMIT $offset, $perPage");
-
-$categorias = [];
-while ($cat = $res->fetch_assoc()) {
-    $categorias[$cat['categoryid']] = $cat;
+// 1) busca todas as categorias e monta array por parent
+$res = $con->query("
+  SELECT categoryid, catname, catparentid
+  FROM isc_categories
+  ORDER BY catparentid ASC, catname ASC
+");
+$cats = [];
+while ($r = $res->fetch_assoc()) {
+    $cats[$r['catparentid']][] = $r;
 }
 
-function exibirCategoria($id, $categorias, $nivel = 0) {
-    if (!isset($categorias[$id])) return '';
-
-    $espaco = str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;', $nivel);
-    $html = "<label class='checkbox-cat' data-nivel='$nivel'>
-                <input type='checkbox' name='categoria[]' value='{$id}'>
-                <span>{$espaco}{$categorias[$id]['catname']}</span>
-             </label>";
-
-    // Render filhos
-    foreach ($categorias as $cat) {
-        if ($cat['catparentid'] == $id) {
-            $html .= exibirCategoria($cat['categoryid'], $categorias, $nivel + 1);
-        }
-    }
-
-    return $html;
-}
-
-// Primeiro renderiza apenas categorias "raiz" do lote atual
-$html = '';
-foreach ($categorias as $cat) {
-    if ($cat['catparentid'] == 0) {
-        $html .= exibirCategoria($cat['categoryid'], $categorias);
+// 2) função recursiva para imprimir a árvore inteira
+function renderTree($cats, $parent = 0, $nivel = 0) {
+    if (!isset($cats[$parent])) return;
+    foreach ($cats[$parent] as $c) {
+        $indent = str_repeat("&nbsp;&nbsp;&nbsp;&nbsp;", $nivel);
+        echo "<label class='cat-label nivel-{$nivel}'>";
+        echo "  <input type='checkbox' name='categoria[]' value='{$c['categoryid']}'>";
+        echo "  <span>{$indent}" . htmlspecialchars($c['catname']) . "</span>";
+        echo "</label>";
+        renderTree($cats, $c['categoryid'], $nivel + 1);
     }
 }
 
-$html .= "<div class='paginacao'>";
-if ($page > 1) {
-    $html .= "<button class='pag-link' data-page='" . ($page - 1) . "'>Anterior</button>";
-}
-for ($i = 1; $i <= $pages; $i++) {
-    $active = ($i == $page) ? 'active' : '';
-    $html .= "<button class='pag-link $active' data-page='$i'>$i</button>";
-}
-if ($page < $pages) {
-    $html .= "<button class='pag-link' data-page='" . ($page + 1) . "'>Próximo</button>";
-}
-$html .= "</div>";
-
-echo $html;
+// 3) imprime tudo dentro do contêiner
+echo "<div id='categoriaContainer' class='categoria-wrapper'>";
+renderTree($cats);
+echo "</div>";

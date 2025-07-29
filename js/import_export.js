@@ -1,76 +1,69 @@
-// 1) Função global para buscar e renderizar as categorias paginadas
-function carregarCategorias(page = 0) {
-  // mostra loading
-  $('#categoriasContainer').html('<div class="loading">Carregando categorias...</div>');
-
-  // 2) use caminho absoluto
-  const url = `${window.BASE_URL}/backend/metaTags/getCategorias.php?page=${page}`;
-  $.get(url, function(html) {
-    $('#categoriasContainer').html(html);
-  });
+document.addEventListener('change', function (e) {
+    // “e.target” é o elemento que disparou o change
+    if (e.target && e.target.id === 'arquivoExcel') {
+        const imgIcon = document.getElementById('imgExcel');
+        if (e.target.files && e.target.files.length > 0) {
+            imgIcon.src = 'img/pla.png';
+        } else {
+            imgIcon.src = 'img/exelupload.png';
+        }
+    }
+});
+// 1) Função global para puxar TODAS as categorias de uma vez
+function carregarCategorias() {
+    $('#categoriasContainer').html('<div class="loading">Carregando categorias...</div>');
+    // caminho absoluto relativo ao root:
+    $.get(`${window.BASE_URL}/backend/metaTags/getCategorias.php`, function (html) {
+        $('#categoriasContainer').html(html);
+    });
 }
 
 $(document).ready(function () {
-  // 3) Delegação de evento para paginação
-  $(document).on('click', '.page-btn', function () {
-    const page = $(this).data('page');  // pega data-page
-    carregarCategorias(page);           // recarrega lista
-  });
-
-  // Botão EXPORTAR
-  $('.btn_exportprod').on('click', function () {
-    const selecionadas = $('input[name="categoria[]"]:checked')
-                         .map(function() { return this.value; })
-                         .get();
-    if (!selecionadas.length) {
-      return alert("Selecione ao menos uma categoria.");
+    // 2) dispara assim que a tela for injetada pelo loadPage():
+    if (document.querySelector('.btn_exportprod')) {
+        carregarCategorias();
     }
 
-    let total = selecionadas.length,
-        count = 0;
-
-    function exportarUma() {
-      const catId = selecionadas[count++];
-      $.post(
-        `${window.BASE_URL}/backend/metaTags/exportar.php`,
-        { id_categoria: catId },
-        function() {
-          // atualiza barra
-          const pct = (count / total) * 100;
-          $('.progress').css('width', pct + '%');
-          $('.Value').text(pct.toFixed(1) + '%');
-
-          if (count < total) {
-            exportarUma();
-          } else {
-            alert("Exportação finalizada!");
-          }
-        },
-        'json'
-      );
-    }
-
-    exportarUma();
-  });
-
-  // Botão IMPORTAR
-  $('.btn_importprod').on('click', function () {
-    const file = $('#arquivoJSON')[0].files[0];
-    if (!file) return alert("Selecione um arquivo JSON!");
-
-    const fd = new FormData();
-    fd.append('arquivo', file);
-
-    $.ajax({
-      url: `${window.BASE_URL}/backend/metaTags/importar.php`,
-      type: 'POST',
-      data: fd,
-      processData: false,
-      contentType: false,
-      success: function (res) {
-        alert("Importação finalizada.");
-        console.log(res);
-      }
+    // 3) IMPORTAR (sem mudança)
+    $('.btn_importprod').on('click', function () {
+        const file = $('#arquivoJSON')[0].files[0];
+        if (!file) return alert("Selecione um arquivo JSON!");
+        const fd = new FormData(); fd.append('arquivo', file);
+        $.ajax({
+            url: `${window.BASE_URL}/backend/metaTags/importar.php`,
+            type: 'POST',
+            data: fd,
+            processData: false,
+            contentType: false,
+            success: res => {
+                alert("Importação finalizada.");
+                console.log(res);
+            }
+        });
     });
-  });
+
+    // 4) EXPORTAR (sem mudança, itera checadas)
+    $(document).on('click', '#area_apresent .btn_exportprod', function () {
+        const sel = $('input[name="categoria[]"]:checked')
+            .map(function () { return this.value; }).get();
+        if (!sel.length) return alert("Selecione categorias.");
+        let total = sel.length, i = 0;
+        function next() {
+            $.post(`${window.BASE_URL}/backend/metaTags/exportar.php`,
+                { id_categoria: sel[i++] },
+                function () {
+                    const pct = (i / total) * 100;
+                    $('.progress').css('width', pct + '%');
+                    $('.Value').text(pct.toFixed(1) + '%');
+                    if (i < total) {
+                        next();
+                    } else {
+                        // Quando tudo terminar, dispara o download
+                        window.location = `${window.BASE_URL}/backend/metaTags/download.php`;
+                        alert("Exportação finalizada!");
+                    }
+                }, 'json');
+        }
+        next();
+    });
 });
