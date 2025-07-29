@@ -85,7 +85,13 @@ $baseUrl = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
                 .then(html => {
                     document.getElementById('area_apresent').innerHTML = html;
                     document.getElementById('titulo_nav').innerHTML = titulo;
+
+                    // Só dispara se existir o botão de exportação (ou importação)
+                    if (document.querySelector('.btn_exportprod')) {
+                        carregarCategorias(0);
+                    }
                 })
+
                 .catch(err => {
                     document.getElementById('area_apresent').innerHTML = "<p>Erro ao carregar conteúdo.</p>";
                     console.error(err);

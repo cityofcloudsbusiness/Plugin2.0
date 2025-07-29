@@ -1,92 +1,76 @@
-document.addEventListener('change', function (e) {
-    // “e.target” é o elemento que disparou o change
-    if (e.target && e.target.id === 'arquivoExcel') {
-        const imgIcon = document.getElementById('imgExcel');
-        if (e.target.files && e.target.files.length > 0) {
-            imgIcon.src = 'img/pla.png';
-        } else {
-            imgIcon.src = 'img/exelupload.png';
-        }
+// 1) Função global para buscar e renderizar as categorias paginadas
+function carregarCategorias(page = 0) {
+  // mostra loading
+  $('#categoriasContainer').html('<div class="loading">Carregando categorias...</div>');
+
+  // 2) use caminho absoluto
+  const url = `${window.BASE_URL}/backend/metaTags/getCategorias.php?page=${page}`;
+  $.get(url, function(html) {
+    $('#categoriasContainer').html(html);
+  });
+}
+
+$(document).ready(function () {
+  // 3) Delegação de evento para paginação
+  $(document).on('click', '.page-btn', function () {
+    const page = $(this).data('page');  // pega data-page
+    carregarCategorias(page);           // recarrega lista
+  });
+
+  // Botão EXPORTAR
+  $('.btn_exportprod').on('click', function () {
+    const selecionadas = $('input[name="categoria[]"]:checked')
+                         .map(function() { return this.value; })
+                         .get();
+    if (!selecionadas.length) {
+      return alert("Selecione ao menos uma categoria.");
     }
-});
 
-function atualizarProgresso(p) {
-    p = parseFloat(p).toFixed(3);
-    $('.progress').css('width', p + '%');
-    $('.Value').text(p + '%');
-}
+    let total = selecionadas.length,
+        count = 0;
 
-function carregarCategorias(pagina = 1) {
-    $.get('backend/metaTags/getCategorias.php?page=' + pagina, function (html) {
-        $('#categoriasContainer').html(html);
+    function exportarUma() {
+      const catId = selecionadas[count++];
+      $.post(
+        `${window.BASE_URL}/backend/metaTags/exportar.php`,
+        { id_categoria: catId },
+        function() {
+          // atualiza barra
+          const pct = (count / total) * 100;
+          $('.progress').css('width', pct + '%');
+          $('.Value').text(pct.toFixed(1) + '%');
 
-        // Delegação de evento para botões de página
-        $('#categoriasContainer').on('click', '.btn-pagina', function () {
-            const paginaSelecionada = $(this).data('pagina');
-            carregarCategorias(paginaSelecionada);
-        });
+          if (count < total) {
+            exportarUma();
+          } else {
+            alert("Exportação finalizada!");
+          }
+        },
+        'json'
+      );
+    }
+
+    exportarUma();
+  });
+
+  // Botão IMPORTAR
+  $('.btn_importprod').on('click', function () {
+    const file = $('#arquivoJSON')[0].files[0];
+    if (!file) return alert("Selecione um arquivo JSON!");
+
+    const fd = new FormData();
+    fd.append('arquivo', file);
+
+    $.ajax({
+      url: `${window.BASE_URL}/backend/metaTags/importar.php`,
+      type: 'POST',
+      data: fd,
+      processData: false,
+      contentType: false,
+      success: function (res) {
+        alert("Importação finalizada.");
+        console.log(res);
+      }
     });
-}
-
-
-function inicializarImportExport() {
-    // Só executa se o container existir
-    if (!document.querySelector('#categoriasContainer')) return;
-
-    carregarCategorias();
-
-    $('.btn_importprod').on('click', function () {
-        const file = $('#arquivoJSON')[0].files[0];
-        if (!file) return alert("Selecione um arquivo JSON!");
-
-        const fd = new FormData();
-        fd.append('arquivo', file);
-
-        $.ajax({
-            url: 'backend/metaTags/importar.php',
-            type: 'POST',
-            data: fd,
-            processData: false,
-            contentType: false,
-            success: function (res) {
-                alert("Importação finalizada.");
-                console.log(res);
-            }
-        });
-    });
-
-    $('.btn_exportprod').on('click', function () {
-        const selecionadas = [];
-        $('input[name="categoria[]"]:checked').each(function () {
-            selecionadas.push($(this).val());
-        });
-
-        if (selecionadas.length === 0) return alert("Selecione categorias.");
-
-        let total = selecionadas.length;
-        let count = 0;
-
-        function exportarUma(catId) {
-            $.post('backend/metaTags/exportar.php', { id_categoria: catId }, function (res) {
-                count++;
-                atualizarProgresso((count / total) * 100);
-                if (count < total) {
-                    exportarUma(selecionadas[count]);
-                } else {
-                    alert("Exportação finalizada!");
-                }
-            }, 'json');
-        }
-
-        exportarUma(selecionadas[0]);
-    });
-}
-
-// Reexecuta sempre que uma nova página é carregada dinamicamente
-document.addEventListener("DOMContentLoaded", () => {
-    const target = document.getElementById("area_apresent");
-    const observer = new MutationObserver(() => {
-        inicializarImportExport();
-    });
-    if (target) observer.observe(target, { childList: true, subtree: true });
+  });
 });

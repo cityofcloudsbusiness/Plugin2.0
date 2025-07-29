@@ -642,7 +642,7 @@ main#principal #right .barra_progresso .skills span {
         zoom: 71% !important;
     }
 
-    .area .box1 .sun_box1 {
+    .area_home .box1 .sun_box1 {
         width: 626px;
     }
 
@@ -650,7 +650,7 @@ main#principal #right .barra_progresso .skills span {
         font-size: 14px;
     }
 
-    .area .box1 {
+    .area_home .box1 {
         width: 100%;
         height: auto;
     }
