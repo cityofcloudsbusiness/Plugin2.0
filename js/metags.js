@@ -273,10 +273,10 @@ $(document).on('click', '#area_apresent .botaocat', function (e) {
 $(function () {
     document.addEventListener('change', function (e) {
         // “e.target” é o elemento que disparou o change
-        if (e.target && e.target.id === 'arquivoExcel') {
-            const imgIcon = document.getElementById('imgExcel');
+        if (e.target && e.target.id === 'arquivoJSON') {
+            const imgIcon = document.getElementById('imgBD');
             if (e.target.files && e.target.files.length > 0) {
-                imgIcon.src = 'img/pla.png';
+                imgIcon.src = 'img/bd.png';
             } else {
                 imgIcon.src = 'img/exelupload.png';
             }

@@ -101,8 +101,9 @@ $baseUrl = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
         });
     </script>
 
-    <script src="js/metags.js"></script>
 
+    <script src="js/import_export.js"></script>
+    <script src="js/metags.js"></script>
 
 </body>
 

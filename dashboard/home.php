@@ -176,6 +176,9 @@
         </div>
 
     </div>
+
+  
+
     <?php
     include(__DIR__ . '/../backend/conexao.php');
     $qtde_prods = mysqli_num_rows(mysqli_query($con, "SELECT * FROM isc_categories"));
