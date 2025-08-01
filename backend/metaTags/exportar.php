@@ -1,116 +1,103 @@
 <?php
-// 1) Só POST
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo json_encode(['erro' => 'Método não permitido']);
+ob_start();
+header('Content-Type: application/json');
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+require __DIR__ . '/../conexao.php';
+
+function erroJson($mensagem) {
+    echo json_encode(['erro' => $mensagem]);
     exit;
 }
 
-// 2) Previne timeouts/memory_limit para este script
-ini_set('max_execution_time', 0);
-ini_set('memory_limit', '512M');
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    erroJson('Método inválido.');
+}
 
-// 3) Conexão original (não altera esta linha)
-include __DIR__ . '/../conexao.php';
+if (!isset($_POST['id_categoria'])) {
+    erroJson('ID da categoria não fornecido.');
+}
 
-// 4) Função helper que reconecta se der “gone away”
-/**
- * Busca produtos de uma categoria.
- * Usa isc_categoryassociations para filtrar e isc_product_images para a imagem.
- */
-function fetchProdutos(mysqli &$con, int $catId): array
-{
-    // 1) SQL com imagem
-    $sqlJoin = "
-      SELECT p.productid,
-             p.prodname,
-             p.prodprice,
-             COALESCE(i.imagefile, '') AS imagefile
-      FROM isc_categoryassociations ca
-      JOIN isc_products p
-        ON p.productid = ca.productid
-      LEFT JOIN isc_product_images i
-        ON i.imageprodid = p.productid
-      WHERE ca.categoryid = ?
-    ";
+$id_categoria = (int) $_POST['id_categoria'];
 
-    // 2) SQL sem imagem (fallback)
-    $sqlNoImg = "
-      SELECT p.productid,
-             p.prodname,
-             p.prodprice,
-             '' AS imagefile
-      FROM isc_categoryassociations ca
-      JOIN isc_products p
-        ON p.productid = ca.productid
-      WHERE ca.categoryid = ?
-    ";
+function fetchCategoria($con, $id) {
+    $stmt = $con->prepare("SELECT * FROM isc_categories WHERE categoryid = ?");
+    $stmt->bind_param('i', $id);
+    $stmt->execute();
+    return $stmt->get_result()->fetch_assoc();
+}
 
-    try {
-        $stmt = $con->prepare($sqlJoin);
-        $stmt->bind_param('i', $catId);
-        $stmt->execute();
-
-    } catch (mysqli_sql_exception $e) {
-        $msg = $e->getMessage();
-
-        // 3.a) Reconecta se "MySQL server has gone away"
-        if (stripos($msg, 'MySQL server has gone away') !== false) {
-            $con->close();
-            include __DIR__ . '/../conexao.php';
-            $stmt = $con->prepare($sqlJoin);
-            $stmt->bind_param('i', $catId);
-            $stmt->execute();
-
-        // 3.b) Se falhar por falta de coluna ou tabela de imagens, usa sem join de imagens
-        } elseif (stripos($msg, "doesn't exist") !== false || $e->getCode() === 1146) {
-            $stmt = $con->prepare($sqlNoImg);
-            $stmt->bind_param('i', $catId);
-            $stmt->execute();
-
-        // 3.c) Outro erro: repassa
-        } else {
-            throw $e;
-        }
-    }
-
-    $res = $stmt->get_result();
+function fetchProdutos($con, $catid) {
     $produtos = [];
+
+    $stmt = $con->prepare("
+        SELECT p.* FROM isc_products p
+        INNER JOIN isc_categoryassociations ca ON p.productid = ca.productid
+        WHERE ca.categoryid = ?
+    ");
+    $stmt->bind_param('i', $catid);
+    $stmt->execute();
+    $res = $stmt->get_result();
+
     while ($row = $res->fetch_assoc()) {
+        // Inclui somente campos relevantes (ou todos se quiser)
         $produtos[] = $row;
     }
-    $stmt->close();
+
     return $produtos;
 }
 
+function buscarFilhos($con, $id) {
+    $filhos = [];
 
-// 5) Lê ID
-$id = (int)($_POST['id_categoria'] ?? 0);
-if ($id <= 0) {
-    echo json_encode(['erro' => 'ID inválido']);
-    exit;
+    $stmt = $con->prepare("SELECT categoryid FROM isc_categories WHERE catparentid = ?");
+    $stmt->bind_param('i', $id);
+    $stmt->execute();
+    $res = $stmt->get_result();
+
+    while ($row = $res->fetch_assoc()) {
+        $filhos[] = $row['categoryid'];
+    }
+
+    return $filhos;
 }
 
-// 6) Busca produtos (usa helper)
-$produtos = fetchProdutos($con, $id);
+function montarEstrutura($con, $id_categoria, &$estrutura) {
+    // CATEGORIA PRINCIPAL
+    $categoria = fetchCategoria($con, $id_categoria);
+    if ($categoria) {
+        $estrutura[] = [
+            'Tipo' => 1,
+            'id_categoria' => $id_categoria,
+            'categoria' => $categoria
+        ];
 
-// 7) Monta o bloco e grava em dados.json
-$bloco = [
-  'Tipo'         => 2,
-  'id_categoria' => $id,
-  'produtos'     => $produtos
-];
+        $estrutura[] = [
+            'Tipo' => 2,
+            'id_categoria' => $id_categoria,
+            'produtos' => fetchProdutos($con, $id_categoria)
+        ];
+    }
 
-$file = __DIR__ . '/../../dados/dados.json';
-if (!file_exists($file)) {
-    file_put_contents($file, '{"Dados": [');
-} else {
-    file_put_contents($file, ',', FILE_APPEND);
+    // RECURSIVO: filhos (subcategorias)
+    $filhos = buscarFilhos($con, $id_categoria);
+    foreach ($filhos as $filho) {
+        montarEstrutura($con, $filho, $estrutura);
+    }
 }
-file_put_contents($file,
-    json_encode($bloco, JSON_UNESCAPED_UNICODE),
-    FILE_APPEND
-);
 
-// 8) Retorna status
+// Executa exportação
+$estrutura = [];
+montarEstrutura($con, $id_categoria, $estrutura);
+
+// Salva no arquivo temporário
+$arquivo = __DIR__ . '/dados/export_' . date('Ymd_His') . '.json';
+file_put_contents($arquivo, json_encode(['Dados' => $estrutura], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+// Atualiza caminho do último para download
+file_put_contents(__DIR__ . '/dados/ultimo.txt', basename($arquivo));
+
 echo json_encode(['status' => 'ok']);
+ob_end_flush();

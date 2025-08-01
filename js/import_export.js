@@ -42,19 +42,28 @@ $(document).ready(function () {
         });
     });
 
-    // 4) EXPORTAR (sem mudança, itera checadas)
+    // 4) EXPORTAR (corrigido para usar $.ajax corretamente)
     $(document).on('click', '#area_apresent .btn_exportprod', function () {
         const sel = $('input[name="categoria[]"]:checked')
             .map(function () { return this.value; }).get();
         if (!sel.length) return alert("Selecione categorias.");
+
         let total = sel.length, i = 0;
+
         function next() {
-            $.post(`${window.BASE_URL}/backend/metaTags/exportar.php`,
-                { id_categoria: sel[i++] },
-                function () {
+            $.ajax({
+                url: `${window.BASE_URL}/backend/metaTags/exportar.php`,
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    id_categoria: sel[i++],
+                    verif: 2
+                },
+                success: function () {
                     const pct = (i / total) * 100;
                     $('.progress').css('width', pct + '%');
                     $('.Value').text(pct.toFixed(1) + '%');
+
                     if (i < total) {
                         next();
                     } else {
@@ -62,8 +71,14 @@ $(document).ready(function () {
                         window.location = `${window.BASE_URL}/backend/metaTags/download.php`;
                         alert("Exportação finalizada!");
                     }
-                }, 'json');
+                },
+                error: function (xhr, status, err) {
+                    console.error("Erro na exportação:", err);
+                    alert("Erro ao exportar categoria.");
+                }
+            });
         }
+
         next();
     });
 });
