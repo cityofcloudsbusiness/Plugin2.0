@@ -1,47 +1,102 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    exit('Método inválido.');
+header('Content-Type: application/json');
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+require __DIR__ . '/../conexao.php';
+
+function erro($msg) {
+    echo json_encode(['erro' => $msg]);
+    exit;
 }
 
-include '../conexao.php';
-$config = include 'config.php';
-$delay = intval($config['siteTimeout']);
-$siteOrigem = rtrim($config['siteOrigem'], '/') . '/';
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') erro("Requisição inválida.");
+if (!isset($_FILES['arquivo'])) erro("Arquivo JSON não enviado.");
 
-if (!isset($_FILES['arquivo']['tmp_name'])) {
-    exit("Arquivo não enviado.");
+$dados = json_decode(file_get_contents($_FILES['arquivo']['tmp_name']), true);
+if (!$dados || !isset($dados['Dados'])) erro("JSON inválido.");
+
+$mapCatNameToId = [];
+
+// Busca ID de categoria pelo nome
+function buscarCategoriaIdPorNome($con, $nome) {
+    global $mapCatNameToId;
+    if (isset($mapCatNameToId[$nome])) return $mapCatNameToId[$nome];
+
+    $stmt = $con->prepare("SELECT categoryid FROM isc_categories WHERE catname = ?");
+    $stmt->bind_param("s", $nome);
+    $stmt->execute();
+    $res = $stmt->get_result()->fetch_assoc();
+    return $res ? $res['categoryid'] : null;
 }
 
-$data = json_decode(file_get_contents($_FILES['arquivo']['tmp_name']), true);
-if (!isset($data['Dados'])) {
-    exit("JSON inválido.");
-}
+// Cria categoria se não existir
+function criarCategoria($con, $categoria) {
+    global $mapCatNameToId;
+    $nome = $categoria['catname'];
 
-foreach ($data['Dados'] as $bloco) {
-    foreach ($bloco['produtos'] as $prod) {
-        $nome = $prod['prodname'];
-        $url  = $prod['produrl'];
-        $cat  = $prod['prodcatids'];
+    $existeId = buscarCategoriaIdPorNome($con, $nome);
+    if ($existeId) return $existeId;
 
-        $con->query("INSERT INTO isc_products (prodname, produrl, prodcatids) VALUES ('$nome', '$url', '$cat')");
-        $idprod = $con->insert_id;
+    $catparentid = $categoria['catparentid'] ?? 0;
 
-        foreach ($prod['imagens'] as $img) {
-            $imgfile = $img['imagefile'];
-            $urlImg = $siteOrigem . 'product_images/' . $imgfile;
-            $path = realpath(__DIR__ . '/../../../product_images') . '/' . $imgfile;
-
-            if (!file_exists(dirname($path))) {
-                mkdir(dirname($path), 0777, true);
+    // Tenta encontrar o pai pelo nome (se o ID não existir ainda)
+    if ($catparentid && !in_array($catparentid, $mapCatNameToId)) {
+        foreach ($mapCatNameToId as $n => $id) {
+            if ($n === $categoria['catparentname']) {
+                $catparentid = $id;
+                break;
             }
-
-            file_put_contents($path, file_get_contents($urlImg));
-            $con->query("INSERT INTO isc_product_images (imageprodid, imagefile) VALUES ($idprod, '$imgfile')");
         }
+    }
 
-        usleep($delay * 1000); // respeita o config.php
+    $stmt = $con->prepare("INSERT INTO isc_categories (catparentid, catname) VALUES (?, ?)");
+    $stmt->bind_param("is", $catparentid, $nome);
+    $stmt->execute();
+    $newId = $stmt->insert_id;
+    $mapCatNameToId[$nome] = $newId;
+    return $newId;
+}
+
+// Associa produto a categoria
+function associarProduto($con, $idCategoria, $produto) {
+    $productid = $produto['productid'];
+
+    $stmt = $con->prepare("SELECT 1 FROM isc_products WHERE productid = ?");
+    $stmt->bind_param("i", $productid);
+    $stmt->execute();
+    if (!$stmt->get_result()->fetch_assoc()) {
+        $colunas = array_keys($produto);
+        $valores = array_values($produto);
+        $placeholders = implode(',', array_fill(0, count($valores), '?'));
+        $tipos = str_repeat('s', count($valores));
+
+        $stmt = $con->prepare("INSERT INTO isc_products (`" . implode('`,`', $colunas) . "`) VALUES ($placeholders)");
+        $stmt->bind_param($tipos, ...$valores);
+        $stmt->execute();
+    }
+
+    $stmt = $con->prepare("INSERT IGNORE INTO isc_categoryassociations (categoryid, productid) VALUES (?, ?)");
+    $stmt->bind_param("ii", $idCategoria, $productid);
+    $stmt->execute();
+}
+
+// Executa importação
+foreach ($dados['Dados'] as $item) {
+    if ($item['Tipo'] === 1) {
+        $categoria = $item['categoria'];
+        $categoria['catparentid'] = buscarCategoriaIdPorNome($con, $categoria['catparentname'] ?? '') ?? 0;
+        $catid = criarCategoria($con, $categoria);
+    }
+
+    if ($item['Tipo'] === 2 && !empty($item['produtos'])) {
+        $catid = buscarCategoriaIdPorNome($con, $item['categoria']['catname'] ?? '') ?? null;
+        if ($catid) {
+            foreach ($item['produtos'] as $produto) {
+                associarProduto($con, $catid, $produto);
+            }
+        }
     }
 }
 
-echo "Importação realizada com sucesso!";
+echo json_encode(['status' => 'ok']);

@@ -9,22 +9,20 @@ document.addEventListener('change', function (e) {
         }
     }
 });
-// 1) Função global para puxar TODAS as categorias de uma vez
+
 function carregarCategorias() {
     $('#categoriasContainer').html('<div class="loading">Carregando categorias...</div>');
-    // caminho absoluto relativo ao root:
     $.get(`${window.BASE_URL}/backend/metaTags/getCategorias.php`, function (html) {
         $('#categoriasContainer').html(html);
     });
 }
 
 $(document).ready(function () {
-    // 2) dispara assim que a tela for injetada pelo loadPage():
     if (document.querySelector('.btn_exportprod')) {
         carregarCategorias();
     }
 
-    // 3) IMPORTAR (sem mudança)
+    // IMPORTAR
     $('.btn_importprod').on('click', function () {
         const file = $('#arquivoJSON')[0].files[0];
         if (!file) return alert("Selecione um arquivo JSON!");
@@ -42,43 +40,44 @@ $(document).ready(function () {
         });
     });
 
-    // 4) EXPORTAR (corrigido para usar $.ajax corretamente)
+    // EXPORTAR com barra de progresso e download automático
     $(document).on('click', '#area_apresent .btn_exportprod', function () {
         const sel = $('input[name="categoria[]"]:checked')
             .map(function () { return this.value; }).get();
+
         if (!sel.length) return alert("Selecione categorias.");
 
-        let total = sel.length, i = 0;
+        $('.progress').css('width', '0%');
+        $('.Value').text('0.0%');
 
-        function next() {
-            $.ajax({
-                url: `${window.BASE_URL}/backend/metaTags/exportar.php`,
-                type: 'POST',
-                dataType: 'json',
-                data: {
-                    id_categoria: sel[i++],
-                    verif: 2
-                },
-                success: function () {
-                    const pct = (i / total) * 100;
-                    $('.progress').css('width', pct + '%');
-                    $('.Value').text(pct.toFixed(1) + '%');
-
-                    if (i < total) {
-                        next();
-                    } else {
-                        // Quando tudo terminar, dispara o download
-                        window.location = `${window.BASE_URL}/backend/metaTags/download.php`;
-                        alert("Exportação finalizada!");
+        $.ajax({
+            url: `${window.BASE_URL}/backend/metaTags/exportar.php`,
+            type: 'POST',
+            dataType: 'json',
+            data: { id_categorias: sel },
+            xhr: function () {
+                let xhr = new XMLHttpRequest();
+                xhr.addEventListener('progress', function (e) {
+                    if (e.lengthComputable) {
+                        let percent = (e.loaded / e.total) * 100;
+                        $('.progress').css('width', percent + '%');
+                        $('.Value').text(percent.toFixed(1) + '%');
                     }
-                },
-                error: function (xhr, status, err) {
-                    console.error("Erro na exportação:", err);
-                    alert("Erro ao exportar categoria.");
-                }
-            });
-        }
+                });
+                return xhr;
+            },
+            success: function () {
+                $('.progress').css('width', '100%');
+                $('.Value').text('100%');
 
-        next();
+                // Baixa automaticamente o JSON exportado
+                window.location = `${window.BASE_URL}/backend/metaTags/download.php`;
+                alert("Exportação finalizada!");
+            },
+            error: function (xhr, status, err) {
+                console.error("Erro na exportação:", err);
+                alert("Erro ao exportar categorias.");
+            }
+        });
     });
 });
