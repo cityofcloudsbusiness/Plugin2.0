@@ -1,102 +1,241 @@
 <?php
-header('Content-Type: application/json');
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+// backend/metaTags/importar.php
 
-require __DIR__ . '/../conexao.php';
+session_start();
+// mostrar só erros graves
+error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+header('Content-Type: application/json; charset=utf-8');
 
-function erro($msg) {
-    echo json_encode(['erro' => $msg]);
+error_log("=== IMPORTAR.PHP INICIADO ===");
+
+// 1) conexão
+$pathConn = __DIR__ . '/../conexao.php';
+error_log("1) Verificando conexão em $pathConn");
+if (! file_exists($pathConn)) {
+    error_log("ERRO: conexao.php não encontrado");
+    echo json_encode(['status'=>'error','msg'=>'Arquivo de conexão não encontrado.']);
+    exit;
+}
+require_once $pathConn;
+$conn = $con;
+if (! ($conn instanceof mysqli)) {
+    error_log("ERRO: \$con não é instância de mysqli");
+    echo json_encode(['status'=>'error','msg'=>'Conexão inválida.']);
+    exit;
+}
+error_log("Conexão estabelecida com sucesso");
+
+// 1.1) checa tabela de associação produto↔categoria
+$res = $conn->query("SHOW TABLES LIKE 'isc_categoryassociations'");
+$hasProdCatTable = ($res && $res->num_rows > 0);
+error_log("Tabela isc_categoryassociations " . ($hasProdCatTable ? "EXISTE" : "NÃO existe"));
+
+// 2) recebe parâmetro etapa
+error_log("2) Validando parâmetro etapa");
+if (empty($_POST['etapa'])) {
+    error_log("ERRO: parâmetro etapa vazio");
+    echo json_encode(['status'=>'error','msg'=>'Parâmetro etapa não informado']);
+    exit;
+}
+$etapaFile = basename($_POST['etapa']);
+$etapaPath = __DIR__ . '/dados/' . $etapaFile;
+error_log("Parâmetro etapa: $etapaFile → $etapaPath");
+if (! file_exists($etapaPath)) {
+    error_log("ERRO: arquivo de etapa não encontrado");
+    echo json_encode(['status'=>'error','msg'=>"Arquivo {$etapaFile} não encontrado em dados/"]);
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') erro("Requisição inválida.");
-if (!isset($_FILES['arquivo'])) erro("Arquivo JSON não enviado.");
+// 3) lê e decodifica JSON
+error_log("3) Lendo JSON da etapa");
+$bloco = json_decode(file_get_contents($etapaPath), true);
+if (! is_array($bloco) || ! isset($bloco['Tipo'])) {
+    error_log("ERRO: JSON inválido ou sem campo Tipo");
+    unlink($etapaPath);
+    echo json_encode(['status'=>'error','msg'=>"JSON inválido em {$etapaFile}"]);
+    exit;
+}
+error_log("JSON decodificado: Tipo={$bloco['Tipo']}");
 
-$dados = json_decode(file_get_contents($_FILES['arquivo']['tmp_name']), true);
-if (!$dados || !isset($dados['Dados'])) erro("JSON inválido.");
+// inicializa mapas de ID
+if (! isset($_SESSION['map_cat']))  $_SESSION['map_cat']  = [];
+if (! isset($_SESSION['map_prod'])) $_SESSION['map_prod'] = [];
 
-$mapCatNameToId = [];
-
-// Busca ID de categoria pelo nome
-function buscarCategoriaIdPorNome($con, $nome) {
-    global $mapCatNameToId;
-    if (isset($mapCatNameToId[$nome])) return $mapCatNameToId[$nome];
-
-    $stmt = $con->prepare("SELECT categoryid FROM isc_categories WHERE catname = ?");
-    $stmt->bind_param("s", $nome);
-    $stmt->execute();
-    $res = $stmt->get_result()->fetch_assoc();
-    return $res ? $res['categoryid'] : null;
+// helper de escape
+function esc($v) {
+    global $conn;
+    return "'" . $conn->real_escape_string($v) . "'";
 }
 
-// Cria categoria se não existir
-function criarCategoria($con, $categoria) {
-    global $mapCatNameToId;
-    $nome = $categoria['catname'];
+// prepara pasta de imagens
+$siteRoot  = realpath(__DIR__ . '/../../../../');
+$uploadDir = $siteRoot . '/product_images';
+if (! is_dir($uploadDir)) {
+    mkdir($uploadDir, 0755, true);
+    error_log("Criou pasta de imagens: $uploadDir");
+} else {
+    error_log("Pasta de imagens existe: $uploadDir");
+}
 
-    $existeId = buscarCategoriaIdPorNome($con, $nome);
-    if ($existeId) return $existeId;
+// 4) processa por tipo
+$type = (int)$bloco['Tipo'];
+error_log("4) Iniciando processamento do bloco Tipo $type");
 
-    $catparentid = $categoria['catparentid'] ?? 0;
+switch ($type) {
 
-    // Tenta encontrar o pai pelo nome (se o ID não existir ainda)
-    if ($catparentid && !in_array($catparentid, $mapCatNameToId)) {
-        foreach ($mapCatNameToId as $n => $id) {
-            if ($n === $categoria['catparentname']) {
-                $catparentid = $id;
-                break;
-            }
+  case 1:
+    // CATEGORIA
+    error_log("  → Inserindo categoria");
+    $c         = $bloco['categoria'];
+    $oldCat    = (int)$c['categoryid'];
+    $oldParent = (int)$c['catparentid'];
+    $newParent = $oldParent
+               ? ($_SESSION['map_cat'][$oldParent] ?? 0)
+               : 0;
+
+    $sql = "
+      INSERT INTO isc_categories
+        (catparentid, catname, catdesc, catlayoutfile, catvisible)
+      VALUES
+        ($newParent,
+         " . esc($c['catname']) . ",
+         " . esc($c['catdesc']) . ",
+         " . esc($c['catlayoutfile']) . ",
+         " . ((int)$c['catvisible']) . ");
+    ";
+    if (! $conn->query($sql)) {
+        error_log("SQL ERROR categoria: " . $conn->error);
+    } else {
+        $newId = $conn->insert_id;
+        $_SESSION['map_cat'][$oldCat] = $newId;
+        error_log("Categoria antiga $oldCat → nova $newId");
+    }
+    break;
+
+  case 2:
+    // PRODUTOS + IMAGENS
+    error_log("  → Inserindo produtos e imagens embutidas");
+    if (! empty($bloco['produtos']) && is_array($bloco['produtos'])) {
+      foreach ($bloco['produtos'] as $idx => $item) {
+        error_log("    → Produto #$idx");
+        if (! isset($item['produto'])) {
+          error_log("       ERRO: falta chave 'produto'");
+          continue;
         }
-    }
+        $p = $item['produto'];
 
-    $stmt = $con->prepare("INSERT INTO isc_categories (catparentid, catname) VALUES (?, ?)");
-    $stmt->bind_param("is", $catparentid, $nome);
-    $stmt->execute();
-    $newId = $stmt->insert_id;
-    $mapCatNameToId[$nome] = $newId;
-    return $newId;
-}
-
-// Associa produto a categoria
-function associarProduto($con, $idCategoria, $produto) {
-    $productid = $produto['productid'];
-
-    $stmt = $con->prepare("SELECT 1 FROM isc_products WHERE productid = ?");
-    $stmt->bind_param("i", $productid);
-    $stmt->execute();
-    if (!$stmt->get_result()->fetch_assoc()) {
-        $colunas = array_keys($produto);
-        $valores = array_values($produto);
-        $placeholders = implode(',', array_fill(0, count($valores), '?'));
-        $tipos = str_repeat('s', count($valores));
-
-        $stmt = $con->prepare("INSERT INTO isc_products (`" . implode('`,`', $colunas) . "`) VALUES ($placeholders)");
-        $stmt->bind_param($tipos, ...$valores);
-        $stmt->execute();
-    }
-
-    $stmt = $con->prepare("INSERT IGNORE INTO isc_categoryassociations (categoryid, productid) VALUES (?, ?)");
-    $stmt->bind_param("ii", $idCategoria, $productid);
-    $stmt->execute();
-}
-
-// Executa importação
-foreach ($dados['Dados'] as $item) {
-    if ($item['Tipo'] === 1) {
-        $categoria = $item['categoria'];
-        $categoria['catparentid'] = buscarCategoriaIdPorNome($con, $categoria['catparentname'] ?? '') ?? 0;
-        $catid = criarCategoria($con, $categoria);
-    }
-
-    if ($item['Tipo'] === 2 && !empty($item['produtos'])) {
-        $catid = buscarCategoriaIdPorNome($con, $item['categoria']['catname'] ?? '') ?? null;
-        if ($catid) {
-            foreach ($item['produtos'] as $produto) {
-                associarProduto($con, $catid, $produto);
-            }
+        // --- INSERE OU RECUPERA O PRODUTO ---
+        $rawName = trim($p['prodname'] ?? '');
+        if ($rawName === '') {
+          $rawName = uniqid('produto_');
+          error_log("       Nome vazio → gerado '$rawName'");
         }
+
+        // tenta inserir, mas ignora se já existir
+        $sqlP = "
+          INSERT IGNORE INTO isc_products
+            (prodname, proddesc, prodprice, prodcostprice, prodvisible)
+          VALUES
+            (
+              " . esc($rawName) . ",
+              " . esc($p['proddesc']      ?? '') . ",
+              " . esc($p['prodprice']     ?? 0)  . ",
+              " . esc($p['prodcostprice'] ?? 0)  . ",
+              " . ((int)$p['prodvisible'] ?? 0)  . "
+            );
+        ";
+        $conn->query($sqlP);
+
+        if ($conn->affected_rows > 0) {
+          // foi um insert novo
+          $newProd = $conn->insert_id;
+          error_log("       Produto inserido id=$newProd");
+        } else {
+          // já existia: recupera o ID
+          $stmt = $conn->prepare(
+            "SELECT productid FROM isc_products WHERE prodname = ?"
+          );
+          $stmt->bind_param('s', $rawName);
+          $stmt->execute();
+          $stmt->bind_result($newProd);
+          $stmt->fetch();
+          $stmt->close();
+          error_log("       Produto já existia, recuperado id=$newProd");
+        }
+
+        // guarda no mapa
+        $_SESSION['map_prod'][(int)($p['productid'] ?? 0)] = $newProd;
+
+        // --- ASSOCIA CATEGORIAS SEMPRE ---
+        if ($hasProdCatTable) {
+          foreach (explode(',', $p['prodcatids'] ?? '') as $ocat) {
+            $ocat = (int)$ocat;
+            if (isset($_SESSION['map_cat'][$ocat])) {
+              $nc = $_SESSION['map_cat'][$ocat];
+              $conn->query("
+                INSERT IGNORE INTO isc_categoryassociations
+                  (productid, categoryid)
+                VALUES ($newProd, $nc)
+              ");
+              error_log("       Associou produto $newProd → categoria $nc");
+            }
+          }
+        } else {
+          error_log("       Pulando associações: tabela ausente");
+        }
+
+        // --- PROCESSA IMAGENS EMBUTIDAS ---
+        foreach (($item['imagens'] ?? []) as $j => $img) {
+          $urlFile = $img['imagefile'] ?? '';
+          if (! $urlFile) {
+            error_log("       Imagem #$j sem URL");
+            continue;
+          }
+          error_log("       → Imagem #$j URL=$urlFile");
+
+          // baixa temporário
+          $tmp = tempnam(sys_get_temp_dir(), 'img');
+          file_put_contents($tmp, file_get_contents($urlFile));
+
+          // destina em disco
+          $fname     = basename(parse_url($urlFile, PHP_URL_PATH));
+          $firstChar = substr($fname, 0, 1);
+          $chunk     = substr($fname, 1, 3);
+          $dstDir    = "$uploadDir/all/$firstChar/$chunk";
+          if (! is_dir($dstDir)) {
+            mkdir($dstDir, 0755, true);
+            error_log("          Criou pasta $dstDir");
+          }
+          $dst = "$dstDir/$fname";
+          rename($tmp, $dst);
+          error_log("          Gravou $dst");
+
+          // grava no DB
+          $dbPath  = str_replace('\\','/', substr($dst, strlen($siteRoot)));
+          $isThumb = (int)($img['imageisthumb'] ?? 0);
+          $conn->query("
+            INSERT INTO isc_product_images
+              (imageprodid, imagefile, imageisthumb)
+            VALUES
+              ($newProd, " . esc($dbPath) . ", $isThumb)
+          ");
+          error_log("          Imagem cadastrada");
+        }
+      }
+    } else {
+      error_log("    ERRO: bloco sem array 'produtos'");
     }
+    break;
+
+  default:
+    error_log("Tipo $type não tratado");
+    break;
 }
 
-echo json_encode(['status' => 'ok']);
+// 5) remove o JSON de etapa processado
+error_log("5) Apagando etapa $etapaPath");
+unlink($etapaPath);
+
+// 6) responde OK
+echo json_encode(['status'=>'ok']);
+error_log("=== IMPORTAR.PHP FINALIZADO ===\n");

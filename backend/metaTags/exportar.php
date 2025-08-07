@@ -16,30 +16,28 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     erroJson('Método inválido.');
 }
 
-if (!isset($_POST['id_categorias']) || !is_array($_POST['id_categorias'])) {
+if (!isset($_POST['id_categorias'])) {
     erroJson('IDs das categorias não fornecidos.');
 }
 
-$id_categorias = array_map('intval', $_POST['id_categorias']);
+$id_categorias = $_POST['id_categorias'];
+if (!is_array($id_categorias)) {
+    $id_categorias = [$id_categorias];
+}
 
-// Utilizado para rastrear categorias já exportadas
-$jaExportadas = [];
+// URL base do site de origem para montar links
+$base_url = 'https://tudo-projetos-brasil.com.br/product_images/'; // <-- ajuste conforme necessário
 
-function fetchCategoriaComPai($con, $id) {
-    $stmt = $con->prepare("
-        SELECT c.*, 
-               p.catname as catparentname 
-        FROM isc_categories c
-        LEFT JOIN isc_categories p ON c.catparentid = p.categoryid
-        WHERE c.categoryid = ?
-    ");
+function fetchCategoria($con, $id) {
+    $stmt = $con->prepare("SELECT * FROM isc_categories WHERE categoryid = ?");
     $stmt->bind_param('i', $id);
     $stmt->execute();
     return $stmt->get_result()->fetch_assoc();
 }
 
-function fetchProdutos($con, $catid) {
+function fetchProdutos($con, $catid, $base_url) {
     $produtos = [];
+
     $stmt = $con->prepare("
         SELECT p.* FROM isc_products p
         INNER JOIN isc_categoryassociations ca ON p.productid = ca.productid
@@ -48,30 +46,55 @@ function fetchProdutos($con, $catid) {
     $stmt->bind_param('i', $catid);
     $stmt->execute();
     $res = $stmt->get_result();
+
     while ($row = $res->fetch_assoc()) {
-        $produtos[] = $row;
+        $productid = $row['productid'];
+        $produtos[] = [
+            'produto' => $row,
+            'imagens' => fetchImagens($con, $productid, $base_url)
+        ];
     }
+
     return $produtos;
+}
+
+function fetchImagens($con, $productid, $base_url) {
+    $imagens = [];
+
+    $stmt = $con->prepare("SELECT * FROM isc_product_images WHERE imageprodid = ?");
+    $stmt->bind_param('i', $productid);
+    $stmt->execute();
+    $res = $stmt->get_result();
+
+    while ($row = $res->fetch_assoc()) {
+        foreach (['imagefile', 'imagefiletiny', 'imagefilethumb', 'imagefilestd', 'imagefilezoom'] as $campo) {
+            if (!empty($row[$campo])) {
+                $row[$campo] = $base_url . ltrim($row[$campo], '/');
+            }
+        }
+        $imagens[] = $row;
+    }
+
+    return $imagens;
 }
 
 function buscarFilhos($con, $id) {
     $filhos = [];
+
     $stmt = $con->prepare("SELECT categoryid FROM isc_categories WHERE catparentid = ?");
     $stmt->bind_param('i', $id);
     $stmt->execute();
     $res = $stmt->get_result();
+
     while ($row = $res->fetch_assoc()) {
         $filhos[] = $row['categoryid'];
     }
+
     return $filhos;
 }
 
-function montarEstrutura($con, $id_categoria, &$estrutura, &$jaExportadas) {
-    if (in_array($id_categoria, $jaExportadas)) return;
-    $jaExportadas[] = $id_categoria;
-
-    // CATEGORIA
-    $categoria = fetchCategoriaComPai($con, $id_categoria);
+function montarEstrutura($con, $id_categoria, &$estrutura, $base_url) {
+    $categoria = fetchCategoria($con, $id_categoria);
     if ($categoria) {
         $estrutura[] = [
             'Tipo' => 1,
@@ -79,30 +102,30 @@ function montarEstrutura($con, $id_categoria, &$estrutura, &$jaExportadas) {
             'categoria' => $categoria
         ];
 
-        // PRODUTOS DESSA CATEGORIA
         $estrutura[] = [
             'Tipo' => 2,
             'id_categoria' => $id_categoria,
-            'produtos' => fetchProdutos($con, $id_categoria)
+            'produtos' => fetchProdutos($con, $id_categoria, $base_url)
         ];
     }
 
-    // FILHOS
     $filhos = buscarFilhos($con, $id_categoria);
     foreach ($filhos as $filho) {
-        montarEstrutura($con, $filho, $estrutura, $jaExportadas);
+        montarEstrutura($con, $filho, $estrutura, $base_url);
     }
 }
 
-// Executa exportação
+// Executa exportação para cada categoria selecionada
 $estrutura = [];
-foreach ($id_categorias as $id) {
-    montarEstrutura($con, $id, $estrutura, $jaExportadas);
+foreach ($id_categorias as $id_cat) {
+    montarEstrutura($con, (int)$id_cat, $estrutura, $base_url);
 }
 
-// Salva em arquivo JSON
+// Salva no arquivo temporário
 $arquivo = __DIR__ . '/dados/export_' . date('Ymd_His') . '.json';
 file_put_contents($arquivo, json_encode(['Dados' => $estrutura], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+// Atualiza caminho do último para download
 file_put_contents(__DIR__ . '/dados/ultimo.txt', basename($arquivo));
 
 echo json_encode(['status' => 'ok']);
