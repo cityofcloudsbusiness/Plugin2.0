@@ -528,8 +528,8 @@ main#principal #right .barra_progresso .skills span {
     width: 450px;
 }
 
-.area_basededados .box1 .sun_box1 .ajust_import>div .texto_title{
-    text-align:center;
+.area_basededados .box1 .sun_box1 .ajust_import>div .texto_title {
+    text-align: center;
 }
 
 .area_basededados .sun_box1 .sq_right {
@@ -585,7 +585,7 @@ main#principal #right .barra_progresso .skills span {
     display: inline-block;
 }
 
-.checkbox-cat input:checked + span::after {
+.checkbox-cat input:checked+span::after {
     content: '';
     position: absolute;
     left: 0;
@@ -597,45 +597,60 @@ main#principal #right .barra_progresso .skills span {
 }
 
 @keyframes underline {
-    0% { width: 0; }
-    100% { width: 100%; }
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
 
 .cat-label {
-  display: flex;
-  align-items: center;
-  margin: 5px 0;
-  cursor: pointer;
-  position: relative;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+    position: relative;
 }
 
 .cat-label input[type="checkbox"] {
-  margin-right: 8px;
-  transform: scale(1.2);
+    margin-right: 8px;
+    transform: scale(1.2);
 }
 
 /* ANIMAÇÃO: risca da esquerda pra direita */
 .cat-label span {
-  position: relative;
+    position: relative;
 }
+
 .cat-label span::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  height: 2px;
-  width: 0;
-  background-color: #007bff;
-  transition: width 0.4s ease;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background-color: #007bff;
+    transition: width 0.4s ease;
 }
-.cat-label input[type="checkbox"]:checked + span::after {
-  width: 100%;
+
+.cat-label input[type="checkbox"]:checked+span::after {
+    width: 100%;
 }
 
 /* indentação */
-.nivel-1 span { padding-left: 20px; }
-.nivel-2 span { padding-left: 40px; }
-.nivel-3 span { padding-left: 60px; }
+.nivel-1 span {
+    padding-left: 20px;
+}
+
+.nivel-2 span {
+    padding-left: 40px;
+}
+
+.nivel-3 span {
+    padding-left: 60px;
+}
 
 
 .area_basededados .sun_box1 .sq_right label img:hover {
@@ -647,6 +662,95 @@ main#principal #right .barra_progresso .skills span {
     font-family: sans-serif;
     font-size: 14px;
 }
+
+
+/* SESSAO DE PREÇOS */
+
+.area_basededados .sun_box3 .container1 .section1>div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.area_basededados .sun_box3 .container1 .section1>div select#mode {
+    box-shadow: 4px 3px 5px #00000036;
+    width: 90%;
+    height: 35px;
+    text-align: center;
+    background: #8b7947;
+    color: white;
+    font-size: 10px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+
+
+.area_basededados .sun_box3 .container1 .section1>div label {
+    width: 100%;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.area_basededados .sun_box3 input[type=number]::-webkit-inner-spin-button,
+.area_basededados .sun_box3 input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.area_basededados .sun_box3 .container1 .section1 input#percent {
+    text-align: center;
+    border: 1px solid black;
+    width: 30%;
+}
+
+.area_basededados .button_lg_p {
+    width: 70px;
+    height: 30px;
+    background-color: var(--ver_pad_strong);
+    color: white;
+    box-shadow: 2px 2px 5px #00000075;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.area_basededados .button_lg_p:hover {
+    background-color: #8b7947a3;
+    cursor: pointer;
+}
+
+.area_basededados .sun_box3 .container1 .section1 #percent_esp {
+    width: 50%;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.area_basededados .sun_box3 .container1 .section1 .btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.area_basededados .sun_box3 .container1 .section1 select#category {
+    box-shadow: 4px 3px 5px #00000036;
+    width: 90%;
+    height: 35px;
+    text-align: center;
+    background: #8b7947;
+    color: white;
+    margin-top: 10px;
+    font-size: 10px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+/* SESSAO DE PREÇOS */
 
 /* BASE_DE_DADOS.PHP */
 

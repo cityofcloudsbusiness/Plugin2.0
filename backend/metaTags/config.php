@@ -1,7 +1,6 @@
 <?php
-// backend/metaTags/config.php
 return [
-  'siteTimeout' => 0,     // atraso em ms
-  'headerRows'  => 4,     // quantas linhas <Row> antes dos dados
+  'siteTimeout' => 0,    
+  'headerRows'  => 4,     
   'siteOrigem' => 'https://siteorigem.com.br/',
 ];
