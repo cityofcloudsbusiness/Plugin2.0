@@ -750,12 +750,168 @@ main#principal #right .barra_progresso .skills span {
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
+
 /* SESSAO DE PREÇOS */
 
 /* BASE_DE_DADOS.PHP */
 
+@media (max-width:500px) {
+    body {
+        height: auto !important;
+    }
 
-@media(max-width:1366px) {
+    .superior {
+        zoom: 31%;
+    }
+
+    .area {
+        zoom: 51% !important;
+    }
+
+    nav {
+        font-size: 3px !important;
+    }
+
+    main#principal #right .barra_progresso {
+        min-width: 90px;
+    }
+
+    main#principal #right .barra_progresso .skills .percent {
+        width: 80px;
+    }
+
+    ul {
+        zoom: 20%;
+    }
+
+    .area .box1 {
+
+        flex-direction: column !important;
+
+    }
+
+    .area .box1 .sun_box3 {
+        width: 100% !important;
+        margin: 10px 0;
+    }
+
+    .area .box1 .sun_box2 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .area .box1 .sun_box1 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    main#principal #left {
+        height: auto !important;
+    }
+
+}
+
+@media (min-width:500px) and (max-width:827px) {
+    body {
+        height: auto !important;
+    }
+
+    .superior {
+        zoom: 51%;
+    }
+
+    .area {
+        zoom: 81% !important;
+    }
+
+    nav {
+        font-size: 4px !important;
+    }
+
+    main#principal #right .barra_progresso {
+        min-width: 110px;
+    }
+
+    main#principal #right .barra_progresso .skills .percent {
+        width: 100px;
+    }
+
+    ul {
+        zoom: 30%;
+    }
+
+    .area .box1 {
+
+        flex-direction: column !important;
+
+    }
+
+    .area .box1 .sun_box3 {
+        width: 100% !important;
+        margin: 10px 0;
+    }
+
+    .area .box1 .sun_box2 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .area .box1 .sun_box1 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    main#principal #left {
+        height: auto !important;
+    }
+}
+
+
+@media(min-width:827px) and (max-width:1000px) {
+    .area {
+        zoom: 51% !important;
+    }
+
+    nav {
+        font-size: 7px !important;
+    }
+
+    main#principal #right .barra_progresso {
+        min-width: 110px;
+    }
+
+    main#principal #right .barra_progresso .skills .percent {
+        width: 100px;
+    }
+
+    ul {
+        zoom: 40%;
+    }
+}
+
+@media(min-width:1000px) and (max-width:1280px) {
+    .area {
+        zoom: 61% !important;
+    }
+
+    nav {
+        font-size: 10px !important;
+    }
+
+    main#principal #right .barra_progresso {
+        min-width: 110px;
+    }
+
+    main#principal #right .barra_progresso .skills .percent {
+        width: 100px;
+    }
+
+    ul {
+        zoom: 60%;
+    }
+}
+
+@media (min-width:1280px) and (max-width:1366px) {
 
     .area {
         zoom: 71% !important;
@@ -780,5 +936,17 @@ main#principal #right .barra_progresso .skills span {
 
     main#principal #left li {
         font-size: 13px;
+    }
+}
+
+@media(min-width:1367px) and (max-width:1500px) {
+    .area {
+        zoom: 81% !important;
+    }
+}
+
+@media(min-width:1500px) and (max-width:1700px) {
+    .area {
+        zoom: 88% !important;
     }
 }
