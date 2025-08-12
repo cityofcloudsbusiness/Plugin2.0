@@ -499,6 +499,26 @@ main#principal #right .barra_progresso .skills span {
     cursor: pointer;
 }
 
+.area .box3 .sun_box3 .container1 .btn_apaga_metatags {
+    width: 80%;
+    height: 80%;
+    background-color: var(--ver_pad_strong);
+    color: white;
+    box-shadow: 4px 4px 5px #00000075;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    transition: 0.3s;
+}
+
+.area .box3 .sun_box3 .container1 .btn_apaga_metatags:hover{
+       background-color: rgba(139, 121, 71, 0.64);
+        cursor: pointer;
+}
+
+
 /* TERCEIRA SECTION DO HOME */
 
 /* SISTEMAS CONECTADOS - HOME - */

@@ -361,5 +361,85 @@ $(document).ready(function () {
 
 // PORCENTAGEM DE PREÇO DE PRODUTO
 
+/* === PLUGIN: Apagar todas as meta tags (isc_product_tags) === */
+(function () {
+  const TAGS_API = 'backend/metaTags/tags.php';
+
+  // pega elementos da sua barra (suporta .value e .Value)
+  function getProgressEls() {
+    return {
+      bar:   document.querySelector('nav .barra_progresso .percent .progress'),
+      value: document.querySelector('nav .barra_progresso .value, nav .barra_progresso .Value'),
+      title: document.getElementById('titulo_nav'),
+    };
+  }
+  function setProgress(p) {
+    const { bar, value } = getProgressEls();
+    const n = (parseFloat(p) || 0).toFixed(2) + '%';
+    if (bar)   bar.style.width = n;
+    if (value) value.textContent = n;
+  }
+  function setTitle(t) {
+    const { title } = getProgressEls();
+    if (title) title.textContent = t || '';
+  }
+  function refreshTagsCounter() {
+    const el = document.getElementById('tags_counter');
+    if (!el) return;
+    fetch(`${TAGS_API}?action=count`, { cache: 'no-store' })
+      .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP '+r.status)))
+      .then(j => { el.textContent = `Registros: ${j.tags_total}` + (j.assoc_total != null ? ` (associações: ${j.assoc_total})` : ''); })
+      .catch(() => { el.textContent = '—'; });
+  }
+  // se existir contador na tela, atualiza ao carregar
+  if (document.getElementById('tags_counter')) refreshTagsCounter();
+
+  // botão .btn_apaga_metatags (CAPTURA para não conflitar com outros handlers)
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.btn_apaga_metatags');
+    if (!btn) return;
+
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    e.stopPropagation();
+
+    const msg = btn.dataset.confirm
+      || 'Tem certeza que deseja apagar TODAS as meta tags de produtos? Esta ação é irreversível.';
+    if (!confirm(msg)) return;
+
+    // fecha SSE anterior, se houver
+    if (window.__es instanceof EventSource) { try { window.__es.close(); } catch(_) {} }
+
+    setTitle('Apagando meta tags…');
+    setProgress(0);
+
+    const es = new EventSource(`${TAGS_API}?action=purge`);
+    window.__es = es;
+
+    es.onmessage = (ev) => {
+      const data = String(ev.data || '');
+      if (data.startsWith('progress:')) {
+        setProgress(data.split(':')[1] || '0');
+      } else if (data === 'done') {
+        setProgress(100);
+        setTitle('Concluído!');
+        try { es.close(); } catch(_) {}
+        refreshTagsCounter();
+      } else if (data.startsWith('error:')) {
+        setTitle('Erro: ' + data.slice(6));
+        console.error('[purge tags] SSE error:', data);
+        try { es.close(); } catch(_) {}
+      }
+    };
+
+    es.onerror = (err) => {
+      console.error('[purge tags] Falha na conexão SSE', err);
+      setTitle('Erro na conexão.');
+      try { es.close(); } catch(_) {}
+    };
+  }, true);
+})();
+
+
 
 });

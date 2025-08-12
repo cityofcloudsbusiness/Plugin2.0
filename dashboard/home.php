@@ -173,6 +173,15 @@
         <div class="sun_box3 sunform">
             <span class="square"></span>
 
+            <div class="container1">
+                <p class="titulo_green">Tags de Produto</p>
+                <div class="container1">
+                    <div class="section1">
+                        <button class="btn_apaga_metatags">LIMPAR</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
