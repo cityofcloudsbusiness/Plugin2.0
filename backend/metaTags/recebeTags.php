@@ -1,123 +1,143 @@
 <?php
-// transforma em Server-Sent Events
+/**
+ * ARQUIVO: recebeTags.php
+ * FUNÇÃO: Atualiza SEO de Produtos e cria/associa Tags (com filtro por categoria)
+ */
+
+// 1. CONFIGURAÇÕES DE FLUXO E SSE
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
+header('Connection: keep-alive');
+header('X-Accel-Buffering: no');
+
+// Desativa limites de tempo para processamentos longos
+set_time_limit(0); 
+ini_set('display_errors', 0);
+error_reporting(E_ALL);
 
 include "../conexao.php";
 
-// 1) valida parâmetros via GET (SSE só trabalha com GET)
-$num1      = filter_input(INPUT_GET,  'num1',      FILTER_VALIDATE_INT);
-$num2      = filter_input(INPUT_GET,  'num2',      FILTER_VALIDATE_INT);
+// 2. COLETA E VALIDAÇÃO DE PARÂMETROS
 $cidades   = json_decode($_GET['cidades']   ?? '[]', true);
 $telefones = json_decode($_GET['telefones'] ?? '[]', true);
+$id_cats   = json_decode($_GET['id_categorias'] ?? '[]', true); // IDs vindos do Modal
 
-if ($num1 === false || $num2 === false) {
-    echo "event: error\n";
-    echo "data: Parâmetros inválidos\n\n";
-    exit;
+// 3. CONSTRUÇÃO DO FILTRO SQL (WHERE)
+$where = "";
+if (!empty($id_cats)) {
+    $filtros = [];
+    foreach($id_cats as $id) {
+        // FIND_IN_SET é ideal pois prodcatids armazena listas como "12,45,100"
+        $filtros[] = "FIND_IN_SET(".(int)$id.", prodcatids)";
+    }
+    $where = " WHERE " . implode(" OR ", $filtros);
 }
 
-// 2) carrega todas as categorias numa única query
+// 4. CACHE DE CATEGORIAS (Para buscar Descrição do "Pai")
 $cats = [];
-$res = $con->query("
-    SELECT categoryid, catparentid, catmetadesc
-      FROM isc_categories
-");
+$res = $con->query("SELECT categoryid, catparentid, catmetadesc FROM isc_categories");
 while ($r = $res->fetch_assoc()) {
     $cats[(int)$r['categoryid']] = [
       'parent'      => (int)$r['catparentid'],
       'description' => $r['catmetadesc']
     ];
 }
+
+/**
+ * Busca recursiva da descrição da categoria raiz (parent = 0)
+ */
 function getMetaDesc(int $cid, array $cats): string {
-    if (! isset($cats[$cid])) {
-        return '';
-    }
+    if (!isset($cats[$cid])) return '';
     while (isset($cats[$cid]) && $cats[$cid]['parent'] !== 0) {
         $cid = $cats[$cid]['parent'];
     }
     return $cats[$cid]['description'] ?? '';
 }
 
-// 3) busca todos os produtos de uma vez
-$prods = $con->query("SELECT productid, prodname, prodcatids FROM isc_products");
+// 5. PREPARAÇÃO DOS MOTORES SQL (Prepared Statements)
+// Fora do loop para ganhar velocidade (até 10x mais rápido)
+$updProd = $con->prepare("UPDATE isc_products SET prodmetadesc=?, prodpagetitle=?, prodsearchkeywords=?, prodmetakeywords=? WHERE productid=?");
+
+$updSrch = $con->prepare("INSERT INTO isc_product_search (productid, prodname, prodsearchkeywords) 
+                          VALUES (?, ?, ?) 
+                          ON DUPLICATE KEY UPDATE prodsearchkeywords=VALUES(prodsearchkeywords)");
+
+$updTag  = $con->prepare("INSERT INTO isc_product_tags (tagname, tagfriendlyname, tagcount) 
+                          VALUES (?, ?, 0) 
+                          ON DUPLICATE KEY UPDATE tagid=LAST_INSERT_ID(tagid)");
+
+$updAssoc = $con->prepare("INSERT IGNORE INTO isc_product_tagassociations (tagid, productid) VALUES (?, ?)");
+
+// 6. BUSCA DE PRODUTOS E INÍCIO DO LOOP SSE
+$prods = $con->query("SELECT productid, prodname, prodcatids FROM isc_products" . $where);
 $total = $prods->num_rows;
 $atual = 0;
 
-// 4) loop de processamento + envio de evento SSE
+// Caso não haja produtos no filtro
+if ($total == 0) {
+    echo "event: complete\ndata: 100\n\n";
+    exit;
+}
+
 while ($prod = $prods->fetch_assoc()) {
     $atual++;
-    $percent = intval($atual / $total * 100);
-
-    // extrai dados
+    
     $productId = (int)$prod['productid'];
     $nome      = $prod['prodname'];
-    $ids       = array_filter(explode(',', $prod['prodcatids']), fn($v)=>ctype_digit($v));
-    $categoria = $ids ? (int)reset($ids) : 0;
-    $metaDesc  = getMetaDesc($categoria, $cats);
+    
+    // Identifica a categoria principal para buscar a Meta Description
+    $catIdsArr = array_filter(explode(',', $prod['prodcatids']), fn($v)=>ctype_digit($v));
+    $catPrincipal = $catIdsArr ? (int)reset($catIdsArr) : 0;
+    $metaDesc = getMetaDesc($catPrincipal, $cats);
 
-    // monta strings
+    // MONTAGEM DAS STRINGS SEO
     $titulo   = $nome . ' ' . implode(' ', $telefones) . ' ' . implode(' ', $cidades);
     $keywords = $nome . ', ' . implode(', ', array_map(fn($c)=>"$nome $c", $cidades));
     $friendly = mb_strtolower(str_replace(' ', '-', $keywords), 'UTF-8');
 
-    // UPDATE no produto
-    $upd = $con->prepare("
-      UPDATE isc_products
-         SET prodmetadesc       = ?,
-             prodpagetitle      = ?,
-             prodsearchkeywords = ?,
-             prodmetakeywords   = ?
-       WHERE productid         = ?
-    ");
-    $upd->bind_param("ssssi",
-        $metaDesc,
-        $titulo,
-        $keywords,
-        $keywords,
-        $productId
-    );
-    $upd->execute();
+    // EXECUÇÃO DAS ATUALIZAÇÕES
+    // A) Update no Produto
+    $updProd->bind_param("ssssi", $metaDesc, $titulo, $keywords, $keywords, $productId);
+    $updProd->execute();
 
-    // upsert na tabela de busca
-    $srch = $con->prepare("
-      INSERT INTO isc_product_search (productid, prodname, prodsearchkeywords)
-      VALUES (?, ?, ?)
-      ON DUPLICATE KEY UPDATE
-        prodsearchkeywords = VALUES(prodsearchkeywords)
-    ");
-    $srch->bind_param("iss", $productId, $nome, $keywords);
-    $srch->execute();
+    // B) Upsert na Busca
+    $updSrch->bind_param("iss", $productId, $nome, $keywords);
+    $updSrch->execute();
 
-    // upsert de tags
-    $tag = $con->prepare("
-      INSERT INTO isc_product_tags (tagname, tagfriendlyname, tagcount)
-      VALUES (?, ?, 0)
-      ON DUPLICATE KEY UPDATE
-        tagname         = VALUES(tagname),
-        tagfriendlyname = VALUES(tagfriendlyname)
-    ");
-    $tag->bind_param("ss", $keywords, $friendly);
-    $tag->execute();
-    $tagId = $con->insert_id ?: $tagId;
+    // C) Upsert na Tag (Garante existência e captura ID)
+    $updTag->bind_param("ss", $keywords, $friendly);
+    $updTag->execute();
+    $tagId = $con->insert_id;
 
-    // associação tag↔produto
-    $assoc = $con->prepare("
-      INSERT INTO isc_product_tagassociations (tagid, productid)
-      VALUES (?, ?)
-      ON DUPLICATE KEY UPDATE
-        tagid = tagid
-    ");
-    $assoc->bind_param("ii", $tagId, $productId);
-    $assoc->execute();
+    // Caso o insert_id falhe por já existir sem alteração, fazemos um fallback
+    if ($tagId == 0) {
+        $resTag = $con->query("SELECT tagid FROM isc_product_tags WHERE tagname = '" . $con->real_escape_string($keywords) . "'");
+        $tagId = $resTag->fetch_assoc()['tagid'] ?? 0;
+    }
 
-    // envia progresso ao cliente
-    echo "event: progress\n";
-    echo "data: {$percent}\n\n";
-    @ob_flush(); flush();
+    // D) Associação Tag <-> Produto
+    if ($tagId > 0) {
+        $updAssoc->bind_param("ii", $tagId, $productId);
+        $updAssoc->execute();
+    }
+
+    // 7. ENVIO DE PROGRESSO AO FRONTEND (A cada 5 itens para fluidez)
+    if ($atual % 5 == 0 || $atual == $total) {
+        $percent = intval(($atual / $total) * 100);
+        echo "event: progress\ndata: {$percent}\n\n";
+        
+        // Força a saída do buffer
+        if (ob_get_level() > 0) ob_flush();
+        flush();
+    }
 }
 
-// sinaliza conclusão
-echo "event: complete\n";
-echo "data: 100\n\n";
-exit;
+// 8. FINALIZAÇÃO
+echo "event: complete\ndata: 100\n\n";
+
+// Fecha statements e conexão
+$updProd->close();
+$updSrch->close();
+$updTag->close();
+$updAssoc->close();
+$con->close();

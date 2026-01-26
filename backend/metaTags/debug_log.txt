@@ -1,0 +1,1123 @@
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5-mp-vhd-3520-d-intelbras-teste-34992917687-6977781bed1fc.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5-mp-vhd-3520-d-intelbras-teste-34992917687-6977781bed1fc.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5-mp-vhd-3520-d-intelbras-teste-34992917687-6977781c2dbdd.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5-mp-vhd-3520-d-intelbras-teste-34992917687-6977781c2dbdd.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5-mp-vhd-3520-d-intelbras-teste-34992917687-6977781c6866c.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5-mp-vhd-3520-d-intelbras-teste-34992917687-6977781c6866c.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5mp-vhd-1520-d-intelbras-teste-34992917687-6977781a5309f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5mp-vhd-1520-d-intelbras-teste-34992917687-6977781a5309f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5mp-vhd-1520-d-intelbras-teste-34992917687-6977781a8b01a.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5mp-vhd-1520-d-intelbras-teste-34992917687-6977781a8b01a.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5mp-vhd-1520-d-intelbras-teste-34992917687-6977781ac594d.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5mp-vhd-1520-d-intelbras-teste-34992917687-6977781ac594d.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1010-d-g4-intelbras-teste-34992917687-697777b8b92a8.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1010-d-g4-intelbras-teste-34992917687-697777b8b92a8.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1010-d-g4-intelbras-teste-34992917687-697777b8e7466.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1010-d-g4-intelbras-teste-34992917687-697777b8e7466.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aa4fd47.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aa4fd47.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aa7c8bc.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aa7c8bc.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aab1667.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aab1667.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aae7ba3.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aae7ba3.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d5caf91.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d5caf91.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d608b52.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d608b52.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d63c8bd.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d63c8bd.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d672e85.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d672e85.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777be86034.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777be86034.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777beafe92.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777beafe92.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777bed828f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777bed828f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777bf1f2c7.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777bf1f2c7.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g6-intelbras-teste-34992917687-697777bacb9b6.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g6-intelbras-teste-34992917687-697777bacb9b6.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g6-intelbras-teste-34992917687-697777bb087f4.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g6-intelbras-teste-34992917687-697777bb087f4.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g6-intelbras-teste-34992917687-697777bb51ec4.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g6-intelbras-teste-34992917687-697777bb51ec4.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g8-intelbras-teste-34992917687-697777d0cd50e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g8-intelbras-teste-34992917687-697777d0cd50e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g8-intelbras-teste-34992917687-697777d10a3aa.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g8-intelbras-teste-34992917687-697777d10a3aa.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g8-intelbras-teste-34992917687-697777d14049b.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g8-intelbras-teste-34992917687-697777d14049b.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777c9e602e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777c9e602e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777ca31977.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777ca31977.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777ca673dc.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777ca673dc.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777caa1b62.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777caa1b62.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b929fc0.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b929fc0.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b95e95f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b95e95f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b994abd.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b994abd.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b9ca2c0.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b9ca2c0.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777cd8f92e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777cd8f92e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777cdd0dd3.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777cdd0dd3.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777ce143bf.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777ce143bf.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777ce4c20d.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777ce4c20d.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g4-intelbras-teste-34992917687-697777b0536da.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g4-intelbras-teste-34992917687-697777b0536da.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g5-intelbras-teste-34992917687-697777bf5568a.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g5-intelbras-teste-34992917687-697777bf5568a.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g5-intelbras-teste-34992917687-697777bf93111.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g5-intelbras-teste-34992917687-697777bf93111.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g5-intelbras-teste-34992917687-697777bfcb42a.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g5-intelbras-teste-34992917687-697777bfcb42a.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c42139c.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c42139c.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c4566b7.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c4566b7.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c48c307.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c48c307.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c4b7552.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c4b7552.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b5b93fb.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b5b93fb.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b5f0762.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b5f0762.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b634903.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b634903.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b6658f0.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b6658f0.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3130-d-g7-intelbras-teste-34992917687-697777a99fe2f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3130-d-g7-intelbras-teste-34992917687-697777a99fe2f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3130-d-g7-intelbras-teste-34992917687-697777a9d6641.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3130-d-g7-intelbras-teste-34992917687-697777a9d6641.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3130-d-g7-intelbras-teste-34992917687-697777aa16e0b.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3130-d-g7-intelbras-teste-34992917687-697777aa16e0b.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3150-vf-g7-intelbras-teste-34992917687-697777cf41b7e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3150-vf-g7-intelbras-teste-34992917687-697777cf41b7e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3150-vf-g7-intelbras-teste-34992917687-697777cf7765d.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3150-vf-g7-intelbras-teste-34992917687-697777cf7765d.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3150-vf-g7-intelbras-teste-34992917687-697777cfaee0f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3150-vf-g7-intelbras-teste-34992917687-697777cfaee0f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3220-d-a-g6-intelbras-teste-34992917687-697777cacd045.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3220-d-a-g6-intelbras-teste-34992917687-697777cacd045.png
+[] --- Iniciando verificação: a/133/412-teste-34992917687-69777579deba1.png
+[] --- Iniciando verificação: a/247/bra--o-articulado-up-teste-34992917687-6977758aeceb8.png
+[] --- Iniciando verificação: a/264/zap-pop-teste-34992917687-697775dbbcd14.jpg
+[] --- Iniciando verificação: a/371/kit-anzol-teste-34992917687-6977758b8fd4a.png
+[] --- Iniciando verificação: a/492/new-bv-nano-vip-teste-34992917687-69777577ec58d.png
+[] --- Iniciando verificação: a/555/pivo-tra----o-pt-pl3-teste-34992917687-6977757929787.png
+[] --- Iniciando verificação: a/650/200mps-teste-34992917687-697775867e14c.png
+[] --- Iniciando verificação: a/675/pivo-pist--o-pp-pl4-teste-34992917687-6977757a53a04.png
+[] --- Iniciando verificação: a/739/s-board-2000-teste-34992917687-6977755c078bf.jpg
+[] --- Iniciando verificação: a/763/caixa-para-centrais-dz-teste-34992917687-6977758bc1a1e.png
+[] --- Iniciando verificação: a/903/wego-botoeira-teste-34992917687-6977756b8b1e6.png
+[] --- Iniciando verificação: a/905/ln-bio-teste-34992917687-69777569510e0.png
+[] --- Iniciando verificação: b/009/sr800-i-hs-teste-34992917687-69777558648d9.png
+[] --- Iniciando verificação: b/221/js80-r-teste-34992917687-6977757ea6bd6.png
+[] --- Iniciando verificação: b/225/my-nice-welcome-teste-34992917687-6977754f933f5.png
+[] --- Iniciando verificação: b/356/nitro-1024-teste-34992917687-6977758206fe4.png
+[] --- Iniciando verificação: b/447/dz-nano-nitro-teste-34992917687-69777573d8105.png
+[] --- Iniciando verificação: b/506/atack-black-2-feixes-teste-34992917687-69777561314bf.png
+[] --- Iniciando verificação: b/655/golden-super-teste-34992917687-69777552ea845.png
+[] --- Iniciando verificação: b/766/pivo-sk-predial-24v-teste-34992917687-6977760be1254.png
+[] --- Iniciando verificação: b/860/ss-400-teste-34992917687-697775e12958e.png
+[] --- Iniciando verificação: b/990/impacto-teste-34992917687-69777562c21a8.png
+[] --- Iniciando verificação: c/045/j275-sa-teste-34992917687-6977757c97618.png
+[] --- Iniciando verificação: c/104/new-bv-atto-vip-teste-34992917687-69777576a6885.png
+[] --- Iniciando verificação: c/137/wkxh90-vip-teste-34992917687-6977758403756.png
+[] --- Iniciando verificação: c/147/dz-atto-nitro-teste-34992917687-69777572aca96.png
+[] --- Iniciando verificação: c/530/sprint-4000-teste-34992917687-6977755acdb54.png
+[] --- Iniciando verificação: c/548/o-view-teste-34992917687-6977756611544.png
+[] --- Iniciando verificação: c/662/pivo-condominium-jetflex-teste-34992917687-69777609bbc45.png
+[] --- Iniciando verificação: c/699/tx-click-teste-34992917687-697775854a0ef.png
+[] --- Iniciando verificação: d/184/era-one-lora-----oxi-lr-teste-34992917687-697775713d73b.png
+[] --- Iniciando verificação: d/230/zap-select-teste-34992917687-697775ddadcb9.png
+[] --- Iniciando verificação: d/262/fr300-teste-34992917687-69777569b7c06.png
+[] --- Iniciando verificação: d/284/super-800-teste-34992917687-69777554473d8.png
+[] --- Iniciando verificação: d/306/dz-nano-turbo-teste-34992917687-6977757328012.png
+[] --- Iniciando verificação: d/444/j275-f-2k20-teste-34992917687-6977757d6d2ad.png
+[] --- Iniciando verificação: d/640/xt4-433mhz-rc-teste-34992917687-69777582f1d68.png
+[] --- Iniciando verificação: d/686/10k-choque-duplo-teste-34992917687-697776315e6fe.png
+[] --- Iniciando verificação: d/734/dz3-turbo-teste-34992917687-6977757428834.png
+[] --- Iniciando verificação: d/851/rack-para-gravadores-teste-34992917687-697775e160c7a.png
+[] --- Iniciando verificação: d/866/golden-max-teste-34992917687-6977755288b80.png
+[] --- Iniciando verificação: d/883/3tb-teste-34992917687-697775706bb44.jpg
+[] --- Iniciando verificação: e/264/402-teste-34992917687-6977757ac2703.png
+[] --- Iniciando verificação: e/306/c2pro-teste-34992917687-697775688dda8.jpg
+[] --- Iniciando verificação: e/313/dz-rio-400-mono-teste-34992917687-697776024c947.png
+[] --- Iniciando verificação: e/316/pivo-sk-jetflex-teste-34992917687-6977760c5a92b.png
+[] --- Iniciando verificação: e/335/volt-gate-ind-senoidal-teste-34992917687-697775de2d384.png
+[] --- Iniciando verificação: e/354/lk-evo-teste-34992917687-6977757f83d5e.png
+[] --- Iniciando verificação: e/373/era-one-teste-34992917687-697775719a95f.png
+[] --- Iniciando verificação: e/375/wego-conversora-teste-34992917687-69777566ae883.jpg
+[] --- Iniciando verificação: e/505/chaveiro-de-proximidade-teste-34992917687-6977756cda50c.png
+[] --- Iniciando verificação: e/510/placa-pk-teste-34992917687-69777587b07ff.png
+[] --- Iniciando verificação: e/577/radar-captur-teste-34992917687-697775de9cbbc.png
+[] --- Iniciando verificação: e/585/atack-new-black-2-feixes-teste-34992917687-69777561754c8.png
+[] --- Iniciando verificação: e/737/wkxb90-teste-34992917687-69777583ce387.png
+[] --- Iniciando verificação: e/762/volt-gate-ind-teste-34992917687-697775dcbe2aa.jpg
+[] --- Iniciando verificação: e/766/ctw3004-teste-34992917687-6977756eecaac.png
+[] --- Iniciando verificação: e/806/mg3000-teste-34992917687-6977756b0774c.png
+[] --- Iniciando verificação: e/857/alum--nio-max-teste-34992917687-697775525278c.png
+[] --- Iniciando verificação: e/891/wego-bot--o-de-sa--da-teste-34992917687-69777565d5a2a.jpg
+[] --- Iniciando verificação: e/924/cthn-teste-34992917687-69777585eb280.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5-mp-vhd-3520-d-intelbras-teste-34992917687-6977781bed1fc.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5-mp-vhd-3520-d-intelbras-teste-34992917687-6977781c2dbdd.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5-mp-vhd-3520-d-intelbras-teste-34992917687-6977781c6866c.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5mp-vhd-1520-d-intelbras-teste-34992917687-6977781a5309f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5mp-vhd-1520-d-intelbras-teste-34992917687-6977781a8b01a.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-hdcvi-5mp-vhd-1520-d-intelbras-teste-34992917687-6977781ac594d.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1010-d-g4-intelbras-teste-34992917687-697777b8b92a8.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1010-d-g4-intelbras-teste-34992917687-697777b8e7466.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aa4fd47.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aa7c8bc.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aab1667.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1130-b-g7-intelbras-teste-34992917687-697777aae7ba3.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d5caf91.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d608b52.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d63c8bd.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g5-intelbras-teste-34992917687-697777d672e85.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777be86034.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777beafe92.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777bed828f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-b-g6-intelbras-teste-34992917687-697777bf1f2c7.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g6-intelbras-teste-34992917687-697777bacb9b6.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g6-intelbras-teste-34992917687-697777bb087f4.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g6-intelbras-teste-34992917687-697777bb51ec4.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g8-intelbras-teste-34992917687-697777d0cd50e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g8-intelbras-teste-34992917687-697777d10a3aa.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1220-d-g8-intelbras-teste-34992917687-697777d14049b.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777c9e602e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777ca31977.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777ca673dc.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g7-intelbras-teste-34992917687-697777caa1b62.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b929fc0.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b95e95f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b994abd.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g8-intelbras-teste-34992917687-697777b9ca2c0.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777cd8f92e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777cdd0dd3.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777ce143bf.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-1230-b-g9-intelbras-teste-34992917687-697777ce4c20d.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g4-intelbras-teste-34992917687-697777b0536da.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g5-intelbras-teste-34992917687-697777bf5568a.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g5-intelbras-teste-34992917687-697777bf93111.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g5-intelbras-teste-34992917687-697777bfcb42a.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c42139c.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c4566b7.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c48c307.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g6-intelbras-teste-34992917687-697777c4b7552.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b5b93fb.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b5f0762.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b634903.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3120-b-g7-intelbras-teste-34992917687-697777b6658f0.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3130-d-g7-intelbras-teste-34992917687-697777a99fe2f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3130-d-g7-intelbras-teste-34992917687-697777a9d6641.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3130-d-g7-intelbras-teste-34992917687-697777aa16e0b.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3150-vf-g7-intelbras-teste-34992917687-697777cf41b7e.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3150-vf-g7-intelbras-teste-34992917687-697777cf7765d.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3150-vf-g7-intelbras-teste-34992917687-697777cfaee0f.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3220-d-a-g6-intelbras-teste-34992917687-697777cacd045.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3220-d-a-g6-intelbras-teste-34992917687-697777cb024b9.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3220-d-a-g6-intelbras-teste-34992917687-697777cb355f6.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-b-g6-intelbras-teste-34992917687-697777b21b1c7.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-b-g6-intelbras-teste-34992917687-697777b2552c6.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-b-g6-intelbras-teste-34992917687-697777b2824cb.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-b-g8-intelbras-teste-34992917687-697777d393092.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-b-g8-intelbras-teste-34992917687-697777d3c8375.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-b-g8-intelbras-teste-34992917687-697777d4088e8.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-b-g8-intelbras-teste-34992917687-697777d449a7d.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-d-g8-intelbras-teste-34992917687-697777b47418a.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-d-g8-intelbras-teste-34992917687-697777b49e9ad.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-d-g8-intelbras-teste-34992917687-697777b4d2550.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-d-z-g5-intelbras-teste-34992917687-697777d526a1a.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-d-z-g5-intelbras-teste-34992917687-697777d554137.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3230-d-z-g5-intelbras-teste-34992917687-697777d595702.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3240-d-vf-g7-intelbras-teste-34992917687-697777c82d1ba.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3240-d-vf-g7-intelbras-teste-34992917687-697777c8623bc.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3240-d-vf-g7-intelbras-teste-34992917687-697777c89a995.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3240-d-vf-g7-intelbras-teste-34992917687-697777c8c68ae.png
+[] --- Iniciando verificação: f/001/c--mera-infravermelho-multi-hd-vhd-3240-d-vf-g8-intelbras-teste-34992917687-697777cfe11a1.png
+[] --- Iniciando verificação: f/001/c--mera-inteligente-da-s--rie-5000-vip-5460-z-ia-intelbras-teste-34992917687-697777f3a6bf4.png
+[] --- Iniciando verificação: f/001/c--mera-inteligente-da-s--rie-5000-vip-5460-z-ia-intelbras-teste-34992917687-697777f3dbe28.png
+[] --- Iniciando verificação: f/001/c--mera-inteligente-da-s--rie-5000-vip-5460-z-ia-intelbras-teste-34992917687-697777f41a307.png
+[] --- Iniciando verificação: f/001/c--mera-inteligente-da-s--rie-5000-vip-5460-z-ia-intelbras-teste-34992917687-697777f45c064.png
+[] --- Iniciando verificação: f/001/c--mera-inteligente-wi-fi-a-bateria-im8-intelbras-teste-34992917687-69777780be060.png
+[] --- Iniciando verificação: f/001/c--mera-inteligente-wi-fi-a-bateria-im8-intelbras-teste-34992917687-69777780f17cc.png
+[] --- Iniciando verificação: f/001/c--mera-inteligente-wi-fi-a-bateria-im8-intelbras-teste-34992917687-69777781354d0.png
+[] --- Iniciando verificação: f/001/c--mera-inteligente-wi-fi-a-bateria-im8-intelbras-teste-34992917687-697777816a336.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-3mp-wi-fi-360---im4-3mp-intelbras-teste-34992917687-6977776e5622e.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-3mp-wi-fi-360---im4-3mp-intelbras-teste-34992917687-6977776e8cd38.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-3mp-wi-fi-360---im4-3mp-intelbras-teste-34992917687-6977776ebf040.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-3mp-wi-fi-360---ime-360-3mp-intelbras-teste-34992917687-6977777f476f2.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-3mp-wi-fi-360---ime-360-3mp-intelbras-teste-34992917687-6977777f7e8f0.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-3mp-wi-fi-360---ime-360-3mp-intelbras-teste-34992917687-6977777fbaef6.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-c---micro-sd-32-gb-intelbras-teste-34992917687-697777858af14.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-c---micro-sd-32-gb-intelbras-teste-34992917687-69777785be8e9.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-c---micro-sd-32-gb-intelbras-teste-34992917687-69777785ecbf0.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-c-black-intelbras-teste-34992917687-697777804f9e6.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-c-black-intelbras-teste-34992917687-69777780856fb.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-c-intelbras-teste-34992917687-6977776f321ca.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-c-intelbras-teste-34992917687-6977776f6be77.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-c-intelbras-teste-34992917687-6977776fa2e9c.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-intelbras-teste-34992917687-69777769577ac.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-intelbras-teste-34992917687-6977776981a99.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-intelbras-teste-34992917687-69777769ad2a6.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-360---im4-intelbras-teste-34992917687-69777769e3993.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im1-2mp-intelbras-teste-34992917687-6977777fe6466.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im1-2mp-intelbras-teste-34992917687-697777801d33b.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3---microsd-32gb-intelbras-teste-34992917687-697777747a7d5.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3---microsd-32gb-intelbras-teste-34992917687-69777774b0c20.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3---microsd-32gb-intelbras-teste-34992917687-69777774ebd6a.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3---microsd-32gb-intelbras-teste-34992917687-69777775323e9.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-c-com-microsd-32gb-intelbras-teste-34992917687-697777716c640.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-c-com-microsd-32gb-intelbras-teste-34992917687-69777771a2209.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-c-com-microsd-32gb-intelbras-teste-34992917687-69777771cea69.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-c-com-microsd-32gb-intelbras-teste-34992917687-6977777204383.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-c-duo-intelbras-teste-34992917687-69777773124a0.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-c-duo-intelbras-teste-34992917687-69777773466f8.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-c-duo-intelbras-teste-34992917687-697777737621d.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-c-duo-intelbras-teste-34992917687-69777773ac2c4.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-duo-intelbras-teste-34992917687-69777782417a7.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-duo-intelbras-teste-34992917687-6977778278842.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-duo-intelbras-teste-34992917687-69777782b8162.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-duo-intelbras-teste-34992917687-69777782ea281.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-intelbras-teste-34992917687-6977776d7c78f.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-intelbras-teste-34992917687-6977776daddd4.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-intelbras-teste-34992917687-6977776de599d.png
+[] --- Iniciando verificação: f/001/c--mera-interna-inteligente-wi-fi-full-hd-im3-intelbras-teste-34992917687-6977776e24c02.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-360---ime-360-c-intelbras-teste-34992917687-6977776c91b27.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-360---ime-360-c-intelbras-teste-34992917687-6977776cc37ed.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-360---ime-360-c-intelbras-teste-34992917687-6977776d03577.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-360---ime-360-c-intelbras-teste-34992917687-6977776d38164.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-360---ime-360-intelbras-teste-34992917687-6977778332f19.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-360---ime-360-intelbras-teste-34992917687-697777836c54a.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-360---ime-360-intelbras-teste-34992917687-69777783a405e.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-360---izc-1004-intelbras-teste-34992917687-69777781a1cd8.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-360---izc-1004-intelbras-teste-34992917687-69777781dd619.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-360---izc-1004-intelbras-teste-34992917687-6977778211d9b.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-im3-c-intelbras-teste-34992917687-69777784b0b7d.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-im3-c-intelbras-teste-34992917687-69777784e759d.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-im3-c-intelbras-teste-34992917687-6977778526927.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-im3-c-intelbras-teste-34992917687-6977778556c2e.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx---microsd-32-gb-intelbras-teste-34992917687-6977777ca4d70.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx---microsd-32-gb-intelbras-teste-34992917687-6977777ce21c5.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx---microsd-32-gb-intelbras-teste-34992917687-6977777d1f028.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx---microsd-32-gb-intelbras-teste-34992917687-6977777d581cc.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx-c---micro-sd-de-32-gb-intelbras-teste-34992917687-697777780324b.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx-c---micro-sd-de-32-gb-intelbras-teste-34992917687-6977777836507.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx-c---micro-sd-de-32-gb-intelbras-teste-34992917687-697777786d58d.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx-c-intelbras-teste-34992917687-6977777238221.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx-c-intelbras-teste-34992917687-697777726cfda.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx-c-intelbras-teste-34992917687-697777729e4ba.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx-c-intelbras-teste-34992917687-69777772d4678.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx-intelbras-teste-34992917687-6977776fd0e14.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx-intelbras-teste-34992917687-697777700d290.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx-intelbras-teste-34992917687-697777703bb41.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-full-hd-imx-intelbras-teste-34992917687-69777770736bb.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-im1-com-micro-sd-de-32gb-intelbras-teste-34992917687-69777775675e9.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-im1-com-micro-sd-de-32gb-intelbras-teste-34992917687-697777759d715.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-im1-com-micro-sd-de-32gb-intelbras-teste-34992917687-69777775cd573.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-im1-intelbras-teste-34992917687-6977776a26692.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-im1-intelbras-teste-34992917687-6977776a6ad59.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-im1-intelbras-teste-34992917687-6977776a9f35a.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-im1-intelbras-teste-34992917687-6977776ad5609.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-imx1-com-micro-sd-32gb-intelbras-teste-34992917687-6977776ef3bce.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-imx1-intelbras-teste-34992917687-69777786285b4.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-imx1-intelbras-teste-34992917687-69777786606df.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-imx1-intelbras-teste-34992917687-6977778696587.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-hd-imx1-intelbras-teste-34992917687-69777786d36c6.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-profissional-vipw-1210-c-intelbras-teste-34992917687-697778088c805.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-profissional-vipw-1210-c-intelbras-teste-34992917687-69777808c40ca.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-profissional-vipw-1210-c-intelbras-teste-34992917687-6977780907b67.png
+[] --- Iniciando verificação: f/001/c--mera-interna-wi-fi-profissional-vipw-1210-c-intelbras-teste-34992917687-697778093ea2d.png
+[] --- Iniciando verificação: f/001/c--mera-ip-360---vip-7360-mini-pan-intelbras-teste-34992917687-697777a16cc1b.png
+[] --- Iniciando verificação: f/001/c--mera-ip-4-mp-com-ultra-intelig--ncia-artificial-vip-9440-d-ultra-ia-ft-intelbras-teste-34992917687-69777795b4431.png
+[] --- Iniciando verificação: f/001/c--mera-ip-4-mp-com-ultra-intelig--ncia-artificial-vip-9440-d-ultra-ia-ft-intelbras-teste-34992917687-69777795e6909.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet----prova-de-explos--o-vip-7230-ae-intelbras-teste-34992917687-6977779f0e719.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-intelig--ncia-artificial-vip-3240-ia-g2-intelbras-teste-34992917687-697777e2d86be.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-intelig--ncia-artificial-vip-3240-ia-g2-intelbras-teste-34992917687-697777e31849c.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-intelig--ncia-artificial-vip-3240-ia-g2-intelbras-teste-34992917687-697777e34335d.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-intelig--ncia-artificial-vip-3240-ia-g2-intelbras-teste-34992917687-697777e37c5a5.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-intelig--ncia-artificial-vip-7860-5g-z-ia-ft-intelbras-teste-34992917687-697777e0384ad.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-intelig--ncia-artificial-vip-7860-5g-z-ia-ft-intelbras-teste-34992917687-697777e073c44.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-intelig--ncia-artificial-vip-7860-5g-z-ia-ft-intelbras-teste-34992917687-697777e0a7b07.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-intelig--ncia-artificial-vip-7860-5g-z-ia-ft-intelbras-teste-34992917687-697777e0daa16.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-reconhecimento-facial-vip-9450-b-ia-ft-g2-intelbras-teste-34992917687-697777a219689.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-reconhecimento-facial-vip-9450-b-ia-ft-g2-intelbras-teste-34992917687-697777a2437a3.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-reconhecimento-facial-vip-9450-b-ia-ft-g2-intelbras-teste-34992917687-697777a270877.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-reconhecimento-facial-vip-9450-b-ia-ft-g2-intelbras-teste-34992917687-697777a2aacd3.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-resolu----o-4k-vip-3830-ia-intelbras-teste-34992917687-697777e7c3ee6.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-resolu----o-4k-vip-3830-ia-intelbras-teste-34992917687-697777e804a2a.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-resolu----o-4k-vip-3830-ia-intelbras-teste-34992917687-697777e837894.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-resolu----o-4k-vip-3830-ia-intelbras-teste-34992917687-697777e86ec2d.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-com-vis--o-panor--mica-vip-9180-pan--ft-intelbras-teste-34992917687-6977779a82bcd.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-de-4-mp-vip-9450-b-ia-ft-intelbras-teste-34992917687-6977779726a5f.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-de-4-mp-vip-9450-b-ia-ft-intelbras-teste-34992917687-69777797598d0.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-de-4-mp-vip-9450-b-ia-ft-intelbras-teste-34992917687-6977779792883.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-de-4-mp-vip-9450-b-ia-ft-intelbras-teste-34992917687-69777797c7edd.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-panor--mica-vip-5180-pan-ia-intelbras-teste-34992917687-69777803bc59b.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-panor--mica-vip-5180-pan-ia-intelbras-teste-34992917687-697778040d033.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-panor--mica-vip-7180-pan-ft-intelbras-teste-34992917687-6977780b4c2af.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-panor--mica-vip-7180-pan-ft-intelbras-teste-34992917687-6977780b80f17.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-panor--mica-vip-7180-pan-ft-intelbras-teste-34992917687-6977780baa9b4.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-termogr--fica-vip-5203-t-ia-intelbras-teste-34992917687-697778035e0f1.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-termogr--fica-vip-5203-t-ia-intelbras-teste-34992917687-6977780389cd1.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-vip-1230-b-g2-intelbras-teste-34992917687-697777fb0d1bd.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-vip-1230-b-g2-intelbras-teste-34992917687-697777fb37172.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-vip-1230-b-g2-intelbras-teste-34992917687-697777fb6d7e2.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-vip-1230-b-g2-intelbras-teste-34992917687-697777fba3bae.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-vip-1230-b-g3-intelbras-teste-34992917687-697777f48ec6e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-vip-1230-b-g3-intelbras-teste-34992917687-697777f4cc5db.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-vip-1230-b-g3-intelbras-teste-34992917687-697777f51057e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-bullet-vip-1230-b-g3-intelbras-teste-34992917687-697777f539f86.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-2-ptz-e-25x-de-zoom-vip-9425-dual-sd-ia-ft-intelbras-teste-34992917687-69777798a92a0.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-contagem-de-gado-vip-9420-gd-ft-intelbras-teste-34992917687-697777a5b3bf7.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-entrada-de-alarme-vip-3250-al-ia-intelbras-teste-34992917687-697777dcc7e95.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-entrada-de-alarme-vip-3250-al-ia-intelbras-teste-34992917687-697777dd07c44.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-entrada-de-alarme-vip-3250-al-ia-intelbras-teste-34992917687-697777dd3512c.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-entrada-de-alarme-vip-3250-al-ia-intelbras-teste-34992917687-697777dd62936.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-intelig--ncia-artificial-embarcada-vip-5440-d-z-ia-intelbras-teste-34992917687-697777fee1379.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-intelig--ncia-artificial-embarcada-vip-5440-d-z-ia-intelbras-teste-34992917687-697777ff2735f.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-intelig--ncia-artificial-embarcada-vip-5440-d-z-ia-intelbras-teste-34992917687-697777ff50260.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-intelig--ncia-artificial-embarcada-vip-5440-d-z-ia-intelbras-teste-34992917687-697777ff87207.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-leitura-autom--tica-de-placas-vip-5460-lpr-ia-intelbras-teste-34992917687-697777e1e8b57.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-leitura-autom--tica-de-placas-vip-5460-lpr-ia-intelbras-teste-34992917687-697777e228d65.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-leitura-autom--tica-de-placas-vip-5460-lpr-ia-intelbras-teste-34992917687-697777e25efd0.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-leitura-autom--tica-de-placas-vip-5460-lpr-ia-intelbras-teste-34992917687-697777e2a28d1.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-leitura-autom--tica-de-placas-vip-74120-lpr-ia-ft-intelbras-teste-34992917687-6977778a390e6.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-leitura-autom--tica-de-placas-vip-74120-lpr-ia-ft-intelbras-teste-34992917687-6977778a73f06.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-leitura-autom--tica-de-placas-vip-74120-lpr-ia-ft-intelbras-teste-34992917687-6977778ab1572.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-leitura-autom--tica-de-placas-vip-74120-lpr-ia-ft-intelbras-teste-34992917687-6977778ae8be9.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-leitura-autom--tica-de-placas-vip-93200-lpr-ia-ft-g2-intelbras-teste-34992917687-6977779a533b8.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-leitura-autom--tica-de-placas-vip-94180-lpr-ia-ft-intelbras-teste-34992917687-69777788b173e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-leitura-autom--tica-de-placas-vip-99300-lpr-ia-ft-intelbras-teste-34992917687-6977779062e29.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-resolu----o-de-3-mp-e-an--lise-comportamental-vip-9320-ia-ft-intelbras-teste-34992917687-6977779f413a0.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-resolu----o-de-4-mp-e-an--lise-comportamental-vip-9420-ia-ft-intelbras-teste-34992917687-697777dc922a1.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-vis--o-panor--mica-e-eptz-vip-5180-pan-ft-intelbras-teste-34992917687-697777a66aab6.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-vis--o-panor--mica-e-eptz-vip-5180-pan-ft-intelbras-teste-34992917687-697777a69aedc.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-zoom-motorizado-vip-3260-z-ia-intelbras-teste-34992917687-697777f63ed11.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-zoom-motorizado-vip-3260-z-ia-intelbras-teste-34992917687-697777f670e00.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-zoom-motorizado-vip-3260-z-ia-intelbras-teste-34992917687-697777f6abc9b.png
+[] --- Iniciando verificação: f/001/c--mera-ip-com-zoom-motorizado-vip-3260-z-ia-intelbras-teste-34992917687-697777f6e2c78.png
+[] --- Iniciando verificação: f/001/c--mera-ip-custo-benef--cio-com-poe-vipc-1230-b-g2-intelbras-teste-34992917687-697778011284c.png
+[] --- Iniciando verificação: f/001/c--mera-ip-custo-benef--cio-com-poe-vipc-1230-b-g2-intelbras-teste-34992917687-6977780144269.png
+[] --- Iniciando verificação: f/001/c--mera-ip-custo-benef--cio-com-poe-vipc-1230-b-g2-intelbras-teste-34992917687-697778016f624.png
+[] --- Iniciando verificação: f/001/c--mera-ip-custo-benef--cio-com-poe-vipc-1230-b-g2-intelbras-teste-34992917687-697778019e137.png
+[] --- Iniciando verificação: f/001/c--mera-ip-custo-benef--cio-com-poe-vipc-1430-b-intelbras-teste-34992917687-697777daa8660.png
+[] --- Iniciando verificação: f/001/c--mera-ip-custo-benef--cio-com-poe-vipc-1430-b-intelbras-teste-34992917687-697777daeb272.png
+[] --- Iniciando verificação: f/001/c--mera-ip-custo-benef--cio-com-poe-vipc-1430-b-intelbras-teste-34992917687-697777db2cee6.png
+[] --- Iniciando verificação: f/001/c--mera-ip-custo-benef--cio-com-poe-vipc-1430-b-intelbras-teste-34992917687-697777db68e4d.png
+[] --- Iniciando verificação: f/001/c--mera-ip-da-s--rie-1000-com-full-color-e-ir-vip-1220-d-fc--intelbras-teste-34992917687-697777ed02cc2.png
+[] --- Iniciando verificação: f/001/c--mera-ip-da-s--rie-1000-com-full-color-e-ir-vip-1220-d-fc--intelbras-teste-34992917687-697777ed43dca.png
+[] --- Iniciando verificação: f/001/c--mera-ip-da-s--rie-1000-com-full-color-e-ir-vip-1220-d-fc--intelbras-teste-34992917687-697777ed72b41.png
+[] --- Iniciando verificação: f/001/c--mera-ip-da-s--rie-1000-com-full-color-e-ir-vip-1220-d-fc--intelbras-teste-34992917687-697777edacdd1.png
+[] --- Iniciando verificação: f/001/c--mera-ip-da-s--rie-1000-com-full-color-e-ir-vip-1220-fc--intelbras-teste-34992917687-697777fbd9a66.png
+[] --- Iniciando verificação: f/001/c--mera-ip-da-s--rie-1000-com-full-color-e-ir-vip-1220-fc--intelbras-teste-34992917687-697777fc2a30a.png
+[] --- Iniciando verificação: f/001/c--mera-ip-da-s--rie-1000-com-full-color-e-ir-vip-1220-fc--intelbras-teste-34992917687-697777fc64fb4.png
+[] --- Iniciando verificação: f/001/c--mera-ip-da-s--rie-1000-com-full-color-e-ir-vip-1220-fc--intelbras-teste-34992917687-697777fc981db.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-12-mp-com-reconhecimento-facial-vip-91260-ultra-ia-ft-intelbras-teste-34992917687-6977778ec6f1d.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-12-mp-com-reconhecimento-facial-vip-91260-ultra-ia-ft-intelbras-teste-34992917687-6977778f07fa8.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-12-mp-com-reconhecimento-facial-vip-91260-ultra-ia-ft-intelbras-teste-34992917687-6977778f3c837.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-12-mp-com-reconhecimento-facial-vip-91260-ultra-ia-ft-intelbras-teste-34992917687-6977778f71958.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-4-mp-com-reconhecimento-facial-vip-9460-ultra-ia-ft-intelbras-teste-34992917687-6977778e01ec5.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-4-mp-com-reconhecimento-facial-vip-9460-ultra-ia-ft-intelbras-teste-34992917687-6977778e2d5a9.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-4-mp-com-reconhecimento-facial-vip-9460-ultra-ia-ft-intelbras-teste-34992917687-6977778e59c70.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-4-mp-com-reconhecimento-facial-vip-9460-ultra-ia-ft-intelbras-teste-34992917687-6977778e8f55d.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-4mp-vip-7450-z-a-ft-intelbras-teste-34992917687-697777a4a5c31.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-8-megapixels-com-zoom-motorizado-vip-9840-d-ia-ft-intelbras-teste-34992917687-697777a36ab7a.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-8-megapixels-com-zoom-motorizado-vip-9860-ia-ft-intelbras-teste-34992917687-69777787e6112.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-8-megapixels-com-zoom-motorizado-vip-9860-ia-ft-intelbras-teste-34992917687-6977778820868.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-8-megapixels-com-zoom-motorizado-vip-9860-ia-ft-intelbras-teste-34992917687-697777884aabf.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-8-megapixels-com-zoom-motorizado-vip-9860-ia-ft-intelbras-teste-34992917687-697777887cc22.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-contagem-de-pessoas-vip-9320-3d-ia-ft-intelbras-teste-34992917687-697777a1368cc.png
+[] --- Iniciando verificação: f/001/c--mera-ip-de-contagem-de-pessoas-vip-9420-3d-ft-intelbras-teste-34992917687-6977778c65b8c.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-com-full-color-inteligente-vip-3230-d-fc--ap-ia-intelbras-teste-34992917687-697778096aff2.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-com-full-color-inteligente-vip-3230-d-fc--ap-ia-intelbras-teste-34992917687-69777809ad494.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-com-full-color-inteligente-vip-3230-d-fc--ap-ia-intelbras-teste-34992917687-69777809e2334.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-com-full-color-inteligente-vip-3230-d-fc--ap-ia-intelbras-teste-34992917687-6977780a30bb2.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-com-reconhecimento-facial-vip-9440-d-ia-ft-g2-intelbras-teste-34992917687-697777a6dc099.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-custo-benef--cio-com-poe-vipc-1230-d-g2-intelbras-teste-34992917687-697777dba05ea.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-custo-benef--cio-com-poe-vipc-1230-d-g2-intelbras-teste-34992917687-697777dbdd564.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-custo-benef--cio-com-poe-vipc-1230-d-g2-intelbras-teste-34992917687-697777dc25428.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-custo-benef--cio-com-poe-vipc-1230-d-g2-intelbras-teste-34992917687-697777dc5d71e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-da-s--rie-1000-vip-1220-d-full-color-g4-intelbras-teste-34992917687-697777e96e149.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-da-s--rie-1000-vip-1220-d-full-color-g4-intelbras-teste-34992917687-697777e9aeac5.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-da-s--rie-1000-vip-1220-d-full-color-g4-intelbras-teste-34992917687-697777e9e4e96.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-da-s--rie-1000-vip-1220-d-full-color-g4-intelbras-teste-34992917687-697777ea2fb50.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-full-hd-2-mp-vip-1230-d-g2-intelbras-teste-34992917687-69777807dc9c5.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-full-hd-2-mp-vip-1230-d-g2-intelbras-teste-34992917687-697778081e59e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-full-hd-2-mp-vip-1230-d-g2-intelbras-teste-34992917687-697778085602f.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-full-hd-2-mp-vip-1230-d-g3-intelbras-teste-34992917687-6977780be077a.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-full-hd-2-mp-vip-1230-d-g3-intelbras-teste-34992917687-6977780c23ad4.png
+[] --- Iniciando verificação: f/001/c--mera-ip-dome-full-hd-2-mp-vip-1230-d-g3-intelbras-teste-34992917687-6977780c59114.png
+[] --- Iniciando verificação: f/001/c--mera-ip-fisheye-com-resolu----o-de-5mp-vip-5500-f-ia-intelbras-teste-34992917687-697777f2e0075.png
+[] --- Iniciando verificação: f/001/c--mera-ip-fisheye-com-resolu----o-de-5mp-vip-5500-f-ia-intelbras-teste-34992917687-697777f31c8fa.png
+[] --- Iniciando verificação: f/001/c--mera-ip-fisheye-com-resolu----o-de-5mp-vip-5500-f-ia-intelbras-teste-34992917687-697777f347f3e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-fisheye-com-resolu----o-de-5mp-vip-5500-f-ia-intelbras-teste-34992917687-697777f37262c.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-color-da-s--rie-1000-vip-1220-b-full-color-g4-intelbras-teste-34992917687-697777d6a6eef.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-color-da-s--rie-1000-vip-1220-b-full-color-g4-intelbras-teste-34992917687-697777d6da485.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-color-da-s--rie-1000-vip-1220-b-full-color-g4-intelbras-teste-34992917687-697777d713688.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-color-da-s--rie-1000-vip-1220-b-full-color-g4-intelbras-teste-34992917687-697777d73e540.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-hd-da-s--rie-1000-vip-1230-b-g5-intelbras-teste-34992917687-697777df305a2.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-hd-da-s--rie-1000-vip-1230-b-g5-intelbras-teste-34992917687-697777df81beb.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-hd-da-s--rie-1000-vip-1230-b-g5-intelbras-teste-34992917687-697777dfb9e84.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-hd-da-s--rie-1000-vip-1230-b-g5-intelbras-teste-34992917687-697777e006d42.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-hd-da-s--rie-1000-vip-1230-d-g5-intelbras-teste-34992917687-6977780a64694.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-hd-da-s--rie-1000-vip-1230-d-g5-intelbras-teste-34992917687-6977780a98fa0.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-hd-da-s--rie-1000-vip-1230-d-g5-intelbras-teste-34992917687-6977780accc14.png
+[] --- Iniciando verificação: f/001/c--mera-ip-full-hd-da-s--rie-1000-vip-1230-d-g5-intelbras-teste-34992917687-6977780b11571.png
+[] --- Iniciando verificação: f/001/c--mera-ip-mini-panor--mica-vip-9360-mini-pan-ft-intelbras-teste-34992917687-6977779518838.png
+[] --- Iniciando verificação: f/001/c--mera-ip-mini-panor--mica-vip-9360-mini-pan-ft-intelbras-teste-34992917687-697777954b648.png
+[] --- Iniciando verificação: f/001/c--mera-ip-mini-panor--mica-vip-9360-mini-pan-ft-intelbras-teste-34992917687-697777958082c.png
+[] --- Iniciando verificação: f/001/c--mera-ip-panor--mica-vip-9360-pan-ia-ft-intelbras-teste-34992917687-6977779dc38e7.png
+[] --- Iniciando verificação: f/001/c--mera-ip-panor--mica-vip-9360-pan-ia-ft-intelbras-teste-34992917687-6977779e03e93.png
+[] --- Iniciando verificação: f/001/c--mera-ip-panor--mica-vip-9360-pan-ia-ft-intelbras-teste-34992917687-6977779e3068d.png
+[] --- Iniciando verificação: f/001/c--mera-ip-pinhole-vph-7201-ft-intelbras-teste-34992917687-69777796e6fa1.png
+[] --- Iniciando verificação: f/001/c--mera-ip-pinhole-vph-7204-ft-intelbras-teste-34992917687-69777798dcd0e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-pinhole-vph-7204-ft-intelbras-teste-34992917687-69777799202f9.png
+[] --- Iniciando verificação: f/001/c--mera-ip-pinhole-vph-7204-ft-intelbras-teste-34992917687-6977779951dc3.png
+[] --- Iniciando verificação: f/001/c--mera-ip-pinhole-vph-7204-ft-intelbras-teste-34992917687-69777799843ff.png
+[] --- Iniciando verificação: f/001/c--mera-ip-pinhole-vph-7205-ft-intelbras-teste-34992917687-6977779b77ccf.png
+[] --- Iniciando verificação: f/001/c--mera-ip-pinhole-vph-7205-ft-intelbras-teste-34992917687-6977779bac48e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-pinhole-vph-7205-ft-intelbras-teste-34992917687-6977779be278f.png
+[] --- Iniciando verificação: f/001/c--mera-ip-pinhole-vph-7205-ft-intelbras-teste-34992917687-6977779c225db.png
+[] --- Iniciando verificação: f/001/c--mera-ip-ptz-com-25x-de-zoom-vip-7225-ptz-ft-intelbras-teste-34992917687-697777a785a1d.png
+[] --- Iniciando verificação: f/001/c--mera-ip-ptz-com-zoom-de-40x-vip-9440-ptz-ia-ft-g2-intelbras-teste-34992917687-69777799b9313.png
+[] --- Iniciando verificação: f/001/c--mera-ip-s--rie-1000-com-full-color-e-ir-vip-1430-d-fc--intelbras-teste-34992917687-697777e704fb0.png
+[] --- Iniciando verificação: f/001/c--mera-ip-s--rie-1000-com-full-color-e-ir-vip-1430-d-fc--intelbras-teste-34992917687-697777e72e8a5.png
+[] --- Iniciando verificação: f/001/c--mera-ip-s--rie-1000-com-full-color-e-ir-vip-1430-d-fc--intelbras-teste-34992917687-697777e75a183.png
+[] --- Iniciando verificação: f/001/c--mera-ip-s--rie-1000-com-full-color-e-ir-vip-1430-d-fc--intelbras-teste-34992917687-697777e78f98b.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-2mp-vip-7245-sd-intelbras-teste-34992917687-697777a1db2ad.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-16x-de-zoom---ptico-vip-3216-sd-ir-ia-intelbras-teste-34992917687-697777d912085.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-16x-de-zoom---ptico-vip-3216-sd-ir-ia-intelbras-teste-34992917687-697777d93b81a.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-16x-de-zoom---ptico-vip-3216-sd-ir-ia-intelbras-teste-34992917687-697777d967be4.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-16x-de-zoom---ptico-vip-3216-sd-ir-ia-intelbras-teste-34992917687-697777d997bdf.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-16x-de-zoom-vip-5216-sd-ia-ft-intelbras-teste-34992917687-697777a71f0a4.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-16x-de-zoom-vip-5216-sd-ia-ft-intelbras-teste-34992917687-697777a752648.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-32x-de-zoom---ptico-vip-5232-sd-ia-g2-intelbras-teste-34992917687-697777e48f773.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-32x-de-zoom---ptico-vip-5232-sd-ia-g2-intelbras-teste-34992917687-697777e4c927a.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-32x-de-zoom---ptico-vip-5232-sd-ia-g2-intelbras-teste-34992917687-697777e5075fb.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-32x-de-zoom-vip-5432-sd-ir-ia-ft-intelbras-teste-34992917687-6977779c8027c.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-32x-de-zoom-vip-5432-sd-ir-ia-ft-intelbras-teste-34992917687-6977779cb33fa.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-32x-de-zoom-vip-5432-sd-ir-ia-ft-intelbras-teste-34992917687-6977779ce950a.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-45x-de-zoom---ptico-vip-7245-sd-ir-ia-ft-intelbras-teste-34992917687-69777790977ef.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-45x-de-zoom---ptico-vip-7245-sd-ir-ia-ft-intelbras-teste-34992917687-69777790dd452.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-45x-de-zoom---ptico-vip-7245-sd-ir-ia-ft-intelbras-teste-34992917687-6977779121704.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-45x-de-zoom---ptico-vip-7245-sd-ir-ia-ft-intelbras-teste-34992917687-6977779160319.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-45x-de-zoom-vip-9445-sd-laser-ia-ft-intelbras-teste-34992917687-6977779b2b2f1.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-alerta-visual-e-sonoro-vip-5425-sd-a-ft-intelbras-teste-34992917687-697777a05aef4.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-alerta-visual-e-sonoro-vip-5425-sd-a-ft-intelbras-teste-34992917687-697777a087caa.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-alerta-visual-e-sonoro-vip-5425-sd-a-ft-intelbras-teste-34992917687-697777a0beb2c.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-alerta-visual-e-sonoro-vip-5425-sd-a-ft-intelbras-teste-34992917687-697777a100c9d.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-intelig--ncia-artificial-e-infravermelho-vip-5232-sd-ir-ia-ft-intelbras-teste-34992917687-6977779d28b50.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-intelig--ncia-artificial-e-infravermelho-vip-5232-sd-ir-ia-ft-intelbras-teste-34992917687-6977779d5e5b5.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-intelig--ncia-artificial-e-infravermelho-vip-5232-sd-ir-ia-ft-intelbras-teste-34992917687-6977779d933a1.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-intelig--ncia-artificial-e-ir-vip-5225-sd-ir-ia-ft-intelbras-teste-34992917687-6977779e5a576.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-intelig--ncia-artificial-e-ir-vip-5225-sd-ir-ia-ft-intelbras-teste-34992917687-6977779e89061.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-intelig--ncia-artificial-e-ir-vip-5225-sd-ir-ia-ft-intelbras-teste-34992917687-6977779ec3959.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-intelig--ncia-artificial-vip-5225-sd-ir-ia-g2-intelbras-teste-34992917687-697777f7e6fcd.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-intelig--ncia-artificial-vip-5225-sd-ir-ia-g2-intelbras-teste-34992917687-697777f826cc2.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-intelig--ncia-artificial-vip-5225-sd-ir-ia-g2-intelbras-teste-34992917687-697777f865104.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-zoom---ptico-de-60x-vip-9260-sd-ia-ft-intelbras-teste-34992917687-697777a32d7dd.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-com-zoom-30x-e-anticorros--o-vip-7230-sd-ac-intelbras-teste-34992917687-6977778d4ef95.png
+[] --- Iniciando verificação: f/001/c--mera-ip-speed-dome-da-linha-future-com-4-mp-vip-7445-sd-ia-ft-intelbras-teste-34992917687-69777799f212a.png
+[] --- Iniciando verificação: f/001/c--mera-ip-t--rmica-h--brida-com-medidor-de-temperatura-vip-7220-d-th-ft-intelbras-teste-34992917687-697777a1a80b3.png
+[] --- Iniciando verificação: f/001/c--mera-ip-t--rmica-h--brida-com-medidor-de-temperatura-vip-7220-th-ft-intelbras-teste-34992917687-6977779810956.png
+[] --- Iniciando verificação: f/001/c--mera-ip-t--rmica-h--brida-com-medidor-de-temperatura-vip-7220-th-ft-intelbras-teste-34992917687-6977779839857.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-7220-ia-intelbras-teste-34992917687-6977786151b4f.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-7220-ia-intelbras-teste-34992917687-6977786185e98.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-7220-ia-intelbras-teste-34992917687-69777861bf06e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-7220-ia-intelbras-teste-34992917687-69777861f3786.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-9230-ia-intelbras-teste-34992917687-697778624703a.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-9230-ia-intelbras-teste-34992917687-69777862758ef.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-9230-ia-intelbras-teste-34992917687-69777862a3530.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-9230-ia-intelbras-teste-34992917687-69777862d6d5e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-9230-intelbras-teste-34992917687-69777860778d8.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-9230-intelbras-teste-34992917687-69777860a243e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-9230-intelbras-teste-34992917687-69777860db808.png
+[] --- Iniciando verificação: f/001/c--mera-ip-veicular-vipm-9230-intelbras-teste-34992917687-697778611bec9.png
+[] --- Iniciando verificação: f/001/c--mera-ip-vip-9420-obj-ft-intelbras-teste-34992917687-6977778c32a2b.png
+[] --- Iniciando verificação: f/001/c--mera-ip-vipm-3230-veicular-vipm-3230-intelbras-teste-34992917687-69777863c9d7d.png
+[] --- Iniciando verificação: f/001/c--mera-ip-vipm-3230-veicular-vipm-3230-intelbras-teste-34992917687-697778640cea8.png
+[] --- Iniciando verificação: f/001/c--mera-ip-vipm-3230-veicular-vipm-3230-intelbras-teste-34992917687-6977786443943.png
+[] --- Iniciando verificação: f/001/c--mera-ip-vipm-3230-veicular-vipm-3230-intelbras-teste-34992917687-697778646e5af.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-4-mp-vipw-1430-b-intelbras-teste-34992917687-697777f1210b0.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-4-mp-vipw-1430-b-intelbras-teste-34992917687-697777f156204.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-4-mp-vipw-1430-b-intelbras-teste-34992917687-697777f18d58b.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-4-mp-vipw-1430-b-intelbras-teste-34992917687-697777f1c08ee.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-4-mp-vipw-1430-d-intelbras-teste-34992917687-697777f5642c1.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-4-mp-vipw-1430-d-intelbras-teste-34992917687-697777f597606.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-4-mp-vipw-1430-d-intelbras-teste-34992917687-697777f5c91d8.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-4-mp-vipw-1430-d-intelbras-teste-34992917687-697777f6073a0.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-full-color-e-ir-vipw-1220-d-fc--intelbras-teste-34992917687-6977780dd8ff3.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-full-color-e-ir-vipw-1220-d-fc--intelbras-teste-34992917687-6977780e1cece.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-full-color-e-ir-vipw-1220-d-fc--intelbras-teste-34992917687-6977780e5717e.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-profissional-com-full-color-e-ir-vipw-1220-d-fc--intelbras-teste-34992917687-6977780e8c6ef.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-vipw-1410-mini-intelbras-teste-34992917687-697777e532594.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-vipw-1410-mini-intelbras-teste-34992917687-697777e55b91b.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-vipw-1410-mini-intelbras-teste-34992917687-697777e590742.png
+[] --- Iniciando verificação: f/001/c--mera-ip-wi-fi-vipw-1410-mini-intelbras-teste-34992917687-697777e5c6545.png
+[] --- Iniciando verificação: f/001/c--mera-l--mpada-interna-inteligente-wi-fi-3mp-im6-full-color-intelbras-teste-34992917687-697777774f7f3.png
+[] --- Iniciando verificação: f/001/c--mera-l--mpada-interna-inteligente-wi-fi-3mp-im6-full-color-intelbras-teste-34992917687-6977777782a39.png
+[] --- Iniciando verificação: f/001/c--mera-l--mpada-interna-inteligente-wi-fi-3mp-im6-full-color-intelbras-teste-34992917687-69777777b2376.png
+[] --- Iniciando verificação: f/001/c--mera-mini-speed-dome-com-4-mp-e-super-color-vip-3400-mini-sd-sc-ia-ft-intelbras-teste-34992917687-6977779c5080d.png
+[] --- Iniciando verificação: f/001/c--mera-mini-speed-dome-profissional-vip-1300-mini-sd-intelbras-teste-34992917687-6977780d7090d.png
+[] --- Iniciando verificação: f/001/c--mera-mini-speed-dome-profissional-vip-1300-mini-sd-intelbras-teste-34992917687-6977780da3428.png
+[] --- Iniciando verificação: f/001/c--mera-mini-speed-dome-wi-fi-profissional-vipw-1300-mini-sd-intelbras-teste-34992917687-697777dd943a6.png
+[] --- Iniciando verificação: f/001/c--mera-mini-speed-dome-wi-fi-profissional-vipw-1300-mini-sd-intelbras-teste-34992917687-697777ddd977f.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd---full-color-vhd-3220-d-full-color-intelbras-teste-34992917687-697777b16c26b.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd---full-color-vhd-3220-d-full-color-intelbras-teste-34992917687-697777b1a22be.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd---full-color-vhd-3220-d-full-color-intelbras-teste-34992917687-697777b1d5983.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-de-15-m-vhd-1015-b-g7-intelbras-teste-34992917687-697777c8f0c82.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-de-15-m-vhd-1015-b-g7-intelbras-teste-34992917687-697777c92e40c.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-de-15-m-vhd-1015-b-g7-intelbras-teste-34992917687-697777c96234c.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-de-15-m-vhd-1015-b-g7-intelbras-teste-34992917687-697777c9adf7c.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-de-15-m-vhd-1015-d-g7-intelbras-teste-34992917687-697777ad4d3e7.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-de-15-m-vhd-1015-d-g7-intelbras-teste-34992917687-697777ad844be.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-de-15-m-vhd-1015-d-g7-intelbras-teste-34992917687-697777adc3c57.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1010-d-g5-intelbras-teste-34992917687-697777b7364dc.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1010-d-g5-intelbras-teste-34992917687-697777b769fc9.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1010-d-g5-intelbras-teste-34992917687-697777b79e0fe.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1120-b-g6-intelbras-teste-34992917687-697777b2abe4c.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1120-b-g6-intelbras-teste-34992917687-697777b2e1592.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1120-b-g6-intelbras-teste-34992917687-697777b324306.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1120-b-g6-intelbras-teste-34992917687-697777b35e71d.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1120-d-g6-intelbras-teste-34992917687-697777ae05251.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1120-d-g6-intelbras-teste-34992917687-697777ae3b035.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1120-d-g6-intelbras-teste-34992917687-697777ae6642f.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1120-d-g7-intelbras-teste-34992917687-697777a7bb6a2.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1120-d-g7-intelbras-teste-34992917687-697777a7eebff.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-1120-d-g7-intelbras-teste-34992917687-697777a8326f4.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-3120-d-g6-intelbras-teste-34992917687-697777d480901.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-3120-d-g6-intelbras-teste-34992917687-697777d4bbab2.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-3120-d-g6-intelbras-teste-34992917687-697777d4ee5eb.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-3130-b-g6-intelbras-teste-34992917687-697777c74e755.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-3130-b-g6-intelbras-teste-34992917687-697777c784133.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-3130-b-g6-intelbras-teste-34992917687-697777c7b66b0.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-3130-b-g6-intelbras-teste-34992917687-697777c7ec56d.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-3130-b-g7-intelbras-teste-34992917687-697777d1ea903.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-3130-b-g7-intelbras-teste-34992917687-697777d22b180.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-3130-b-g7-intelbras-teste-34992917687-697777d2626f6.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-com-infravermelho-vhd-3130-b-g7-intelbras-teste-34992917687-697777d295e00.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-full-color-vhd-3240-full-color---g8-intelbras-teste-34992917687-697777b51abd2.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-full-color-vhd-3240-full-color---g8-intelbras-teste-34992917687-697777b54ea60.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-full-color-vhd-3240-full-color---g8-intelbras-teste-34992917687-697777b5832da.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-full-color-vhd-3240-full-color-g6-intelbras-teste-34992917687-697777d0285a3.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-full-color-vhd-3240-full-color-g6-intelbras-teste-34992917687-697777d05bd0f.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-full-color-vhd-3240-full-color-g6-intelbras-teste-34992917687-697777d0915dd.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-vhd-1220-d-g9-intelbras-teste-34992917687-697777bc57e80.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-vhd-1220-d-g9-intelbras-teste-34992917687-697777bc8b55d.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-vhd-1220-d-g9-intelbras-teste-34992917687-697777bcb75e5.png
+[] --- Iniciando verificação: f/001/c--mera-multi-hd-vhd-1220-d-g9-intelbras-teste-34992917687-697777bce0f61.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-25x-de-zoom---ptico-vip-5425-sd-pan-ia-ft-intelbras-teste-34992917687-69777793148d3.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-25x-de-zoom---ptico-vip-5425-sd-pan-ia-ft-intelbras-teste-34992917687-697777934d6c0.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-25x-de-zoom---ptico-vip-5425-sd-pan-ia-ft-intelbras-teste-34992917687-6977779385dcb.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-25x-de-zoom---ptico-vip-5425-sd-pan-ia-ft-intelbras-teste-34992917687-69777793baec0.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-case-de-embutir-vip-5232-sd-e-ft-intelbras-teste-34992917687-697777a2e1373.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-3225-sd-ir-ia-g2-intelbras-teste-34992917687-697777e6138b2.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-3225-sd-ir-ia-g2-intelbras-teste-34992917687-697777e649ce3.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-3225-sd-ir-ia-g2-intelbras-teste-34992917687-697777e68bc5f.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-3225-sd-ir-ia-g2-intelbras-teste-34992917687-697777e6c6caf.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-3225-sd-ir-ia-intelbras-teste-34992917687-697777fa2872c.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-3225-sd-ir-ia-intelbras-teste-34992917687-697777fa5f189.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-3225-sd-ir-ia-intelbras-teste-34992917687-697777fa929d4.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-3225-sd-ir-ia-intelbras-teste-34992917687-697777fac6646.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-5425-sd-dual-ia-ft-intelbras-teste-34992917687-697777a3d20be.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-5425-sd-dual-ia-ft-intelbras-teste-34992917687-697777a41631c.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-5425-sd-dual-ia-ft-intelbras-teste-34992917687-697777a440137.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-intelig--ncia-artificial-vip-5425-sd-dual-ia-ft-intelbras-teste-34992917687-697777a46e4b4.png
+[] --- Iniciando verificação: f/001/c--mera-speed-dome-com-zoom-de-15x-vhd-7215-sd-sl-intelbras-teste-34992917687-697777a85be58.png
+[] --- Iniciando verificação: f/001/c--mera-starlight-varifocal-vhd-5250-z-sl-intelbras-teste-34992917687-697778231c696.png
+[] --- Iniciando verificação: f/001/c--mera-starlight-varifocal-vhd-5250-z-sl-intelbras-teste-34992917687-6977782351371.png
+[] --- Iniciando verificação: f/001/c--mera-starlight-varifocal-vhd-5250-z-sl-intelbras-teste-34992917687-6977782387193.png
+[] --- Iniciando verificação: f/001/c--mera-starlight-varifocal-vhd-5250-z-sl-intelbras-teste-34992917687-69777823af787.png
+[] --- Iniciando verificação: f/001/c--mera-t--rmica-com-intelig--ncia-artificial-vip-5203-t-ft-intelbras-teste-34992917687-697777a5e5c74.png
+[] --- Iniciando verificação: f/001/c--mera-t--rmica-com-intelig--ncia-artificial-vip-5203-t-ft-intelbras-teste-34992917687-697777a63163d.png
+[] --- Iniciando verificação: f/001/c--mera-t--rmica-com-intelig--ncia-artificial-vip-5203-tm-ft-intelbras-teste-34992917687-6977779ab7b03.png
+[] --- Iniciando verificação: f/001/c--mera-t--rmica-com-intelig--ncia-artificial-vip-5203-tm-ft-intelbras-teste-34992917687-6977779aebcd9.png
+[] --- Iniciando verificação: f/001/c--mera-t--rmica-com-intelig--ncia-artificial-vip-5207-t-ft-intelbras-teste-34992917687-69777802ef511.png
+[] --- Iniciando verificação: f/001/c--mera-t--rmica-com-intelig--ncia-artificial-vip-5207-t-ft-intelbras-teste-34992917687-6977780334848.png
+[] --- Iniciando verificação: f/001/c--mera-varifocal-infravermelho-multi-hd-vhd-3140-vf-g6-intelbras-teste-34992917687-697777c2c3c7f.png
+[] --- Iniciando verificação: f/001/c--mera-varifocal-infravermelho-multi-hd-vhd-3140-vf-g6-intelbras-teste-34992917687-697777c2f0022.png
+[] --- Iniciando verificação: f/001/c--mera-varifocal-infravermelho-multi-hd-vhd-3140-vf-g6-intelbras-teste-34992917687-697777c33c630.png
+[] --- Iniciando verificação: f/001/c--mera-varifocal-infravermelho-multi-hd-vhd-3230-d-vf-g6-intelbras-teste-34992917687-697777bb929b3.png
+[] --- Iniciando verificação: f/001/c--mera-varifocal-infravermelho-multi-hd-vhd-3230-d-vf-g6-intelbras-teste-34992917687-697777bbc9f9f.png
+[] --- Iniciando verificação: f/001/c--mera-varifocal-infravermelho-multi-hd-vhd-3230-d-vf-g6-intelbras-teste-34992917687-697777bc1c300.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-com-case-met--lico-vhdm-1012-dsm-d-intelbras-teste-34992917687-697778665df9d.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-com-case-met--lico-vhdm-1012-dsm-d-intelbras-teste-34992917687-697778668edfb.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-com-case-met--lico-vhdm-1012-dsm-d-intelbras-teste-34992917687-69777866c7a75.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-com-case-met--lico-vhdm-1012-dsm-d-intelbras-teste-34992917687-6977786709a33.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-dashcam-dcm-3002-gw-ia-intelbras-teste-34992917687-6977785e56365.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-dashcam-dcm-3002-gw-ia-intelbras-teste-34992917687-6977785e7f990.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-dashcam-dcm-3002-gw-ia-intelbras-teste-34992917687-6977785eab50d.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-dashcam-dcm-3002-gw-ia-intelbras-teste-34992917687-6977785ee9fd7.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-dashcam-dcm-5004-gw-ia-intelbras-teste-34992917687-6977785456cb1.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-dashcam-dcm-5004-gw-ia-intelbras-teste-34992917687-697778548559e.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-dashcam-dcm-5004-gw-ia-intelbras-teste-34992917687-69777854bc762.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-dashcam-dcm-5004-gw-ia-intelbras-teste-34992917687-697778550bae2.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-de-case-met--lico-vhdm-3020-d-intelbras-teste-34992917687-6977786742e05.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-de-case-met--lico-vhdm-3020-d-intelbras-teste-34992917687-6977786776cb9.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-de-case-met--lico-vhdm-3020-d-intelbras-teste-34992917687-69777867ae4cd.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-de-case-met--lico-vhdm-3020-x-intelbras-teste-34992917687-69777856eaa21.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-de-case-met--lico-vhdm-3020-x-intelbras-teste-34992917687-697778572ea2b.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-de-longo-alcance-vipm-9280-sd-ir-intelbras-teste-34992917687-6977785fa08a7.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-de-longo-alcance-vipm-9280-sd-ir-intelbras-teste-34992917687-6977785fda578.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-de-longo-alcance-vipm-9280-sd-ir-intelbras-teste-34992917687-697778601f1a9.png
+[] --- Iniciando verificação: f/001/c--mera-veicular-de-longo-alcance-vipm-9280-sd-ir-intelbras-teste-34992917687-697778604d32d.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-externa-smart-izc-1005-intelbras-teste-34992917687-6977776b1863b.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-externa-smart-izc-1005-intelbras-teste-34992917687-6977776b4edef.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-externa-smart-izc-1005-intelbras-teste-34992917687-6977776b8d53e.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-externa-smart-izc-1005-intelbras-teste-34992917687-6977776bb9d09.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-izc-1003-intelbras-teste-34992917687-69777778acecd.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-izc-1003-intelbras-teste-34992917687-69777778e5be7.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-izc-1003-intelbras-teste-34992917687-6977777936db0.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-izc-1003-intelbras-teste-34992917687-697777797fb6e.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-profissional-com-full-color-vipw-1220-d-fc-intelbras-teste-34992917687-697777ffbc427.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-profissional-com-full-color-vipw-1220-d-fc-intelbras-teste-34992917687-697777fff230c.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-profissional-com-full-color-vipw-1220-d-fc-intelbras-teste-34992917687-6977780035235.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-profissional-com-full-color-vipw-1220-d-fc-intelbras-teste-34992917687-6977780069a02.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-profissional-vipw-1230-b-intelbras-teste-34992917687-697777e8a451e.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-profissional-vipw-1230-b-intelbras-teste-34992917687-697777e8d7cdd.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-profissional-vipw-1230-b-intelbras-teste-34992917687-697777e917291.png
+[] --- Iniciando verificação: f/001/c--mera-wi-fi-profissional-vipw-1230-b-intelbras-teste-34992917687-697777e940ab0.png
+[] --- Iniciando verificação: f/001/c--meras-multi-hd-com-infravermelho-vhd-3130-b-g5-intelbras-teste-34992917687-697777c3753bf.png
+[] --- Iniciando verificação: f/001/c--meras-multi-hd-com-infravermelho-vhd-3130-b-g5-intelbras-teste-34992917687-697777c3a76fa.png
+[] --- Iniciando verificação: f/001/c--meras-multi-hd-com-infravermelho-vhd-3130-b-g5-intelbras-teste-34992917687-697777c3e004e.png
+[] --- Iniciando verificação: f/001/c--meras-veiculares-de-case-met--lico-vhdm-3100-g3-intelbras-teste-34992917687-6977786321df2.png
+[] --- Iniciando verificação: f/001/c--meras-veiculares-de-case-met--lico-vhdm-3100-g3-intelbras-teste-34992917687-697778635ce7a.png
+[] --- Iniciando verificação: f/001/c--meras-veiculares-de-case-met--lico-vhdm-3100-g3-intelbras-teste-34992917687-6977786394475.png
+[] --- Iniciando verificação: f/001/c--meras-veiculares-de-case-met--lico-vhdm-3105-g3-intelbras-teste-34992917687-69777865740d9.png
+[] --- Iniciando verificação: f/001/c--meras-veiculares-de-case-met--lico-vhdm-3105-g3-intelbras-teste-34992917687-69777865ad8c0.png
+[] --- Iniciando verificação: f/001/c--meras-veiculares-de-case-met--lico-vhdm-3105-g3-intelbras-teste-34992917687-69777865e2952.png
+[] --- Iniciando verificação: f/001/c--meras-veiculares-de-case-met--lico-vhdm-3105-g3-intelbras-teste-34992917687-697778662887e.png
+[] --- Iniciando verificação: f/001/c--meras-veiculares-de-case-met--lico-vhdm-3125-g3-intelbras-teste-34992917687-69777867df37d.png
+[] --- Iniciando verificação: f/001/c--meras-veiculares-de-case-met--lico-vhdm-3125-g3-intelbras-teste-34992917687-69777868204fd.png
+[] --- Iniciando verificação: f/001/c--meras-veiculares-de-case-met--lico-vhdm-3125-g3-intelbras-teste-34992917687-6977786855f3e.png
+[] --- Iniciando verificação: f/001/cabo---ptico-2km-riser-cfoi-bli-a-b-eo-36fo-lszh-intelbras-teste-34992917687-697776775b7d2.png
+[] --- Iniciando verificação: f/001/cabo---ptico-2km-riser-cfoi-bli-a-b-eo-36fo-lszh-intelbras-teste-34992917687-697776778fcf5.png
+[] --- Iniciando verificação: f/001/cabo---ptico-2km-riser-cfoi-bli-a-b-eo-36fo-lszh-intelbras-teste-34992917687-69777677c5e4b.png
+[] --- Iniciando verificação: f/001/cabo---ptico-2km-riser-cfoi-bli-a-b-eo-36fo-lszh-intelbras-teste-34992917687-6977767806e82.png
+[] --- Iniciando verificação: f/001/cabo---ptico-4km-opgw-sm-12-4-48fo-opgw-12-4mm---48-fo-intelbras-teste-34992917687-69777675b0940.png
+[] --- Iniciando verificação: f/001/cabo---ptico-4km-opgw-sm-12-4-48fo-opgw-12-4mm---48-fo-intelbras-teste-34992917687-69777675e950f.png
+[] --- Iniciando verificação: f/001/cabo---ptico-4km-opgw-sm-12-4-48fo-opgw-12-4mm---48-fo-intelbras-teste-34992917687-697776762800f.png
+[] --- Iniciando verificação: f/001/cabo---ptico-4km-opgw-sm-12-4-48fo-opgw-12-4mm---48-fo-intelbras-teste-34992917687-697776765f57e.png
+[] --- Iniciando verificação: f/001/cabo---ptico-as-200-cfoa-sm-as200-s-12fo-compacto-nr-intelbras-teste-34992917687-6977766eb0f0c.png
+[] --- Iniciando verificação: f/001/cabo---ptico-as-200-cfoa-sm-as200-s-12fo-compacto-nr-intelbras-teste-34992917687-6977766ee3c6e.png
+[] --- Iniciando verificação: f/001/cabo---ptico-as-200-cfoa-sm-as200-s-12fo-compacto-nr-intelbras-teste-34992917687-6977766f23799.png
+[] --- Iniciando verificação: f/001/cabo---ptico-as-200-cfoa-sm-as200-s-12fo-compacto-nr-intelbras-teste-34992917687-6977766f608a8.png
+[] --- Iniciando verificação: f/001/cabo---ptico-drop-de-1-km-e-2-km-cabos---ptico-drop-de-1-e-2-km-intelbras-teste-34992917687-697776730e5fe.png
+[] --- Iniciando verificação: f/001/cabo---ptico-drop-de-1-km-e-2-km-cabos---ptico-drop-de-1-e-2-km-intelbras-teste-34992917687-6977767345e0e.png
+[] --- Iniciando verificação: f/001/cabo---ptico-drop-de-1-km-e-2-km-cabos---ptico-drop-de-1-e-2-km-intelbras-teste-34992917687-697776737b261.png
+[] --- Iniciando verificação: f/001/cabo---ptico-drop-de-1-km-e-2-km-cabos---ptico-drop-de-1-e-2-km-intelbras-teste-34992917687-69777673b1128.png
+[] --- Iniciando verificação: f/001/cabo-as-compacto-com-at---144-fibras-as-intelbras-teste-34992917687-69777674b5719.png
+[] --- Iniciando verificação: f/001/cabo-as-compacto-com-at---144-fibras-as-intelbras-teste-34992917687-69777674ea064.png
+[] --- Iniciando verificação: f/001/cabo-as-compacto-com-at---144-fibras-as-intelbras-teste-34992917687-6977767538761.png
+[] --- Iniciando verificação: f/001/cabo-as-compacto-com-at---144-fibras-as-intelbras-teste-34992917687-69777675772bb.png
+[] --- Iniciando verificação: f/001/cabo-asu-com-80-e-120-metros-asu-intelbras-teste-34992917687-69777673e42af.png
+[] --- Iniciando verificação: f/001/cabo-asu-com-80-e-120-metros-asu-intelbras-teste-34992917687-69777674228b3.png
+[] --- Iniciando verificação: f/001/cabo-asu-com-80-e-120-metros-asu-intelbras-teste-34992917687-6977767456af4.png
+[] --- Iniciando verificação: f/001/cabo-asu-com-80-e-120-metros-asu-intelbras-teste-34992917687-6977767483ae6.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc67cbr-fast-cam-intelbras---1-teste-34992917687-697779dd452bb.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc67cbr-fast-cam-intelbras---1-teste-34992917687-697779dd79cc8.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc67cbr-fast-cam-intelbras---1-teste-34992917687-697779ddb15db.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc67cbr-fast-cam-intelbras---1-teste-34992917687-697779ddeb6c3.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc67cbr-fast-cam-intelbras-teste-34992917687-6977766b49158.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc67cbr-fast-cam-intelbras-teste-34992917687-6977766b90b1c.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc67cbr-fast-cam-intelbras-teste-34992917687-6977766bd8587.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc67cbr-fast-cam-intelbras-teste-34992917687-6977766c20840.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc80cbr-fast-cam-intelbras---1-teste-34992917687-697779df0d8b4.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc80cbr-fast-cam-intelbras---1-teste-34992917687-697779df3cff5.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc80cbr-fast-cam-intelbras---1-teste-34992917687-697779df78dbe.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc80cbr-fast-cam-intelbras---1-teste-34992917687-697779dfb5cf3.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc80cbr-fast-cam-intelbras-teste-34992917687-6977765ff2468.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc80cbr-fast-cam-intelbras-teste-34992917687-6977766032b31.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc80cbr-fast-cam-intelbras-teste-34992917687-697776605f32b.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-bipolar-para-cftv-anal--gico-fc80cbr-fast-cam-intelbras-teste-34992917687-697776608ba41.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-dlc-58-ccx-1002-intelbras-teste-34992917687-69777a80eae6d.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-dlc-58-ccx-1002-intelbras-teste-34992917687-69777a812cd58.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-dlc-58-ccx-1002-intelbras-teste-34992917687-69777a815f9df.png
+[] --- Iniciando verificação: f/001/cabo-coaxial-dlc-58-ccx-1002-intelbras-teste-34992917687-69777a8193cea.png
+[] --- Iniciando verificação: f/001/cabo-com-80-e-120-metros-de-v--o-asu-compacto-intelbras-teste-34992917687-6977766d2660c.png
+[] --- Iniciando verificação: f/001/cabo-com-80-e-120-metros-de-v--o-asu-compacto-intelbras-teste-34992917687-6977766d62fbe.png
+[] --- Iniciando verificação: f/001/cabo-com-80-e-120-metros-de-v--o-asu-compacto-intelbras-teste-34992917687-6977766da445b.png
+[] --- Iniciando verificação: f/001/cabo-com-80-e-120-metros-de-v--o-asu-compacto-intelbras-teste-34992917687-6977766ddc2a0.png
+[] --- Iniciando verificação: f/001/cabo-diel--trico-para-dutos-cfoa-sm-dd-s-24fo-nr-intelbras-teste-34992917687-6977766e29ba7.png
+[] --- Iniciando verificação: f/001/cabo-diel--trico-para-dutos-cfoa-sm-dd-s-24fo-nr-intelbras-teste-34992917687-6977766e5bbb2.png
+[] --- Iniciando verificação: f/001/cabo-diel--trico-para-dutos-cfoa-sm-dd-s-24fo-nr-intelbras-teste-34992917687-6977766e858cb.png
+[] --- Iniciando verificação: f/001/cabo-diel--trico-para-dutos-ddr-intelbras-teste-34992917687-6977766fa6bc6.png
+[] --- Iniciando verificação: f/001/cabo-diel--trico-para-dutos-ddr-intelbras-teste-34992917687-6977766fda6d8.png
+[] --- Iniciando verificação: f/001/cabo-drop-1km-colado-cabo-drop-intelbras-teste-34992917687-6977766c5ce16.png
+[] --- Iniciando verificação: f/001/cabo-drop-1km-colado-cabo-drop-intelbras-teste-34992917687-6977766c8638f.png
+[] --- Iniciando verificação: f/001/cabo-drop-1km-colado-cabo-drop-intelbras-teste-34992917687-6977766caf3b3.png
+[] --- Iniciando verificação: f/001/cabo-drop-1km-colado-cabo-drop-intelbras-teste-34992917687-6977766ce6ced.png
+[] --- Iniciando verificação: f/001/cabo-drop-indoor-500m-cabo-drop-indoor-intelbras-teste-34992917687-697776701d812.png
+[] --- Iniciando verificação: f/001/cabo-drop-indoor-500m-cabo-drop-indoor-intelbras-teste-34992917687-69777670565b6.png
+[] --- Iniciando verificação: f/001/cabo-drop-indoor-500m-cabo-drop-indoor-intelbras-teste-34992917687-69777670967fb.png
+[] --- Iniciando verificação: f/001/cabo-drop-indoor-500m-cabo-drop-indoor-intelbras-teste-34992917687-69777671032a7.png
+[] --- Iniciando verificação: f/001/cabo-engate-r--pido-para-conex--o-de-bateria-externas-cbo-601-intelbras-teste-34992917687-69777c1de4f20.png
+[] --- Iniciando verificação: f/001/cabo-engate-r--pido-para-conex--o-de-bateria-externas-cbo-601-intelbras-teste-34992917687-69777c1e1f088.png
+[] --- Iniciando verificação: f/001/cabo-engate-r--pido-para-conex--o-de-bateria-externas-cbo-601-intelbras-teste-34992917687-69777c1e5557c.png
+[] --- Iniciando verificação: f/001/cabo-engate-r--pido-para-conex--o-de-bateria-externas-cbo-601-intelbras-teste-34992917687-69777c1e8c50f.png
+[] --- Iniciando verificação: f/001/cabo-engate-r--pido-para-conex--o-de-bateria-externas-cbo-603-intelbras-teste-34992917687-69777c2043b4d.png
+[] --- Iniciando verificação: f/001/cabo-engate-r--pido-para-conex--o-de-bateria-externas-cbo-603-intelbras-teste-34992917687-69777c2075436.png
+[] --- Iniciando verificação: f/001/cabo-engate-r--pido-para-conex--o-de-bateria-externas-cbo-603-intelbras-teste-34992917687-69777c20aa16e.png
+[] --- Iniciando verificação: f/001/cabo-engate-r--pido-para-conex--o-de-bateria-externas-cbo-603-intelbras-teste-34992917687-69777c20dd2a3.png
+[] --- Iniciando verificação: f/001/cabo-engate-r--pido-para-conex--o-de-baterias-cb-600-intelbras-teste-34992917687-69777c211d0cc.png
+[] --- Iniciando verificação: f/001/cabo-engate-r--pido-para-conex--o-de-baterias-cb-600-intelbras-teste-34992917687-69777c2151b89.png
+[] --- Iniciando verificação: f/001/cabo-engate-r--pido-para-conex--o-de-baterias-cb-600-intelbras-teste-34992917687-69777c218481b.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-1420-intelbras-teste-34992917687-69777a21af2c8.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-1420-intelbras-teste-34992917687-69777a21d85ab.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-1420-intelbras-teste-34992917687-69777a2210732.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-1420-intelbras-teste-34992917687-69777a22496e0.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2005-intelbras-teste-34992917687-69777a2690ad9.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2005-intelbras-teste-34992917687-69777a26ceba0.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2005-intelbras-teste-34992917687-69777a2711a9c.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2015-intelbras-teste-34992917687-69777a25b495c.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2015-intelbras-teste-34992917687-69777a25e04d4.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2015-intelbras-teste-34992917687-69777a261fb14.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2015-intelbras-teste-34992917687-69777a26560cb.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2025-intelbras-teste-34992917687-69777a24cc6c7.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2025-intelbras-teste-34992917687-69777a250fd79.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2025-intelbras-teste-34992917687-69777a2544f3e.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2025-intelbras-teste-34992917687-69777a257e15d.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2030-intelbras-teste-34992917687-69777a27e459c.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2030-intelbras-teste-34992917687-69777a281e3ef.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2030-intelbras-teste-34992917687-69777a2851a8b.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2030-intelbras-teste-34992917687-69777a288a965.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2120-intelbras-teste-34992917687-69777a2285157.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2120-intelbras-teste-34992917687-69777a22bf4a6.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2120-intelbras-teste-34992917687-69777a230aba3.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-ch-2120-intelbras-teste-34992917687-69777a234ec18.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-chf-2010-intelbras-teste-34992917687-69777a23849e0.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-chf-2010-intelbras-teste-34992917687-69777a23b8601.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-chf-2010-intelbras-teste-34992917687-69777a23e4324.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-chf-2015-intelbras-teste-34992917687-69777a242784c.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-chf-2015-intelbras-teste-34992917687-69777a245a127.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-chf-2015-intelbras-teste-34992917687-69777a2491b77.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-chf-2020-intelbras-teste-34992917687-69777a274da76.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-chf-2020-intelbras-teste-34992917687-69777a2782a0d.png
+[] --- Iniciando verificação: f/001/cabo-hdmi-chf-2020-intelbras-teste-34992917687-69777a27bacb4.png
+[] --- Iniciando verificação: f/001/cabo-impact-impact-giga-utp-cat-6-lszh-intelbras-teste-34992917687-69777662d808d.png
+[] --- Iniciando verificação: f/001/cabo-impact-impact-giga-utp-cat-6-lszh-intelbras-teste-34992917687-697776631bcd0.png
+[] --- Iniciando verificação: f/001/cabo-lightning-em-nylon-eual-15n-intelbras-teste-34992917687-69777ba47bab4.png
+[] --- Iniciando verificação: f/001/cabo-lightning-em-nylon-eual-15n-intelbras-teste-34992917687-69777ba4b4715.png
+[] --- Iniciando verificação: f/001/cabo-lightning-em-nylon-eual-15n-intelbras-teste-34992917687-69777ba4ecc60.png
+[] --- Iniciando verificação: f/001/cabo-lightning-em-nylon-eual-15n-intelbras-teste-34992917687-69777ba52f0c7.png
+[] --- Iniciando verificação: f/001/cabo-lightning-eual-12p-intelbras-teste-34992917687-69777ba604c26.png
+[] --- Iniciando verificação: f/001/cabo-lightning-eual-12p-intelbras-teste-34992917687-69777ba63fe4e.png
+[] --- Iniciando verificação: f/001/cabo-lightning-eual-12p-intelbras-teste-34992917687-69777ba67ae79.png
+[] --- Iniciando verificação: f/001/cabo-lightning-eual-12p-intelbras-teste-34992917687-69777ba6b0e35.png
+[] --- Iniciando verificação: f/001/cabo-micro-usb-em-nylon-euab-15n-intelbras-teste-34992917687-69777ba789f44.png
+[] --- Iniciando verificação: f/001/cabo-micro-usb-em-nylon-euab-15n-intelbras-teste-34992917687-69777ba7b84ce.png
+[] --- Iniciando verificação: f/001/cabo-micro-usb-em-nylon-euab-15n-intelbras-teste-34992917687-69777ba7e9a1d.png
+[] --- Iniciando verificação: f/001/cabo-micro-usb-euab-12p-intelbras-teste-34992917687-69777ba5618aa.png
+[] --- Iniciando verificação: f/001/cabo-micro-usb-euab-12p-intelbras-teste-34992917687-69777ba58bfb1.png
+[] --- Iniciando verificação: f/001/cabo-micro-usb-euab-12p-intelbras-teste-34992917687-69777ba5c2299.png
+[] --- Iniciando verificação: f/001/cabo-par-tran--ado-para-cftv-anal--gico-mc8cbr-multi-cam-intelbras---1-teste-34992917687-697779dc63e24.png
+[] --- Iniciando verificação: f/001/cabo-par-tran--ado-para-cftv-anal--gico-mc8cbr-multi-cam-intelbras---1-teste-34992917687-697779dcaa138.png
+[] --- Iniciando verificação: f/001/cabo-par-tran--ado-para-cftv-anal--gico-mc8cbr-multi-cam-intelbras---1-teste-34992917687-697779dcd6caf.png
+[] --- Iniciando verificação: f/001/cabo-par-tran--ado-para-cftv-anal--gico-mc8cbr-multi-cam-intelbras---1-teste-34992917687-697779dd0c446.png
+[] --- Iniciando verificação: f/001/cabo-par-tran--ado-para-cftv-anal--gico-mc8cbr-multi-cam-intelbras-teste-34992917687-697776643ed90.png
+[] --- Iniciando verificação: f/001/cabo-par-tran--ado-para-cftv-anal--gico-mc8cbr-multi-cam-intelbras-teste-34992917687-6977766468d8c.png
+[] --- Iniciando verificação: f/001/cabo-par-tran--ado-para-cftv-anal--gico-mc8cbr-multi-cam-intelbras-teste-34992917687-697776649222c.png
+[] --- Iniciando verificação: f/001/cabo-par-tran--ado-para-cftv-anal--gico-mc8cbr-multi-cam-intelbras-teste-34992917687-69777664c1314.png
+[] --- Iniciando verificação: f/001/cabo-qd-qdp-15-intelbras-teste-34992917687-69777a581c233.png
+[] --- Iniciando verificação: f/001/cabo-qd-qdp-15-intelbras-teste-34992917687-69777a5850114.png
+[] --- Iniciando verificação: f/001/cabo-qd-qdp-15-intelbras-teste-34992917687-69777a5888a26.png
+[] --- Iniciando verificação: f/001/cabo-qd-qdp-20-intelbras-teste-34992917687-69777a5b8b3be.png
+[] --- Iniciando verificação: f/001/cabo-qd-qdp-20-intelbras-teste-34992917687-69777a5bc0b87.png
+[] --- Iniciando verificação: f/001/cabo-qd-qdp-20-intelbras-teste-34992917687-69777a5c0cac1.png
+[] --- Iniciando verificação: f/001/cabo-qd-qdu-25-intelbras-teste-34992917687-69777a57de1d1.png
+[] --- Iniciando verificação: f/001/cabo-qd-qdy-15-intelbras-teste-34992917687-69777a5b1948b.png
+[] --- Iniciando verificação: f/001/cabo-qd-qdy-15-intelbras-teste-34992917687-69777a5b4e6b6.png
+[] --- Iniciando verificação: f/001/cabo-solar-dc-cabo-solar-intelbras-teste-34992917687-69777c620b9c1.png
+[] --- Iniciando verificação: f/001/cabo-solar-dc-cabo-solar-intelbras-teste-34992917687-69777c62399fe.png
+[] --- Iniciando verificação: f/001/cabo-solar-dc-cabo-solar-intelbras-teste-34992917687-69777c626fa98.png
+[] --- Iniciando verificação: f/001/cabo-submarino-light-cabo-submarino-light-intelbras-teste-34992917687-69777671501a6.png
+[2026-01-26 22:10:47] --- Iniciando verificação: f/001/cabo-submarino-light-cabo-submarino-light-intelbras-teste-34992917687-697776718b614.png
+[2026-01-26 22:10:47] --- Iniciando verificação: f/001/cabo-submarino-light-cabo-submarino-light-intelbras-teste-34992917687-69777671cdd84.png
+[2026-01-26 22:10:47] --- Iniciando verificação: f/001/cabo-submarino-light-cabo-submarino-light-intelbras-teste-34992917687-697776721b6fc.png
+[2026-01-26 22:10:47] --- Iniciando verificação: f/001/cabo-tight-buffer-cabos-riser-intelbras-teste-34992917687-697776768b165.png
+[2026-01-26 22:10:47] --- Iniciando verificação: f/001/cabo-tight-buffer-cabos-riser-intelbras-teste-34992917687-69777676b566c.png
+[2026-01-26 22:10:47] --- Iniciando verificação: f/001/cabo-tight-buffer-cabos-riser-intelbras-teste-34992917687-69777676e1b31.png
+[2026-01-26 22:10:47] --- Iniciando verificação: f/001/cabo-tight-buffer-cabos-riser-intelbras-teste-34992917687-6977767725cd9.png
+[2026-01-26 22:10:47] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cm-intelbras-teste-34992917687-6977765f097c2.png
+[2026-01-26 22:10:47] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cm-intelbras-teste-34992917687-6977765f4b011.png
+[2026-01-26 22:10:47] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cm-intelbras-teste-34992917687-6977765f7e5b9.png
+[2026-01-26 22:10:47] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cm-intelbras-teste-34992917687-6977765fb37f6.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cmx-intelbras---1-teste-34992917687-697779de2e2d5.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cmx-intelbras---1-teste-34992917687-697779de6749f.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cmx-intelbras---1-teste-34992917687-697779de9c815.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cmx-intelbras---1-teste-34992917687-697779decd048.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cmx-intelbras-teste-34992917687-697776682bf85.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cmx-intelbras-teste-34992917687-697776685aef1.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cmx-intelbras-teste-34992917687-6977766885f3f.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-lan-para-redes-de-dados-categoria-cat-5e-impact-lan-cat-5e-cmx-intelbras-teste-34992917687-69777668b4b23.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-para-redes-de-dados-categoria-cat-6-impact-giga-utp-cat-6-4p-intelbras---1-teste-34992917687-697779dbe24eb.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-para-redes-de-dados-categoria-cat-6-impact-giga-utp-cat-6-4p-intelbras---1-teste-34992917687-697779dc2b5f4.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-para-redes-de-dados-categoria-cat-6-impact-giga-utp-cat-6-4p-intelbras-teste-34992917687-69777661a2ebf.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-u-utp-para-redes-de-dados-categoria-cat-6-impact-giga-utp-cat-6-4p-intelbras-teste-34992917687-69777661d729c.png
+[2026-01-26 22:10:48] --- Iniciando verificação: f/001/cabo-usb-2-em-1-----micro-usb---usb-c-euabc-12p-intelbras-teste-34992917687-69777ba3991af.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-2-em-1-----micro-usb---usb-c-euabc-12p-intelbras-teste-34992917687-69777ba3c769b.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-2-em-1-----micro-usb---usb-c-euabc-12p-intelbras-teste-34992917687-69777ba40ebbe.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-2-em-1-----micro-usb---usb-c-euabc-12p-intelbras-teste-34992917687-69777ba44509a.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-2-em-1-em-nylon-----micro-usb---usb-c-euabc-15nb-intelbras-teste-34992917687-69777ba830e69.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-2-em-1-em-nylon-----micro-usb---usb-c-euabc-15nb-intelbras-teste-34992917687-69777ba86724c.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-2-em-1-em-nylon-----micro-usb---usb-c-euabc-15nb-intelbras-teste-34992917687-69777ba8a67e7.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-2-em-1-em-nylon-----micro-usb---usb-c-euabc-15nb-intelbras-teste-34992917687-69777ba8db507.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-c-para-lightning-em-nylon-eucl-15n-intelbras-teste-34992917687-69777baa71b44.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-c-para-lightning-em-nylon-eucl-15n-intelbras-teste-34992917687-69777baaa835e.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-c-para-lightning-em-nylon-eucl-15n-intelbras-teste-34992917687-69777baae60e6.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-c-para-lightning-eucl-12p-intelbras-teste-34992917687-69777ba6ea554.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-c-para-lightning-eucl-12p-intelbras-teste-34992917687-69777ba72acf0.png
+[2026-01-26 22:10:49] --- Iniciando verificação: f/001/cabo-usb-c-para-lightning-eucl-12p-intelbras-teste-34992917687-69777ba760c47.png
+[2026-01-26 22:10:50] --- Iniciando verificação: f/001/cabo-usb-c-para-usb-c-240w-eucc-20pp-240w-intelbras-teste-34992917687-69777ba2145cb.png
+[2026-01-26 22:10:50] --- Iniciando verificação: f/001/cabo-usb-c-para-usb-c-240w-eucc-20pp-240w-intelbras-teste-34992917687-69777ba251b05.png
+[2026-01-26 22:10:50] --- Iniciando verificação: f/001/cabo-usb-c-para-usb-c-240w-eucc-20pp-240w-intelbras-teste-34992917687-69777ba285dea.png
+[2026-01-26 22:10:50] --- Iniciando verificação: f/001/cabo-usb-c-para-usb-c-240w-eucc-20pp-240w-intelbras-teste-34992917687-69777ba2c516a.png
+[2026-01-26 22:10:50] --- Iniciando verificação: f/001/cabo-usb-c-para-usb-c-em-nylon-eucc-15n-intelbras-teste-34992917687-69777ba30aad7.png
+[2026-01-26 22:10:50] --- Iniciando verificação: f/001/cabo-usb-c-para-usb-c-em-nylon-eucc-15n-intelbras-teste-34992917687-69777ba3427ba.png
+[2026-01-26 22:10:50] --- Iniciando verificação: f/001/cabo-usb-c-para-usb-c-em-nylon-eucc-15n-intelbras-teste-34992917687-69777ba36cae2.png
+[2026-01-26 22:10:50] --- Iniciando verificação: f/001/cabo-usb-c-para-usb-c-eucc-12p-intelbras-teste-34992917687-69777bab29c24.png
+[2026-01-26 22:10:50] --- Iniciando verificação: f/001/cabo-usb-c-para-usb-c-eucc-12p-intelbras-teste-34992917687-69777bab6353a.png
+[2026-01-26 22:10:50] --- Iniciando verificação: f/001/cabo-usb-c-para-usb-c-eucc-12p-intelbras-teste-34992917687-69777bab95fc8.png
+[2026-01-26 22:10:50] --- Iniciando verificação: f/001/cabo-usb-para-usb-c-em-nylon-euac-15n-intelbras-teste-34992917687-69777ba9b8107.png
+[2026-01-26 22:10:51] --- Iniciando verificação: f/001/cabo-usb-para-usb-c-em-nylon-euac-15n-intelbras-teste-34992917687-69777baa06545.png
+[2026-01-26 22:10:51] --- Iniciando verificação: f/001/cabo-usb-para-usb-c-em-nylon-euac-15n-intelbras-teste-34992917687-69777baa3b6a3.png
+[2026-01-26 22:10:51] --- Iniciando verificação: f/001/cabo-usb-para-usb-c-euac-12p-intelbras-teste-34992917687-69777ba91d15d.png
+[2026-01-26 22:10:51] --- Iniciando verificação: f/001/cabo-usb-para-usb-c-euac-12p-intelbras-teste-34992917687-69777ba95baaa.png
+[2026-01-26 22:10:51] --- Iniciando verificação: f/001/cabo-usb-para-usb-c-euac-12p-intelbras-teste-34992917687-69777ba98700f.png
+[2026-01-26 22:10:51] --- Iniciando verificação: f/001/cabos-extensores-de-3-e-6-metros-cabos-extensores-bmw-intelbras-teste-34992917687-697778553de59.png
+[2026-01-26 22:10:51] --- Iniciando verificação: f/001/cabos-extensores-de-3-e-6-metros-cabos-extensores-bmw-intelbras-teste-34992917687-6977785576991.png
+[2026-01-26 22:10:51] --- Iniciando verificação: f/001/cabos-extensores-de-3-e-6-metros-cabos-extensores-bmw-intelbras-teste-34992917687-69777855af77d.png
+[2026-01-26 22:10:51] --- Iniciando verificação: f/001/cabos-extensores-de-3-e-6-metros-cabos-extensores-bmw-intelbras-teste-34992917687-69777855e30a7.png
+[2026-01-26 22:10:52] --- Iniciando verificação: f/001/cadastrador-de-mesa-biom--trico-cm-3410-bio-intelbras---1-teste-34992917687-69777ae551d23.png
+[2026-01-26 22:10:52] --- Iniciando verificação: f/001/cadastrador-de-mesa-biom--trico-cm-3410-bio-intelbras---1-teste-34992917687-69777ae582cc2.png
+[2026-01-26 22:10:52] --- Iniciando verificação: f/001/cadastrador-de-mesa-biom--trico-cm-3410-bio-intelbras---1-teste-34992917687-69777ae5b33ba.png
+[2026-01-26 22:10:52] --- Iniciando verificação: f/001/cadastrador-de-mesa-biom--trico-cm-3410-bio-intelbras---1-teste-34992917687-69777ae5ec7d7.png
+[2026-01-26 22:10:52] --- Iniciando verificação: f/001/cadastrador-de-mesa-biom--trico-cm-3410-bio-intelbras-teste-34992917687-69777838ee31b.png
+[2026-01-26 22:10:52] --- Iniciando verificação: f/001/cadastrador-de-mesa-biom--trico-cm-3410-bio-intelbras-teste-34992917687-697778392dccf.png
+[2026-01-26 22:10:52] --- Iniciando verificação: f/001/cadastrador-de-mesa-biom--trico-cm-3410-bio-intelbras-teste-34992917687-6977783962c98.png
+[2026-01-26 22:10:52] --- Iniciando verificação: f/001/cadastrador-de-mesa-biom--trico-cm-3410-bio-intelbras-teste-34992917687-69777839958d5.png
+[2026-01-26 22:10:52] --- Iniciando verificação: f/001/cadastrador-de-mesa-rfid-cm-100-intelbras---1-teste-34992917687-69777af4879cf.png
+[2026-01-26 22:10:52] --- Iniciando verificação: f/001/cadastrador-de-mesa-rfid-cm-100-intelbras---1-teste-34992917687-69777af4c9c99.png
+[2026-01-26 22:10:52] --- Iniciando verificação: f/001/cadastrador-de-mesa-rfid-cm-100-intelbras---1-teste-34992917687-69777af50ca09.png
+[2026-01-26 22:10:53] --- Iniciando verificação: f/001/cadastrador-de-mesa-rfid-cm-100-intelbras-teste-34992917687-69777848003e2.png
+[2026-01-26 22:10:53] --- Iniciando verificação: f/001/cadastrador-de-mesa-rfid-cm-100-intelbras-teste-34992917687-697778482a03b.png
+[2026-01-26 22:10:53] --- Iniciando verificação: f/001/cadastrador-de-mesa-rfid-cm-100-intelbras-teste-34992917687-69777848551ab.png
+[2026-01-26 22:10:53] --- Iniciando verificação: f/001/caixa---ptica-interna-ftta-com-splitter---xfcd-808-i-xfcd-808-i-intelbras-teste-34992917687-697777457d5c1.png
+[2026-01-26 22:10:53] --- Iniciando verificação: f/001/caixa---ptica-interna-ftta-com-splitter---xfcd-808-i-xfcd-808-i-intelbras-teste-34992917687-69777745a6d70.png
+[2026-01-26 22:10:53] --- Iniciando verificação: f/001/caixa---ptica-interna-ftta-com-splitter---xfcd-808-i-xfcd-808-i-intelbras-teste-34992917687-69777745dcfd6.png
+[2026-01-26 22:10:53] --- Iniciando verificação: f/001/caixa---ptica-interna-ftta-com-splitter---xfcd-808-i-xfcd-808-i-intelbras-teste-34992917687-697777461c4ea.png
+[2026-01-26 22:10:53] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1000-mini-intelbras-teste-34992917687-697779f711e34.png
+[2026-01-26 22:10:53] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1000-mini-intelbras-teste-34992917687-697779f7429f9.png
+[2026-01-26 22:10:53] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1000-mini-intelbras-teste-34992917687-697779f7744df.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1000-mini-intelbras-teste-34992917687-697779f7b4dff.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1100-black-intelbras-teste-34992917687-697779fb5c6f5.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1100-black-intelbras-teste-34992917687-697779fb8d551.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1100-black-intelbras-teste-34992917687-697779fbc46f1.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1100-black-intelbras-teste-34992917687-697779fc10719.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1100-e-black-intelbras-teste-34992917687-697779fc46bd9.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1100-e-black-intelbras-teste-34992917687-697779fc7f6ce.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1100-e-black-intelbras-teste-34992917687-697779fcb1cdc.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-1100-e-black-intelbras-teste-34992917687-697779fce7ae5.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-3000-b-intelbras-teste-34992917687-697779f7efeb2.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-3000-b-intelbras-teste-34992917687-697779f830d71.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-3000-b-intelbras-teste-34992917687-697779f86eee7.png
+[2026-01-26 22:10:54] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-3000-d-intelbras-teste-34992917687-697779f8a5694.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-3000-d-intelbras-teste-34992917687-697779f8db83f.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-3000-d-intelbras-teste-34992917687-697779f91cc9b.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-3000-d-intelbras-teste-34992917687-697779f945922.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-5000-e-intelbras-teste-34992917687-697779f9718f6.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-5000-e-intelbras-teste-34992917687-697779f9a5fd5.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-5100-e-intelbras-teste-34992917687-697779fae93d9.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-passagem-para-cftv-vbox-5100-e-intelbras-teste-34992917687-697779fb25dd2.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica--cto--c-splitter-1x16-xfct-1616s-intelbras-teste-34992917687-6977774793d60.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica--cto--c-splitter-1x16-xfct-1616s-intelbras-teste-34992917687-69777747bcd62.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica--cto--c-splitter-1x16-xfct-1616s-intelbras-teste-34992917687-69777747f02c2.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica--cto--c-splitter-1x16-xfct-1616s-intelbras-teste-34992917687-697777482fe21.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica--cto--c-splitter-1x8-xfct-1608s-intelbras-teste-34992917687-697777498e8d1.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica--cto--c-splitter-1x8-xfct-1608s-intelbras-teste-34992917687-69777749efcfe.png
+[2026-01-26 22:10:55] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica--cto--c-splitter-1x8-xfct-1608s-intelbras-teste-34992917687-6977774a3a12f.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica--cto--c-splitter-1x8-xfct-1608s-intelbras-teste-34992917687-6977774a7987e.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3008-intelbras-teste-34992917687-6977774ce26a0.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3008-intelbras-teste-34992917687-6977774d1e849.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3008-intelbras-teste-34992917687-6977774d5946e.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3008-intelbras-teste-34992917687-6977774d860f5.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3008c-intelbras-teste-34992917687-6977774860622.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3008c-intelbras-teste-34992917687-697777489ad2f.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3008c-intelbras-teste-34992917687-69777748d381a.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3008c-intelbras-teste-34992917687-6977774921f7e.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3016-intelbras-teste-34992917687-6977774ea07c1.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3016-intelbras-teste-34992917687-6977774ed1181.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3016-intelbras-teste-34992917687-6977774f0f3ce.png
+[2026-01-26 22:10:56] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3016-intelbras-teste-34992917687-6977774f422e7.png
+[2026-01-26 22:10:57] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3016c-intelbras-teste-34992917687-69777744a5598.png
+[2026-01-26 22:10:57] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3016c-intelbras-teste-34992917687-69777744da007.png
+[2026-01-26 22:10:57] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3016c-intelbras-teste-34992917687-697777451badd.png
+[2026-01-26 22:10:57] --- Iniciando verificação: f/001/caixa-de-termina----o---ptica-xfcto-3016c-intelbras-teste-34992917687-6977774554709.png
+[2026-01-26 22:10:57] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-mec--nica-24-144fo-xfceo-5004m-intelbras-teste-34992917687-69777746586de.png
+[2026-01-26 22:10:57] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-mec--nica-24-144fo-xfceo-5004m-intelbras-teste-34992917687-6977774690653.png
+[2026-01-26 22:10:57] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-mec--nica-24-144fo-xfceo-5004m-intelbras-teste-34992917687-69777746cf590.png
+[2026-01-26 22:10:58] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-mec--nica-24-144fo-xfceo-5004m-intelbras-teste-34992917687-697777470c511.png
+[2026-01-26 22:10:58] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-mec--nica-24-96fo-xfceo-4004m-intelbras-teste-34992917687-6977774c17bc3.png
+[2026-01-26 22:10:58] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-mec--nica-24-96fo-xfceo-4004m-intelbras-teste-34992917687-6977774c48fc4.png
+[2026-01-26 22:10:58] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-mec--nica-24-96fo-xfceo-4004m-intelbras-teste-34992917687-6977774c7b74f.png
+[2026-01-26 22:10:58] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-mec--nica-24-96fo-xfceo-4004m-intelbras-teste-34992917687-6977774cae5a5.png
+[2026-01-26 22:10:58] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-t--rmica-24-144fo-xfceo-5004t-intelbras-teste-34992917687-6977774db3a1f.png
+[2026-01-26 22:10:58] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-t--rmica-24-144fo-xfceo-5004t-intelbras-teste-34992917687-6977774df13f0.png
+[2026-01-26 22:10:58] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-t--rmica-24-144fo-xfceo-5004t-intelbras-teste-34992917687-6977774e2d734.png
+[2026-01-26 22:10:58] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-t--rmica-24-144fo-xfceo-5004t-intelbras-teste-34992917687-6977774e602f8.png
+[2026-01-26 22:10:58] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-t--rmica-24-96fo-xfceo-4004t-intelbras-teste-34992917687-6977774b50403.png
+[2026-01-26 22:10:59] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-t--rmica-24-96fo-xfceo-4004t-intelbras-teste-34992917687-6977774b7ce25.png
+[2026-01-26 22:10:59] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-t--rmica-24-96fo-xfceo-4004t-intelbras-teste-34992917687-6977774ba69ae.png
+[2026-01-26 22:10:59] --- Iniciando verificação: f/001/caixa-emenda---ptica-veda----o-t--rmica-24-96fo-xfceo-4004t-intelbras-teste-34992917687-6977774bd5c38.png
+[2026-01-26 22:10:59] --- Iniciando verificação: f/001/caixa-organizadora-para-cftv-coc-4038-intelbras-teste-34992917687-697776b04e0ea.png
+[2026-01-26 22:10:59] --- Iniciando verificação: f/001/caixa-organizadora-para-cftv-coc-4038-intelbras-teste-34992917687-697776b083993.png
+[2026-01-26 22:10:59] --- Iniciando verificação: f/001/caixa-organizadora-para-cftv-coc-4038-intelbras-teste-34992917687-697776b0b5769.png
+[2026-01-26 22:10:59] --- Iniciando verificação: f/001/caixa-organizadora-para-cftv-coc-4038-intelbras-teste-34992917687-697776b0e953e.png
+[2026-01-26 22:10:59] --- Iniciando verificação: f/001/campainha-sem-fio--sem-necessidade-de-baterias-cik-200-intelbras---1-teste-34992917687-69777b22bd0b8.png
+[2026-01-26 22:10:59] --- Iniciando verificação: f/001/campainha-sem-fio--sem-necessidade-de-baterias-cik-200-intelbras---1-teste-34992917687-69777b2311882.png
+[2026-01-26 22:10:59] --- Iniciando verificação: f/001/campainha-sem-fio--sem-necessidade-de-baterias-cik-200-intelbras---1-teste-34992917687-69777b2341fa6.png
+[2026-01-26 22:10:59] --- Iniciando verificação: f/001/campainha-sem-fio--sem-necessidade-de-baterias-cik-200-intelbras---1-teste-34992917687-69777b2376b54.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio--sem-necessidade-de-baterias-cik-200-intelbras-teste-34992917687-697779d5c241d.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio--sem-necessidade-de-baterias-cik-200-intelbras-teste-34992917687-697779d612788.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio--sem-necessidade-de-baterias-cik-200-intelbras-teste-34992917687-697779d65285f.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio--sem-necessidade-de-baterias-cik-200-intelbras-teste-34992917687-697779d69039b.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio-cib-10-intelbras-teste-34992917687-6977799b4b3f2.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio-cib-10-intelbras-teste-34992917687-6977799b7f33b.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio-cib-10-intelbras-teste-34992917687-6977799bb7853.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio-cib-10-intelbras-teste-34992917687-6977799bf1ee3.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras---1-teste-34992917687-697779cad99f7.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras---1-teste-34992917687-697779cb146f9.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras---1-teste-34992917687-697779cb4931f.png
+[2026-01-26 22:11:00] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras---1-teste-34992917687-697779cb8213b.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras---3-teste-34992917687-69777b0c5c672.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras---3-teste-34992917687-69777b0c9348e.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras---3-teste-34992917687-69777b0cd0bf1.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras---3-teste-34992917687-69777b0d1f7ab.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras-teste-34992917687-697779b218af0.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras-teste-34992917687-697779b24fd57.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras-teste-34992917687-697779b27c7c2.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainha-sem-fio-cib-101-intelbras-teste-34992917687-697779b2a716c.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainhas-sem-fio-com-bateria-cib-100-intelbras---1-teste-34992917687-69777b1b13f87.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainhas-sem-fio-com-bateria-cib-100-intelbras---1-teste-34992917687-69777b1b550bd.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainhas-sem-fio-com-bateria-cib-100-intelbras---1-teste-34992917687-69777b1b8c31b.png
+[2026-01-26 22:11:01] --- Iniciando verificação: f/001/campainhas-sem-fio-com-bateria-cib-100-intelbras---1-teste-34992917687-69777b1bc5d05.png
+[2026-01-26 22:11:02] --- Iniciando verificação: f/001/campainhas-sem-fio-com-bateria-cib-100-intelbras-teste-34992917687-697779d3429d1.png
+[2026-01-26 22:11:02] --- Iniciando verificação: f/001/campainhas-sem-fio-com-bateria-cib-100-intelbras-teste-34992917687-697779d37f94e.png
+[2026-01-26 22:11:02] --- Iniciando verificação: f/001/campainhas-sem-fio-com-bateria-cib-100-intelbras-teste-34992917687-697779d3b5283.png
+[2026-01-26 22:11:02] --- Iniciando verificação: f/001/campainhas-sem-fio-com-bateria-cib-100-intelbras-teste-34992917687-697779d3ea900.png
+[2026-01-26 22:11:02] --- Iniciando verificação: f/001/cancela-autom--tica-para-fluxo-intenso-af-3000-intelbras-teste-34992917687-69777b396ebfe.png
+[2026-01-26 22:11:02] --- Iniciando verificação: f/001/cancela-autom--tica-para-fluxo-intenso-af-3000-intelbras-teste-34992917687-69777b39a05c6.png
+[2026-01-26 22:11:02] --- Iniciando verificação: f/001/capa-para-c--mera-im4-cachorro-capa-im4-cachorro-intelbras-teste-34992917687-697779ee86fc0.png
+[2026-01-26 22:11:02] --- Iniciando verificação: f/001/capa-para-c--mera-im4-cachorro-capa-im4-cachorro-intelbras-teste-34992917687-697779eebac7f.png
+[2026-01-26 22:11:02] --- Iniciando verificação: f/001/capa-para-c--mera-im4-cachorro-capa-im4-cachorro-intelbras-teste-34992917687-697779eeee882.png
+[2026-01-26 22:11:02] --- Iniciando verificação: f/001/capa-para-c--mera-im4-cachorro-capa-im4-cachorro-intelbras-teste-34992917687-697779ef29679.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-c--mera-im4-cacto-capa-im4-cacto-intelbras-teste-34992917687-697779ebbba4e.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-c--mera-im4-cacto-capa-im4-cacto-intelbras-teste-34992917687-697779ebf3a86.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-c--mera-im4-cacto-capa-im4-cacto-intelbras-teste-34992917687-697779ec45687.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-c--mera-im4-cacto-capa-im4-cacto-intelbras-teste-34992917687-697779ec7d72a.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-conectores-rj45-cat5e-e-rj45-cat6-capa-para-conectores-intelbras---1-teste-34992917687-697779e0c9506.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-conectores-rj45-cat5e-e-rj45-cat6-capa-para-conectores-intelbras---1-teste-34992917687-697779e103be7.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-conectores-rj45-cat5e-e-rj45-cat6-capa-para-conectores-intelbras---1-teste-34992917687-697779e12dbf7.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-conectores-rj45-cat5e-e-rj45-cat6-capa-para-conectores-intelbras---1-teste-34992917687-697779e15e15b.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-conectores-rj45-cat5e-e-rj45-cat6-capa-para-conectores-intelbras-teste-34992917687-69777665eaad6.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-conectores-rj45-cat5e-e-rj45-cat6-capa-para-conectores-intelbras-teste-34992917687-697776662c679.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-conectores-rj45-cat5e-e-rj45-cat6-capa-para-conectores-intelbras-teste-34992917687-6977766660f0d.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/capa-para-conectores-rj45-cat5e-e-rj45-cat6-capa-para-conectores-intelbras-teste-34992917687-697776668ab7b.png
+[2026-01-26 22:11:03] --- Iniciando verificação: f/001/carregador-com-3-portas-usb-c-e-1-usb-a-ec-31-power-100w-gan-intelbras-teste-34992917687-69777babc09ea.png
+[2026-01-26 22:11:04] --- Iniciando verificação: f/001/carregador-com-3-portas-usb-c-e-1-usb-a-ec-31-power-100w-gan-intelbras-teste-34992917687-69777babf3cb4.png
+[2026-01-26 22:11:04] --- Iniciando verificação: f/001/carregador-com-3-portas-usb-c-e-1-usb-a-ec-31-power-100w-gan-intelbras-teste-34992917687-69777bac33387.png
+[2026-01-26 22:11:04] --- Iniciando verificação: f/001/carregador-com-3-portas-usb-c-e-1-usb-a-ec-31-power-100w-gan-intelbras-teste-34992917687-69777bac679f1.png
+[2026-01-26 22:11:04] --- Iniciando verificação: f/001/carregador-de-mesa-multiportas-turbo-240w-ec-40-desktop-240w-gan-intelbras-teste-34992917687-69777bb42cbb6.png
+[2026-01-26 22:11:04] --- Iniciando verificação: f/001/carregador-de-mesa-multiportas-turbo-240w-ec-40-desktop-240w-gan-intelbras-teste-34992917687-69777bb460f29.png
+[2026-01-26 22:11:04] --- Iniciando verificação: f/001/carregador-de-mesa-multiportas-turbo-240w-ec-40-desktop-240w-gan-intelbras-teste-34992917687-69777bb4a2305.png
+[2026-01-26 22:11:04] --- Iniciando verificação: f/001/carregador-de-mesa-multiportas-turbo-240w-ec-40-desktop-240w-gan-intelbras-teste-34992917687-69777bb4d5459.png
+[2026-01-26 22:11:04] --- Iniciando verificação: f/001/carregador-port--til-para-ve--culos-el--tricos-mini-cve-3000p-intelbras-teste-34992917687-69777b965f202.png
+[2026-01-26 22:11:04] --- Iniciando verificação: f/001/carregador-port--til-para-ve--culos-el--tricos-mini-cve-3000p-intelbras-teste-34992917687-69777b96950ee.png
+[2026-01-26 22:11:04] --- Iniciando verificação: f/001/carregador-port--til-para-ve--culos-el--tricos-mini-cve-3000p-intelbras-teste-34992917687-69777b96ca5e8.png
+[2026-01-26 22:11:05] --- Iniciando verificação: f/001/carregador-port--til-para-ve--culos-el--tricos-mini-cve-3000p-intelbras-teste-34992917687-69777b9712ac5.png
+[2026-01-26 22:11:05] --- Iniciando verificação: f/001/carregador-turbo-32w-ec-12-power-32w-gan-intelbras-teste-34992917687-69777bb0afd14.png
+[2026-01-26 22:11:05] --- Iniciando verificação: f/001/carregador-turbo-32w-ec-12-power-32w-gan-intelbras-teste-34992917687-69777bb0e9850.png
+[2026-01-26 22:11:05] --- Iniciando verificação: f/001/carregador-turbo-32w-ec-12-power-32w-gan-intelbras-teste-34992917687-69777bb134969.png
+[2026-01-26 22:11:06] --- Iniciando verificação: f/001/carregador-turbo-32w-ec-12-power-32w-gan-intelbras-teste-34992917687-69777bb16c2ac.png
+[2026-01-26 22:11:06] --- Iniciando verificação: f/001/carregador-turbo-45w-ec-20-power-45w-gan-intelbras-teste-34992917687-69777bb26cfe2.png
+[2026-01-26 22:11:06] --- Iniciando verificação: f/001/carregador-turbo-45w-ec-20-power-45w-gan-intelbras-teste-34992917687-69777bb2a056e.png
+[2026-01-26 22:11:06] --- Iniciando verificação: f/001/carregador-turbo-45w-ec-20-power-45w-gan-intelbras-teste-34992917687-69777bb2d2a00.png
+[2026-01-26 22:11:06] --- Iniciando verificação: f/001/carregador-turbo-45w-ec-20-power-45w-gan-intelbras-teste-34992917687-69777bb315476.png
+[2026-01-26 22:11:06] --- Iniciando verificação: f/001/carregador-turbo-65w-ec-21-power-65w-gan-intelbras-teste-34992917687-69777bac9b1eb.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-turbo-65w-ec-21-power-65w-gan-intelbras-teste-34992917687-69777bacd7e01.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-turbo-65w-ec-21-power-65w-gan-intelbras-teste-34992917687-69777bad1e4d3.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-turbo-65w-ec-21-power-65w-gan-intelbras-teste-34992917687-69777bad53c97.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-ultrarr--pido-com-2-portas-usb-ec-11-power-20-w-intelbras-teste-34992917687-69777bb34639a.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-ultrarr--pido-com-2-portas-usb-ec-11-power-20-w-intelbras-teste-34992917687-69777bb377085.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-ultrarr--pido-com-2-portas-usb-ec-11-power-20-w-intelbras-teste-34992917687-69777bb3a0b53.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-ultrarr--pido-com-2-portas-usb-ec-11-power-20-w-intelbras-teste-34992917687-69777bb3cbcf4.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-usb-com-tecnologia-qualcomm---quick-charge----3-0-ec-1-quick-intelbras-teste-34992917687-69777bae2b8a1.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-usb-com-tecnologia-qualcomm---quick-charge----3-0-ec-1-quick-intelbras-teste-34992917687-69777bae5e8d8.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-usb-com-tecnologia-qualcomm---quick-charge----3-0-ec-1-quick-intelbras-teste-34992917687-69777bae98c83.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-usb-com-tecnologia-qualcomm---quick-charge----3-0-ec-1-quick-intelbras-teste-34992917687-69777baecb433.png
+[2026-01-26 22:11:07] --- Iniciando verificação: f/001/carregador-usb-de-2-4-a-ec-1-fast-intelbras-teste-34992917687-69777bb19822f.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/carregador-usb-de-2-4-a-ec-1-fast-intelbras-teste-34992917687-69777bb1c2c60.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/carregador-usb-de-2-4-a-ec-1-fast-intelbras-teste-34992917687-69777bb20265b.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/carregador-usb-de-2-4-a-ec-1-fast-intelbras-teste-34992917687-69777bb237c94.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/carregador-veicular-universal-usb-ecv-2-fast-intelbras-teste-34992917687-69777bafc56f7.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/carregador-veicular-universal-usb-ecv-2-fast-intelbras-teste-34992917687-69777bb002362.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/carregador-veicular-universal-usb-ecv-2-fast-intelbras-teste-34992917687-69777bb03587f.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/carregador-veicular-universal-usb-ecv-2-fast-intelbras-teste-34992917687-69777bb076a39.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/cart--o-de-mem--ria-micro-sd-128-gb-wd-purple----micro-sd-128-gb-intelbras-teste-34992917687-6977785265d7f.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/cart--o-de-mem--ria-micro-sd-128-gb-wd-purple----micro-sd-128-gb-intelbras-teste-34992917687-697778529484f.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/cart--o-de-mem--ria-micro-sd-256-gb-wd-purple----micro-sd-256-gb-intelbras-teste-34992917687-69777852ca114.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/cart--o-de-mem--ria-micro-sd-256-gb-wd-purple----micro-sd-256-gb-intelbras-teste-34992917687-697778530adea.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/cart--o-de-mem--ria-micro-sd-32-gb-wd-purple----micro-sd-32-gb-intelbras-teste-34992917687-697778523d4e1.png
+[2026-01-26 22:11:08] --- Iniciando verificação: f/001/cart--o-de-mem--ria-micro-sd-64-gb-wd-purple----micro-sd-64-gb-intelbras-teste-34992917687-69777853401fa.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/cart--o-de-mem--ria-sd-card-256-gb-intelbras-teste-34992917687-6977785f2de21.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/cart--o-de-mem--ria-sd-card-256-gb-intelbras-teste-34992917687-6977785f643d7.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/cart--o-de-proximidade-rfid-125-khz-th-2000-intelbras-teste-34992917687-69777848b8ebd.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/cart--o-de-proximidade-rfid-125-khz-th-2000-intelbras-teste-34992917687-69777848ee106.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/cart--o-de-proximidade-rfid-13-56-mhz-th-2000-mf-intelbras-teste-34992917687-69777851206c0.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/cart--o-de-proximidade-rfid-13-56-mhz-th-2000-mf-intelbras-teste-34992917687-6977785160dff.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/cart--o-rfid-13-56-mhz-th-161l-intelbras---1-teste-34992917687-69777aefbd9aa.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/cart--o-rfid-13-56-mhz-th-161l-intelbras-teste-34992917687-6977784f35b0f.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/catraca-balc--o-cab-3000-uc-intelbras---1-teste-34992917687-69777ae18f0c7.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/catraca-balc--o-cab-3000-uc-intelbras---1-teste-34992917687-69777ae1be63e.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/catraca-balc--o-cab-3000-uc-intelbras---1-teste-34992917687-69777ae1ef391.png
+[2026-01-26 22:11:09] --- Iniciando verificação: f/001/catraca-balc--o-cab-3000-uc-intelbras---1-teste-34992917687-69777ae230ee5.png
+[2026-01-26 22:11:10] --- Iniciando verificação: f/001/catraca-balc--o-cab-3000-uc-intelbras-teste-34992917687-69777832ac97c.png
+[2026-01-26 22:11:10] --- Iniciando verificação: f/001/catraca-balc--o-cab-3000-uc-intelbras-teste-34992917687-69777832e6767.png
+[2026-01-26 22:11:10] --- Iniciando verificação: f/001/catraca-balc--o-cab-3000-uc-intelbras-teste-34992917687-6977783328bbb.png
+[2026-01-26 22:11:10] --- Iniciando verificação: f/001/catraca-balc--o-cab-3000-uc-intelbras-teste-34992917687-697778335da5a.png
+[2026-01-26 22:11:10] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-intelbras---1-teste-34992917687-69777ae26f9a1.png
+[2026-01-26 22:11:10] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-intelbras---1-teste-34992917687-69777ae2a99fc.png
+[2026-01-26 22:11:10] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-intelbras---1-teste-34992917687-69777ae2ebd63.png
+[2026-01-26 22:11:10] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-intelbras---1-teste-34992917687-69777ae32e546.png
+[2026-01-26 22:11:10] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-intelbras-teste-34992917687-69777831c27e0.png
+[2026-01-26 22:11:10] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-intelbras-teste-34992917687-6977783208662.png
+[2026-01-26 22:11:11] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-intelbras-teste-34992917687-697778323a4e9.png
+[2026-01-26 22:11:11] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-intelbras-teste-34992917687-697778326da22.png
+[2026-01-26 22:11:11] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-uc-intelbras---1-teste-34992917687-69777ae4448e3.png
+[2026-01-26 22:11:11] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-uc-intelbras---1-teste-34992917687-69777ae48b37d.png
+[2026-01-26 22:11:11] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-uc-intelbras---1-teste-34992917687-69777ae4cabb1.png
+[2026-01-26 22:11:11] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-uc-intelbras---1-teste-34992917687-69777ae513cfa.png
+[2026-01-26 22:11:11] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-uc-intelbras-teste-34992917687-69777833954d5.png
+[2026-01-26 22:11:11] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-uc-intelbras-teste-34992917687-69777833c02da.png
+[2026-01-26 22:11:11] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-uc-intelbras-teste-34992917687-69777833ee030.png
+[2026-01-26 22:11:11] --- Iniciando verificação: f/001/catraca-pedestal-cap-3000-uc-intelbras-teste-34992917687-6977783435889.png
+[2026-01-26 22:11:12] --- Iniciando verificação: f/001/catraca-pedestal-cap-3100-lite-mf-face-intelbras---1-teste-34992917687-69777ad502414.png
+[2026-01-26 22:11:12] --- Iniciando verificação: f/001/catraca-pedestal-cap-3100-lite-mf-face-intelbras---1-teste-34992917687-69777ad53985a.png
+[2026-01-26 22:11:12] --- Iniciando verificação: f/001/catraca-pedestal-cap-3100-lite-mf-face-intelbras---1-teste-34992917687-69777ad56521b.png
+[2026-01-26 22:11:12] --- Iniciando verificação: f/001/catraca-pedestal-cap-3100-lite-mf-face-intelbras---1-teste-34992917687-69777ad5911e5.png

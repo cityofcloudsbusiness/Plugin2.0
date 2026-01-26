@@ -1,35 +1,163 @@
-// Inicializa contadores
+/**
+ * ARQUIVO: metags.js
+ * FUNÇÃO: Gerenciamento de Meta-Tags com Filtro por Categoria e SSE
+ */
+
+// Contadores para campos dinâmicos
 let numC = 1;
 let numT = 1;
 
-// Evento delegativo: Adiciona cidade
-document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('btn-add-city')) {
+$(document).ready(function () {
+    // 1. CARREGAMENTO INICIAL
+    // Carrega as categorias assim que o documento estiver pronto para popular o Modal
+    carregarCategoriasTags();
+
+    // 2. CONTROLE DO MODAL DE CATEGORIAS
+    // Abrir o modal
+    $(document).on('click', '#btnAbrirFiltro', function (e) {
+        e.preventDefault();
+        $('#modalCategorias').fadeIn(200);
+    });
+
+    // Fechar o modal (Botão X ou Botão Confirmar)
+    $(document).on('click', '.close-modal, .btn-confirmar-filtro', function () {
+        $('#modalCategorias').fadeOut(200);
+        atualizarLabelFiltro();
+    });
+
+    // Fechar ao clicar fora da área branca do modal
+    $(window).on('click', function (event) {
+        if ($(event.target).is('#modalCategorias')) {
+            $('#modalCategorias').fadeOut(200);
+            atualizarLabelFiltro();
+        }
+    });
+
+    // 3. MANIPULAÇÃO DE CAMPOS DINÂMICOS (CIDADE / TELEFONE)
+    // Adicionar campo de Cidade
+    $(document).on('click', '.btn-add-city', function () {
         numC++;
         const campos = document.querySelector('#cidade .campos');
         if (campos) {
-            campos.insertAdjacentHTML('beforeend', `
-                    <div>
-                        <input type="text" name="cidade${numC}" placeholder="Digite a cidade ${numC}">
-                    </div>`);
+            $(campos).append(`
+                <div style="margin-top:5px;">
+                    <input type="text" name="cidade${numC}" placeholder="Digite a cidade ${numC}">
+                </div>`);
         }
-    }
-});
+    });
 
-// Evento delegativo: Adiciona telefone
-document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('btn-add-phone')) {
+    // Adicionar campo de Telefone
+    $(document).on('click', '.btn-add-phone', function () {
         numT++;
         const campos = document.querySelector('#numero .campos');
         if (campos) {
-            campos.insertAdjacentHTML('beforeend', `
-                    <div>
-                        <input type="text" name="telefone${numT}" placeholder="Digite o telefone ${numT}">
-                    </div>`);
+            $(campos).append(`
+                <div style="margin-top:5px;">
+                    <input type="text" name="telefone${numT}" placeholder="Digite o telefone ${numT}">
+                </div>`);
         }
-    }
+    });
 });
 
+/**
+ * Busca o HTML das categorias do servidor
+ */
+function carregarCategoriasTags() {
+    $('#categoriasContainerTags').html('<div class="loading">Carregando categorias...</div>');
+    $.get(`backend/metaTags/getCategorias.php`, function (html) {
+        $('#categoriasContainerTags').html(html);
+    });
+}
+
+/**
+ * Atualiza o texto abaixo do botão para informar se o filtro está ativo
+ */
+function atualizarLabelFiltro() {
+    const selecionadas = $('#categoriasContainerTags input[name="categoria[]"]:checked').length;
+    if (selecionadas > 0) {
+        $('#infoFiltro').text(`${selecionadas}`).css('color', '#4CAF50');
+    } else {
+        $('#infoFiltro').text("0").css('color', '#666');
+    }
+}
+
+/**
+ * FUNÇÃO PRINCIPAL: Inicia o processamento via Server-Sent Events (SSE)
+ * @param {string} urlBase - Caminho para o arquivo PHP (recebeTags ou recebeTagsCat)
+ * @param {jQuery} $btn - Referência do botão clicado para desabilitar/habilitar
+ */
+function iniciarProcessamentoTags(urlBase, $btn) {
+    $btn.prop('disabled', true);
+    
+    // Coleta Cidades Preenchidas
+    const cidades = [];
+    for (let i = 1; i <= numC; i++) {
+        const v = $(`[name=cidade${i}]`).val()?.trim();
+        if (v) cidades.push(v);
+    }
+
+    // Coleta Telefones Preenchidos
+    const telefones = [];
+    for (let i = 1; i <= numT; i++) {
+        const v = $(`[name=telefone${i}]`).val()?.trim();
+        if (v) telefones.push(v);
+    }
+
+    // Coleta IDs das Categorias selecionadas no Modal
+    const selecionadas = $('#categoriasContainerTags input[name="categoria[]"]:checked')
+        .map(function () { return this.value; }).get();
+
+    // Monta Query String
+    const params = $.param({
+        num1: cidades.length,
+        num2: telefones.length,
+        cidades: JSON.stringify(cidades),
+        telefones: JSON.stringify(telefones),
+        id_categorias: JSON.stringify(selecionadas) // Array de IDs convertido para string
+    });
+
+    // Inicia a barra de progresso
+    $('.progress').css('width', '0%');
+    $('.Value').text('0%');
+
+    // Abre conexão SSE
+    const evt = new EventSource(`${urlBase}?${params}`);
+
+    // Escuta progresso
+    evt.addEventListener('progress', e => {
+        const pct = parseInt(e.data, 10);
+        $('.progress').css('width', pct + '%');
+        $('.Value').text(pct + '%');
+    });
+
+    // Escuta conclusão
+    evt.addEventListener('complete', e => {
+        $('.progress').css('width', '100%');
+        $('.Value').text('100%');
+        evt.close();
+        $btn.prop('disabled', false);
+        alert('Operação concluída com sucesso!');
+    });
+
+    // Trata erros
+    evt.addEventListener('error', e => {
+        console.error('SSE Error:', e);
+        evt.close();
+        $btn.prop('disabled', false);
+        alert('Houve um erro no processamento. Verifique o console.');
+    });
+}
+
+// GATILHOS DOS BOTÕES DE AÇÃO
+$(document).on('click', '.botaoprod', function (e) {
+    e.preventDefault();
+    iniciarProcessamentoTags('backend/metaTags/recebeTags.php', $(this));
+});
+
+$(document).on('click', '.botaocat', function (e) {
+    e.preventDefault();
+    iniciarProcessamentoTags('backend/metaTags/recebeTagsCat.php', $(this));
+});
 
 
 //AO CLICAR EM TRANSFORMAR CATEGORIAS EM PRODUTOS DESTAQUES
@@ -176,96 +304,96 @@ $(document).on('click', '#area_apresent .botaodesc', function (e) {
 });
 
 
-// AO CLICAR CADASTRAR META-SEARCH PRODUTO
-$(document).on('click', '#area_apresent .botaoprod', function (e) {
-    e.preventDefault();
-    const $btn = $(this).prop('disabled', true);
+// // AO CLICAR CADASTRAR META-SEARCH PRODUTO
+// $(document).on('click', '#area_apresent .botaoprod', function (e) {
+//     e.preventDefault();
+//     const $btn = $(this).prop('disabled', true);
 
-    // coleta arrays
-    const cidades = [];
-    for (let i = 1; i <= numC; i++) {
-        const v = $(`[name=cidade${i}]`).val().trim();
-        if (v) cidades.push(v);
-    }
-    const telefones = [];
-    for (let i = 1; i <= numT; i++) {
-        const v = $(`[name=telefone${i}]`).val().trim();
-        if (v) telefones.push(v);
-    }
+//     // coleta arrays
+//     const cidades = [];
+//     for (let i = 1; i <= numC; i++) {
+//         const v = $(`[name=cidade${i}]`).val().trim();
+//         if (v) cidades.push(v);
+//     }
+//     const telefones = [];
+//     for (let i = 1; i <= numT; i++) {
+//         const v = $(`[name=telefone${i}]`).val().trim();
+//         if (v) telefones.push(v);
+//     }
 
-    // abre SSE passando tudo via query string
-    const params = $.param({
-        num1: cidades.length,
-        num2: telefones.length,
-        cidades: JSON.stringify(cidades),
-        telefones: JSON.stringify(telefones)
-    });
-    const evt = new EventSource('backend/metaTags/recebeTags.php?' + params);
+//     // abre SSE passando tudo via query string
+//     const params = $.param({
+//         num1: cidades.length,
+//         num2: telefones.length,
+//         cidades: JSON.stringify(cidades),
+//         telefones: JSON.stringify(telefones)
+//     });
+//     const evt = new EventSource('backend/metaTags/recebeTags.php?' + params);
 
-    evt.addEventListener('progress', e => {
-        const pct = parseInt(e.data, 10);
-        $('main#principal #right .progress').css('width', pct + '%');
-        $('main#principal #right .Value').text(pct + '%');
-    });
-    evt.addEventListener('complete', e => {
-        $('main#principal #right .progress').css('width', '100%');
-        $('main#principal #right .Value').text('100%');
-        evt.close();
-        $btn.prop('disabled', false);
+//     evt.addEventListener('progress', e => {
+//         const pct = parseInt(e.data, 10);
+//         $('main#principal #right .progress').css('width', pct + '%');
+//         $('main#principal #right .Value').text(pct + '%');
+//     });
+//     evt.addEventListener('complete', e => {
+//         $('main#principal #right .progress').css('width', '100%');
+//         $('main#principal #right .Value').text('100%');
+//         evt.close();
+//         $btn.prop('disabled', false);
 
-        alert('Operação concluída!');
-    });
-    evt.addEventListener('error', e => {
-        console.error('SSE error:', e);
-        evt.close();
-        $btn.prop('disabled', false);
-    });
-});
+//         alert('Operação concluída!');
+//     });
+//     evt.addEventListener('error', e => {
+//         console.error('SSE error:', e);
+//         evt.close();
+//         $btn.prop('disabled', false);
+//     });
+// });
 
-// AO CLICAR CADASTRAR META-SEARCH CATEGORIA
-$(document).on('click', '#area_apresent .botaocat', function (e) {
-    e.preventDefault();
-    const $btn = $(this).prop('disabled', true);
+// // AO CLICAR CADASTRAR META-SEARCH CATEGORIA
+// $(document).on('click', '#area_apresent .botaocat', function (e) {
+//     e.preventDefault();
+//     const $btn = $(this).prop('disabled', true);
 
-    // Coleta cidades e telefones
-    const cidades = [];
-    for (let i = 1; i <= numC; i++) {
-        const v = $(`[name=cidade${i}]`).val().trim();
-        if (v) cidades.push(v);
-    }
-    const telefones = [];
-    for (let i = 1; i <= numT; i++) {
-        const v = $(`[name=telefone${i}]`).val().trim();
-        if (v) telefones.push(v);
-    }
+//     // Coleta cidades e telefones
+//     const cidades = [];
+//     for (let i = 1; i <= numC; i++) {
+//         const v = $(`[name=cidade${i}]`).val().trim();
+//         if (v) cidades.push(v);
+//     }
+//     const telefones = [];
+//     for (let i = 1; i <= numT; i++) {
+//         const v = $(`[name=telefone${i}]`).val().trim();
+//         if (v) telefones.push(v);
+//     }
 
-    // Abre SSE para progresso
-    const params = $.param({
-        num1: cidades.length,
-        num2: telefones.length,
-        cidades: JSON.stringify(cidades),
-        telefones: JSON.stringify(telefones)
-    });
-    const evt = new EventSource('backend/metaTags/recebeTagsCat.php?' + params);
+//     // Abre SSE para progresso
+//     const params = $.param({
+//         num1: cidades.length,
+//         num2: telefones.length,
+//         cidades: JSON.stringify(cidades),
+//         telefones: JSON.stringify(telefones)
+//     });
+//     const evt = new EventSource('backend/metaTags/recebeTagsCat.php?' + params);
 
-    evt.addEventListener('progress', e => {
-        const pct = parseInt(e.data, 10);
-        $('main#principal #right .progress').css('width', pct + '%');
-        $('main#principal #right .Value').text(pct + '%');
-    });
-    evt.addEventListener('complete', () => {
-        $('main#principal #right .progress').css('width', '100%');
-        $('main#principal #right .Value').text('100%');
-        evt.close();
-        $btn.prop('disabled', false);
+//     evt.addEventListener('progress', e => {
+//         const pct = parseInt(e.data, 10);
+//         $('main#principal #right .progress').css('width', pct + '%');
+//         $('main#principal #right .Value').text(pct + '%');
+//     });
+//     evt.addEventListener('complete', () => {
+//         $('main#principal #right .progress').css('width', '100%');
+//         $('main#principal #right .Value').text('100%');
+//         evt.close();
+//         $btn.prop('disabled', false);
 
-        alert('Operação concluída!');
-    });
-    evt.addEventListener('error', () => {
-        evt.close();
-        $btn.prop('disabled', false);
-    });
-});
+//         alert('Operação concluída!');
+//     });
+//     evt.addEventListener('error', () => {
+//         evt.close();
+//         $btn.prop('disabled', false);
+//     });
+// });
 
 
 // AO CLICAR EM UPLOAD PLANILHA EXCEL
@@ -273,10 +401,10 @@ $(document).on('click', '#area_apresent .botaocat', function (e) {
 $(function () {
     document.addEventListener('change', function (e) {
         // “e.target” é o elemento que disparou o change
-        if (e.target && e.target.id === 'arquivoExcel') {
-            const imgIcon = document.getElementById('imgExcel');
+        if (e.target && e.target.id === 'arquivoJSON') {
+            const imgIcon = document.getElementById('imgBD');
             if (e.target.files && e.target.files.length > 0) {
-                imgIcon.src = 'img/pla.png';
+                imgIcon.src = 'img/bd.png';
             } else {
                 imgIcon.src = 'img/exelupload.png';
             }
@@ -453,27 +581,39 @@ function processarImagens(imagens, cidade, telefone, barra, valor, status) {
 
 
 // AO CLICAR EM LIMPAR IMAGENS ORFANS
+$(document).on("click", "#area_apresent .btn_limpar", function (e) {
+    e.preventDefault();
+    const $btn = $(this).prop('disabled', true);
+    
+    // Feedback visual imediato antes da requisição pesada
+    $('.progress').css('width', '5%');
+    $('.Value').text('Lendo imgs...');
 
-$(document).on("click", "#area_apresent .btn_limpar", function () {
     $.post("backend/metaTags/get_images_folder.php", function (response) {
         if (response.status === "ok" && response.imagens.length > 0) {
-            verificarImagens(response.imagens);
+            $('.Value').text('0% - Iniciando limpeza...');
+            verificarImagens(response.imagens, $btn);
         } else {
-            alert("Nenhuma imagem encontrada.");
+            alert("Nenhuma imagem encontrada ou erro na pasta.");
+            $('.Value').text('0%');
+            $btn.prop('disabled', false);
         }
     }, "json").fail(function () {
         alert("Erro ao buscar imagens da pasta.");
+        $btn.prop('disabled', false);
     });
 });
 
-function verificarImagens(imagens2) {
+function verificarImagens(imagens2, $btn) {
     let total2 = imagens2.length;
     let processadas2 = 0;
 
     function verificarProxima() {
         if (processadas2 >= total2) {
             $('.progress').css('width', '100%');
-            $('.Value').text('100.000%');
+            $('.Value').text('100%');
+            $btn.prop('disabled', false);
+            alert("Limpeza concluída!");
             return;
         }
 
@@ -481,15 +621,14 @@ function verificarImagens(imagens2) {
 
         $.post("backend/metaTags/verificar_apagar.php", { imagem: imagemAtual }, function (response) {
             processadas2++;
-            let p = ((processadas2 / total2) * 100).toFixed(3); // ← exibe com 3 casas decimais
+            let p = ((processadas2 / total2) * 100).toFixed(2);
             $('.progress').css('width', p + '%');
             $('.Value').text(p + '%');
+            
+            // Chama a próxima da fila (Recursividade controlada)
             verificarProxima();
         }, "json").fail(function () {
             processadas2++;
-            let p = ((processadas2 / total2) * 100).toFixed(3); // ← garante precisão mesmo em erro
-            $('.progress').css('width', p + '%');
-            $('.Value').text(p + '%');
             verificarProxima();
         });
     }

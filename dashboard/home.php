@@ -26,9 +26,32 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="mods">
+                    <button type="button" id="btnAbrirFiltro" class="btn">
+                        🔍 
+                    </button>
+                    <div id="infoFiltro">0</div>
+                </div>
+
                 <div class="botoes">
                     <button type="button" class="btn botaoprod">META-TAGS PRODUTOS</button>
                     <button type="button" class="btn botaocat">META-TAGS CATEGORIAS</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="modalCategorias" class="modal-tags">
+            <div class="modal-content-tags">
+                <div class="modal-header-tags">
+                    <span class="texto_title">Selecione as Categorias</span>
+                    <span class="close-modal">&times;</span>
+                </div>
+                <div id="categoriasContainerTags" class="modal-body-tags">
+                    Carregando categorias...
+                </div>
+                <div class="modal-footer-tags">
+                    <button type="button" class="btn btn-confirmar-filtro">CONFIRMAR E FECHAR</button>
                 </div>
             </div>
         </div>
@@ -173,9 +196,21 @@
         <div class="sun_box3 sunform">
             <span class="square"></span>
 
+            <div class="container1">
+                <p class="titulo_green">Tags de Produto</p>
+                <div class="container1">
+                    <div class="section1">
+                        <button class="btn_apaga_metatags">LIMPAR</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
+
+
+
     <?php
     include(__DIR__ . '/../backend/conexao.php');
     $qtde_prods = mysqli_num_rows(mysqli_query($con, "SELECT * FROM isc_categories"));

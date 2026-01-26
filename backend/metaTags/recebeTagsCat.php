@@ -1,82 +1,53 @@
 <?php
-// Server-Sent Events endpoint para atualizar meta-tags de categorias
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 header('X-Accel-Buffering: no');
-
-// Desativa buffers do PHP
-while (ob_get_level() > 0) ob_end_flush();
-ob_implicit_flush(true);
-ini_set('zlib.output_compression', 'Off');
 set_time_limit(0);
 
 include "../conexao.php";
 
-// lê parâmetros via GET
-$num1      = filter_input(INPUT_GET,  'num1',      FILTER_VALIDATE_INT);
-$num2      = filter_input(INPUT_GET,  'num2',      FILTER_VALIDATE_INT);
 $cidades   = json_decode($_GET['cidades']   ?? '[]', true);
 $telefones = json_decode($_GET['telefones'] ?? '[]', true);
+$id_cats   = json_decode($_GET['id_categorias'] ?? '[]', true);
 
-if ($num1 === false || $num2 === false) {
-    echo "event: error\n";
-    echo "data: Parâmetros inválidos\n\n";
-    exit;
+$where = "";
+if (!empty($id_cats)) {
+    $ids_string = implode(',', array_map('intval', $id_cats));
+    $where = " WHERE categoryid IN ($ids_string)";
 }
 
-// carrega todas as categorias em memória
-$cats = [];
-$res = $con->query("SELECT categoryid, catparentid, catmetadesc FROM isc_categories");
-while ($r = $res->fetch_assoc()) {
-    $cats[(int)$r['categoryid']] = [
-        'parent'      => (int)$r['catparentid'],
-        'description' => $r['catmetadesc']
-    ];
-}
-function getMetaDesc(int $cid, array $cats): string {
-    if (!isset($cats[$cid])) return '';
-    while (isset($cats[$cid]) && $cats[$cid]['parent'] !== 0) {
-        $cid = $cats[$cid]['parent'];
-    }
-    return $cats[$cid]['description'] ?? '';
-}
+// 1. Prepara Statements (Melhora performance e evita erros de SQL)
+$updCat = $con->prepare("UPDATE isc_categories SET catpagetitle=?, catmetakeywords=?, catsearchkeywords=? WHERE categoryid=?");
+$updTag = $con->prepare("INSERT INTO isc_product_tags (tagname, tagfriendlyname, tagcount) VALUES (?, ?, 0) ON DUPLICATE KEY UPDATE tagid=LAST_INSERT_ID(tagid)");
+// Nota: Categorias geralmente não têm associação direta de tag na 'isc_product_tagassociations' (que é focada em produtos), 
+// mas se o seu template exigir, a lógica seria similar à de produtos.
 
-// busca todas as categorias
-$qr = $con->query("SELECT categoryid, catname, catparentid FROM isc_categories");
+$qr = $con->query("SELECT categoryid, catname FROM isc_categories" . $where);
 $total = $qr->num_rows;
 $atual = 0;
 
 while ($row = $qr->fetch_assoc()) {
     $atual++;
-    $percent = intval($atual / $total * 100);
-
-    $idcat    = (int)$row['categoryid'];
-    $nome     = $row['catname'];
-    $metaDesc = getMetaDesc((int)$row['catparentid'], $cats);
-
-    // títulos e keywords
+    $idcat = (int)$row['categoryid'];
+    $nome  = $row['catname'];
+    
     $titulo   = $nome . ' ' . implode(' ', $telefones) . ' ' . implode(' ', $cidades);
     $keywords = $nome . ', ' . implode(', ', array_map(fn($c)=>"$nome $c", $cidades));
+    $friendly = mb_strtolower(str_replace(' ', '-', $keywords), 'UTF-8');
 
-    // único UPDATE
-    $upd = $con->prepare("
-      UPDATE isc_categories
-         SET catpagetitle      = ?,
-             catmetakeywords   = ?,
-             catsearchkeywords = ?,
-             catmetadesc       = ?
-       WHERE categoryid       = ?
-    ");
-    $upd->bind_param('ssssi', $titulo, $keywords, $keywords, $metaDesc, $idcat);
-    $upd->execute();
+    // Executa Update da Categoria
+    $updCat->bind_param('sssi', $titulo, $keywords, $keywords, $idcat);
+    $updCat->execute();
 
-    // envia progresso
-    echo "event: progress\n";
-    echo "data: {$percent}\n\n";
-    @flush();
+    // Cria/Atualiza a Tag Global para esta categoria
+    $updTag->bind_param('ss', $keywords, $friendly);
+    $updTag->execute();
+
+    if ($atual % 5 == 0 || $atual == $total) {
+        $percent = intval($atual / $total * 100);
+        echo "event: progress\ndata: {$percent}\n\n";
+        @flush();
+    }
 }
 
-// evento complete
-echo "event: complete\n";
-echo "data: 100\n\n";
-exit;
+echo "event: complete\ndata: 100\n\n";
