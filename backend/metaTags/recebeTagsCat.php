@@ -5,26 +5,36 @@ header('X-Accel-Buffering: no');
 set_time_limit(0);
 
 include "../conexao.php";
+$con->set_charset("utf8mb4");
 
 $cidades   = json_decode($_GET['cidades']   ?? '[]', true);
 $telefones = json_decode($_GET['telefones'] ?? '[]', true);
 $id_cats   = json_decode($_GET['id_categorias'] ?? '[]', true);
 
+// CONSTRUÇÃO DO FILTRO SQL (CORRIGIDO)
 $where = "";
-if (!empty($id_cats)) {
-    $ids_string = implode(',', array_map('intval', $id_cats));
-    $where = " WHERE categoryid IN ($ids_string)";
+if (!empty($id_cats) && is_array($id_cats)) {
+    $clean_ids = array_filter(array_map('intval', $id_cats));
+    if (!empty($clean_ids)) {
+        $where = " WHERE categoryid IN (" . implode(',', $clean_ids) . ")";
+    }
 }
 
-// 1. Prepara Statements (Melhora performance e evita erros de SQL)
 $updCat = $con->prepare("UPDATE isc_categories SET catpagetitle=?, catmetakeywords=?, catsearchkeywords=? WHERE categoryid=?");
 $updTag = $con->prepare("INSERT INTO isc_product_tags (tagname, tagfriendlyname, tagcount) VALUES (?, ?, 0) ON DUPLICATE KEY UPDATE tagid=LAST_INSERT_ID(tagid)");
-// Nota: Categorias geralmente não têm associação direta de tag na 'isc_product_tagassociations' (que é focada em produtos), 
-// mas se o seu template exigir, a lógica seria similar à de produtos.
 
 $qr = $con->query("SELECT categoryid, catname FROM isc_categories" . $where);
 $total = $qr->num_rows;
 $atual = 0;
+
+function normalizarUrlCat($str) {
+    $a = array('À','Á','Â','Ã','Ä','Å','Ç','È','É','Ê','Ë','Ì','Í','Î','Ï','Ò','Ó','Ô','Õ','Ö','Ù','Ú','Û','Ü','Ý','à','á','â','ã','ä','å','ç','è','é','ê','ë','ì','í','î','ï','ñ','ò','ó','ô','õ','ö','ù','ú','û','ü','ý','ÿ');
+    $b = array('A','A','A','A','A','A','C','E','E','E','E','I','I','I','I','O','O','O','O','O','U','U','U','U','Y','a','a','a','a','a','a','c','e','e','e','e','i','i','i','i','n','o','o','o','o','o','u','u','u','u','y','y');
+    $str = str_replace($a, $b, $str);
+    $str = mb_strtolower($str, 'UTF-8');
+    $str = str_replace(' ', '-', $str);
+    return preg_replace('/[^a-z0-9\-]/', '', $str);
+}
 
 while ($row = $qr->fetch_assoc()) {
     $atual++;
@@ -33,13 +43,13 @@ while ($row = $qr->fetch_assoc()) {
     
     $titulo   = $nome . ' ' . implode(' ', $telefones) . ' ' . implode(' ', $cidades);
     $keywords = $nome . ', ' . implode(', ', array_map(fn($c)=>"$nome $c", $cidades));
-    $friendly = mb_strtolower(str_replace(' ', '-', $keywords), 'UTF-8');
+    
+    // CORREÇÃO DE ACENTOS
+    $friendly = normalizarUrlCat($keywords);
 
-    // Executa Update da Categoria
     $updCat->bind_param('sssi', $titulo, $keywords, $keywords, $idcat);
     $updCat->execute();
 
-    // Cria/Atualiza a Tag Global para esta categoria
     $updTag->bind_param('ss', $keywords, $friendly);
     $updTag->execute();
 
@@ -51,3 +61,6 @@ while ($row = $qr->fetch_assoc()) {
 }
 
 echo "event: complete\ndata: 100\n\n";
+$updCat->close();
+$updTag->close();
+$con->close();

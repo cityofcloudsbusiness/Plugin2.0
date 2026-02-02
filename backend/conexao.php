@@ -1,4 +1,4 @@
-<?php
-    $con = mysqli_connect("localhost:3306","root","ec3qz-djmd2","teste");
-	mysqli_set_charset($con, 'utf8mb4');
-?>
+<?php 
+	$con = mysqli_connect("localhost","tudoprojetos_v17atualizada","Lu@na2204","tudoprojetos_v17atualizada");
+
+ ?>

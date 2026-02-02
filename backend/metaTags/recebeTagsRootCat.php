@@ -1,55 +1,65 @@
 <?php
-// SSE endpoint: atualiza catmetadesc para todas as categorias raiz
+/**
+ * SSE endpoint: atualiza catmetadesc nas categorias e propaga para prodmetadesc nos produtos filhos
+ */
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 header('X-Accel-Buffering: no');
 
-// Desabilita buffers do PHP
 while (ob_get_level() > 0) ob_end_flush();
 ob_implicit_flush(true);
 ini_set('zlib.output_compression', 'Off');
 set_time_limit(0);
 
 include "../conexao.php";
+$con->set_charset("utf8mb4");
 
-// lê descrição passada via GET
+// 1. Coleta de parâmetros
 $desc = trim($_GET['desc'] ?? '');
-if ($desc === '') {
-    echo "event: error\n";
-    echo "data: Descrição vazia\n\n";
+$id_cats = json_decode($_GET['id_categorias'] ?? '[]', true);
+
+if ($desc === '' || empty($id_cats)) {
+    echo "event: error\ndata: Parâmetros inválidos\n\n";
     exit;
 }
 
-// seleciona todas as categorias sem parent
-$res = $con->query("SELECT categoryid FROM isc_categories WHERE catparentid = 0");
-$ids = [];
-while ($row = $res->fetch_assoc()) {
-    $ids[] = (int)$row['categoryid'];
-}
+$ids_limpos = array_filter(array_map('intval', $id_cats));
+$total = count($ids_limpos);
 
-$total = count($ids);
 if ($total === 0) {
-    echo "event: complete\n";
-    echo "data: 100\n\n";
+    echo "event: complete\ndata: 100\n\n";
     exit;
 }
 
-// loop de atualização com progresso
+// 2. Preparação dos Statements para performance e segurança
+$updCat = $con->prepare("UPDATE isc_categories SET catmetadesc = ? WHERE categoryid = ?");
+$updProd = $con->prepare("UPDATE isc_products SET prodmetadesc = ? WHERE FIND_IN_SET(?, prodcatids)");
+
 $atual = 0;
-foreach ($ids as $id) {
+
+foreach ($ids_limpos as $id) {
     $atual++;
     $pct = intval($atual / $total * 100);
 
-    $upd = $con->prepare("UPDATE isc_categories SET catmetadesc = ? WHERE categoryid = ?");
-    $upd->bind_param('si', $desc, $id);
-    $upd->execute();
+    // A) Atualiza a Categoria em si
+    $updCat->bind_param('si', $desc, $id);
+    $updCat->execute();
 
-    echo "event: progress\n";
-    echo "data: {$pct}\n\n";
-    @flush();
+    // B) Atualiza todos os PRODUTOS FILHOS desta categoria
+    // O FIND_IN_SET garante que produtos associados a múltiplas categorias também sejam atualizados
+    $updProd->bind_param('si', $desc, $id);
+    $updProd->execute();
+
+    // Envio de progresso
+    echo "event: progress\ndata: {$pct}\n\n";
+    
+    if (ob_get_level() > 0) ob_flush();
+    flush();
 }
 
-// finaliza
-echo "event: complete\n";
-echo "data: 100\n\n";
+echo "event: complete\ndata: 100\n\n";
+
+$updCat->close();
+$updProd->close();
+$con->close();
 exit;

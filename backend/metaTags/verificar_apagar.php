@@ -1,58 +1,51 @@
 <?php
-ini_set('display_errors', 0);
 header('Content-Type: application/json');
+set_time_limit(0); 
+include __DIR__ . '/../conexao.php';
 
-try {
-    include __DIR__ . '/../conexao.php';
+$pastaAlvo = $_POST['pasta'] ?? '';
+$root = rtrim($_SERVER['DOCUMENT_ROOT'], '/\\');
+$caminhoCompleto = $root . DIRECTORY_SEPARATOR . 'product_images';
 
-    $imagemCaminhoRelativo = $_POST['imagem'] ?? '';
-    if (!$imagemCaminhoRelativo) {
-        throw new Exception("Imagem não especificada.");
-    }
-
-    // Busca pelo nome do arquivo (evita erros de caminho de pasta no LIKE)
-    $nomeArquivo = basename($imagemCaminhoRelativo);
-    $termoBusca = "%" . $nomeArquivo . "%";
-
-    // Verifica em todas as colunas de imagem do banco
-    $sql = "SELECT COUNT(*) AS total FROM isc_product_images 
-            WHERE imagefile LIKE ? 
-            OR imagefiletiny LIKE ? 
-            OR imagefilethumb LIKE ? 
-            OR imagefilestd LIKE ? 
-            OR imagefilezoom LIKE ?";
-
-    $stmt = $con->prepare($sql);
-    $stmt->bind_param("sssss", $termoBusca, $termoBusca, $termoBusca, $termoBusca, $termoBusca);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
-    $total = $row['total'] ?? 0;
-    $stmt->close();
-
-    $basePath = realpath(__DIR__ . "/../../../../product_images");
-    
-    // Normalização crucial para Windows: converte barras / para \ no caminho físico
-    $imagemLimpa = str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $imagemCaminhoRelativo);
-    $caminhoCompleto = $basePath . DIRECTORY_SEPARATOR . $imagemLimpa;
-
-    if ($total == 0) {
-        if (file_exists($caminhoCompleto)) {
-            // Tenta apagar o arquivo
-            if (unlink($caminhoCompleto)) {
-                echo json_encode(["status" => "apagada", "imagem" => $imagemCaminhoRelativo]);
-            } else {
-                echo json_encode(["status" => "erro", "mensagem" => "Permissão negada ao excluir."]);
-            }
-        } else {
-            echo json_encode(["status" => "erro", "mensagem" => "Arquivo não existe no disco."]);
-        }
-    } else {
-        echo json_encode(["status" => "mantida", "imagem" => $imagemCaminhoRelativo, "uso" => $total]);
-    }
-
-} catch (Exception $e) {
-    echo json_encode(["status" => "erro", "mensagem" => $e->getMessage()]);
+// Se não for a raiz, adiciona a subpasta
+if ($pastaAlvo !== "") {
+    $caminhoCompleto .= DIRECTORY_SEPARATOR . str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $pastaAlvo);
 }
 
-if (isset($con)) $con->close();
+if (!is_dir($caminhoCompleto)) {
+    echo json_encode(["status" => "vazio", "msg" => "Caminho inexistente"]); exit;
+}
+
+// scandir pega apenas os arquivos DESTA pasta específica (as subpastas já estão na fila do JS)
+$itens = array_diff(scandir($caminhoCompleto), array('.', '..'));
+$apagados = 0; $mantidos = 0;
+
+foreach ($itens as $item) {
+    $caminhoItem = $caminhoCompleto . DIRECTORY_SEPARATOR . $item;
+    
+    // Ignora se for pasta (porque as pastas já serão processadas individualmente pelo JS)
+    if (is_dir($caminhoItem)) continue;
+    
+    // Filtra apenas imagens
+    if (!preg_match('/\.(jpg|jpeg|png|webp)$/i', $item)) continue;
+
+    // Busca no banco pelo nome do arquivo
+    $termo = "%" . $item . "%";
+    $sql = "SELECT COUNT(*) AS total FROM isc_product_images WHERE imagefile LIKE ? OR imagefiletiny LIKE ? OR imagefilethumb LIKE ? OR imagefilestd LIKE ? OR imagefilezoom LIKE ?";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("sssss", $termo, $termo, $termo, $termo, $termo);
+    $stmt->execute();
+    $totalBanco = $stmt->get_result()->fetch_assoc()['total'] ?? 0;
+    $stmt->close();
+
+    if ($totalBanco == 0) {
+        if (@unlink($caminhoItem)) { $apagados++; }
+    } else { $mantidos++; }
+}
+
+echo json_encode([
+    "status" => "ok",
+    "pasta" => $pastaAlvo,
+    "apagados" => $apagados,
+    "mantidos" => $mantidos
+]);

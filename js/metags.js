@@ -1,31 +1,26 @@
 /**
  * ARQUIVO: metags.js
- * FUNÇÃO: Gerenciamento de Meta-Tags com Filtro por Categoria e SSE
+ * Gerenciamento de Modal, Campos Dinâmicos e Processamento SSE
  */
 
-// Contadores para campos dinâmicos
 let numC = 1;
 let numT = 1;
 
 $(document).ready(function () {
     // 1. CARREGAMENTO INICIAL
-    // Carrega as categorias assim que o documento estiver pronto para popular o Modal
     carregarCategoriasTags();
 
-    // 2. CONTROLE DO MODAL DE CATEGORIAS
-    // Abrir o modal
+    // 2. CONTROLE DO MODAL
     $(document).on('click', '#btnAbrirFiltro', function (e) {
         e.preventDefault();
         $('#modalCategorias').fadeIn(200);
     });
 
-    // Fechar o modal (Botão X ou Botão Confirmar)
     $(document).on('click', '.close-modal, .btn-confirmar-filtro', function () {
         $('#modalCategorias').fadeOut(200);
         atualizarLabelFiltro();
     });
 
-    // Fechar ao clicar fora da área branca do modal
     $(window).on('click', function (event) {
         if ($(event.target).is('#modalCategorias')) {
             $('#modalCategorias').fadeOut(200);
@@ -33,122 +28,123 @@ $(document).ready(function () {
         }
     });
 
-    // 3. MANIPULAÇÃO DE CAMPOS DINÂMICOS (CIDADE / TELEFONE)
-    // Adicionar campo de Cidade
-    $(document).on('click', '.btn-add-city', function () {
-        numC++;
-        const campos = document.querySelector('#cidade .campos');
-        if (campos) {
-            $(campos).append(`
-                <div style="margin-top:5px;">
-                    <input type="text" name="cidade${numC}" placeholder="Digite a cidade ${numC}">
-                </div>`);
-        }
+    // 3. SELEÇÃO INTELIGENTE (Checkboxes)
+    
+    // Marcar/Desmarcar Todas
+    $(document).on('change', '#selectAllCats', function() {
+        const marcado = $(this).is(':checked');
+        $('#categoriasContainerTags input[name="categoria[]"]').prop('checked', marcado);
+        atualizarLabelFiltro();
     });
 
-    // Adicionar campo de Telefone
+    // Atualiza contador ao clicar em qualquer checkbox individual
+    $(document).on('change', '#categoriasContainerTags input[name="categoria[]"]', function() {
+        atualizarLabelFiltro();
+    });
+
+    // 4. CAMPOS DINÂMICOS (Cidades e Telefones)
+    $(document).on('click', '.btn-add-city', function () {
+        numC++;
+        $('#cidade .campos').append(`
+            <div style="margin-top:5px;">
+                <input type="text" name="cidade${numC}" placeholder="Digite a cidade ${numC}">
+            </div>`);
+    });
+
     $(document).on('click', '.btn-add-phone', function () {
         numT++;
-        const campos = document.querySelector('#numero .campos');
-        if (campos) {
-            $(campos).append(`
-                <div style="margin-top:5px;">
-                    <input type="text" name="telefone${numT}" placeholder="Digite o telefone ${numT}">
-                </div>`);
-        }
+        $('#numero .campos').append(`
+            <div style="margin-top:5px;">
+                <input type="text" name="telefone${numT}" placeholder="Digite o telefone ${numT}">
+            </div>`);
     });
 });
 
 /**
- * Busca o HTML das categorias do servidor
+ * Busca as categorias respeitando a hierarquia enviada pelo PHP
  */
 function carregarCategoriasTags() {
-    $('#categoriasContainerTags').html('<div class="loading">Carregando categorias...</div>');
-    $.get(`backend/metaTags/getCategorias.php`, function (html) {
+    $('#categoriasContainerTags').html('<div class="loading">Sincronizando categorias...</div>');
+    // Adicionado timestamp para evitar cache do navegador
+    $.get(`backend/metaTags/getCategorias.php?t=${Date.now()}`, function (html) {
         $('#categoriasContainerTags').html(html);
+        atualizarLabelFiltro();
     });
 }
 
 /**
- * Atualiza o texto abaixo do botão para informar se o filtro está ativo
+ * Atualiza o número de categorias selecionadas na Home
  */
 function atualizarLabelFiltro() {
     const selecionadas = $('#categoriasContainerTags input[name="categoria[]"]:checked').length;
+    $('#infoFiltro').text(selecionadas);
+    
+    // Ajuste de cor conforme seleção
     if (selecionadas > 0) {
-        $('#infoFiltro').text(`${selecionadas}`).css('color', '#4CAF50');
+        $('#infoFiltro').css({'color': '#4CAF50', 'font-weight': 'bold'});
     } else {
-        $('#infoFiltro').text("0").css('color', '#666');
+        $('#infoFiltro').css({'color': '#666', 'font-weight': 'normal'});
     }
 }
 
 /**
- * FUNÇÃO PRINCIPAL: Inicia o processamento via Server-Sent Events (SSE)
- * @param {string} urlBase - Caminho para o arquivo PHP (recebeTags ou recebeTagsCat)
- * @param {jQuery} $btn - Referência do botão clicado para desabilitar/habilitar
+ * Dispara o processamento via Server-Sent Events (SSE)
  */
 function iniciarProcessamentoTags(urlBase, $btn) {
     $btn.prop('disabled', true);
     
-    // Coleta Cidades Preenchidas
+    // Coleta Cidades (pega todos os inputs de texto dentro da div #cidade)
     const cidades = [];
-    for (let i = 1; i <= numC; i++) {
-        const v = $(`[name=cidade${i}]`).val()?.trim();
+    $('#cidade input[type="text"]').each(function() {
+        const v = $(this).val().trim();
         if (v) cidades.push(v);
-    }
+    });
 
-    // Coleta Telefones Preenchidos
+    // Coleta Telefones
     const telefones = [];
-    for (let i = 1; i <= numT; i++) {
-        const v = $(`[name=telefone${i}]`).val()?.trim();
+    $('#numero input[type="text"]').each(function() {
+        const v = $(this).val().trim();
         if (v) telefones.push(v);
-    }
+    });
 
-    // Coleta IDs das Categorias selecionadas no Modal
+    // Coleta IDs das Categorias
     const selecionadas = $('#categoriasContainerTags input[name="categoria[]"]:checked')
         .map(function () { return this.value; }).get();
 
-    // Monta Query String
     const params = $.param({
-        num1: cidades.length,
-        num2: telefones.length,
         cidades: JSON.stringify(cidades),
         telefones: JSON.stringify(telefones),
-        id_categorias: JSON.stringify(selecionadas) // Array de IDs convertido para string
+        id_categorias: JSON.stringify(selecionadas)
     });
 
-    // Inicia a barra de progresso
     $('.progress').css('width', '0%');
     $('.Value').text('0%');
 
-    // Abre conexão SSE
     const evt = new EventSource(`${urlBase}?${params}`);
 
-    // Escuta progresso
     evt.addEventListener('progress', e => {
         const pct = parseInt(e.data, 10);
         $('.progress').css('width', pct + '%');
         $('.Value').text(pct + '%');
     });
 
-    // Escuta conclusão
-    evt.addEventListener('complete', e => {
+    evt.addEventListener('complete', () => {
         $('.progress').css('width', '100%');
         $('.Value').text('100%');
         evt.close();
         $btn.prop('disabled', false);
-        alert('Operação concluída com sucesso!');
+        alert('Processamento concluído!');
     });
 
-    // Trata erros
     evt.addEventListener('error', e => {
-        console.error('SSE Error:', e);
+        console.error('Erro SSE:', e);
         evt.close();
         $btn.prop('disabled', false);
-        alert('Houve um erro no processamento. Verifique o console.');
+        alert('Houve um erro na conexão. Tente novamente.');
     });
 }
 
-// GATILHOS DOS BOTÕES DE AÇÃO
+// GATILHOS DOS BOTÕES
 $(document).on('click', '.botaoprod', function (e) {
     e.preventDefault();
     iniciarProcessamentoTags('backend/metaTags/recebeTags.php', $(this));
@@ -277,29 +273,50 @@ $(document).on('click', '#area_apresent .botaosec2cat', function (e) {
 
 $(document).on('click', '#area_apresent .botaodesc', function (e) {
     e.preventDefault();
+    
+    // 1. Coleta a descrição
     const d = $('#desc').val().trim();
     if (!d) {
         alert('Digite uma descrição.');
         return;
     }
-    const evt = new EventSource(
-        'backend/metaTags/recebeTagsRootCat.php?desc=' + encodeURIComponent(d)
-    );
+
+    // 2. Coleta as categorias selecionadas no modal
+    const selecionadas = $('#categoriasContainerTags input[name="categoria[]"]:checked')
+        .map(function () { return this.value; }).get();
+
+    if (selecionadas.length === 0) {
+        alert('Selecione ao menos uma categoria no filtro antes de cadastrar a descrição.');
+        return;
+    }
+
+    // 3. Prepara os parâmetros (descrição + array de IDs)
+    const params = $.param({
+        desc: d,
+        id_categorias: JSON.stringify(selecionadas)
+    });
+
+    console.log("🚀 Iniciando atualização de Meta Description para categorias selecionadas...");
+
+    const evt = new EventSource('backend/metaTags/recebeTagsRootCat.php?' + params);
+
     evt.addEventListener('progress', e => {
         const pct = parseInt(e.data, 10);
         $('main#principal #right .progress').css('width', pct + '%');
         $('main#principal #right .Value').text(pct + '%');
     });
+
     evt.addEventListener('complete', () => {
         $('main#principal #right .progress').css('width', '100%');
         $('main#principal #right .Value').text('100%');
         evt.close();
-
-        alert('Operação concluída!');
+        alert('Meta-descrições atualizadas com sucesso!');
     });
-    evt.addEventListener('error', () => {
+
+    evt.addEventListener('error', e => {
+        console.error('Erro SSE:', e);
         evt.close();
-        alert('Erro ao atualizar.');
+        alert('Erro ao atualizar. Verifique a conexão.');
     });
 });
 
@@ -501,137 +518,107 @@ $(document).on('click', '#area_apresent .btn_codifica', function (e) {
 });
 
 // AO CLICAR EM RENOMEAR IMAGENS
-
 $(document).on("click", ".btn_rename_img", function () {
     const cidade = $("#renamecidade").val().trim();
     const telefone = $("#renametelefone").val().trim();
-    const barra = $(".progress");
-    const valor = $(".Value");
-    const status = $("#status");
+    const $btn = $(this).prop('disabled', true);
 
     if (!cidade || !telefone) {
-        alert("Preencha os campos de cidade e telefone.");
-        return;
+        alert("Preencha cidade e telefone.");
+        $btn.prop('disabled', false); return;
     }
+
+    console.log("%c🚀 Iniciando Renomeação por Frações de ID...", "color: yellow; font-weight: bold;");
 
     $.getJSON("backend/metaTags/get_images.php", function (data) {
         if (data.status === "ok") {
-            const imagens = data.imagens;
-            if (imagens.length === 0) {
-                status.text("Nenhuma imagem encontrada.");
-                return;
-            }
-            processarImagens(imagens, cidade, telefone, barra, valor, status);
-        } else {
-            status.text("Erro ao buscar imagens.");
-            console.error(data.mensagem);
+            processarLotes(data.min_id, data.max_id, cidade, telefone, $btn);
         }
-    }).fail(function (err) {
-        console.error("Erro ao buscar imagens:", err);
-        status.text("Erro na requisição.");
     });
 });
 
-function processarImagens(imagens, cidade, telefone, barra, valor, status) {
-    let total = imagens.length;
-    let processadas = 0;
-
-    function processarProxima() {
-        if (processadas >= total) {
-            status.text("Processo concluído!");
-            barra.css("width", "100%");
-            valor.text("100%");
-            return;
-        }
-
-        const imagemAtual = imagens[processadas];
-
-        $.post("backend/metaTags/renomear.php", {
-            "imagem[caminho]": imagemAtual.caminho,
-            "imagem[campo]": imagemAtual.campo,
-            "cidade": cidade,
-            "telefone": telefone
-        }, function (response) {
-            if (response.status === "ok" || response.status === "pulado") {
-                processadas++;
-                const percentFloat = (processadas / total) * 100;
-                const percent = Math.ceil(percentFloat);
-                barra.css("width", percent + "%");
-                valor.text(percentFloat.toFixed(2) + "%");
-
-                const msg = response.status === "ok"
-                    ? `✅ Renomeada ${processadas} de ${total}`
-                    : `⚠️ Pulada ${processadas} de ${total} (${response.mensagem})`;
-
-                status.text(msg);
-                processarProxima();
-            } else {
-                status.text("❌ Erro ao renomear imagem.");
-                console.error(response.mensagem);
-            }
-
-        }, "json").fail(function (err) {
-            console.error("Erro de comunicação:", err);
-            status.text("Erro ao renomear imagens.");
-        });
+function processarLotes(atualId, maxId, cidade, telefone, $btn) {
+    if (atualId > maxId) {
+        console.log("%c🏁 Concluído!", "color: green; font-weight: bold;");
+        $(".Value").text("100%");
+        $btn.prop('disabled', false);
+        return;
     }
 
-    processarProxima();
+    $.post("backend/metaTags/renomear.php", {
+        p1: atualId,
+        p2: cidade,
+        p3: telefone
+    }, function (res) {
+        if (res.logs) res.logs.forEach(l => console.log(l));
+        
+        // Atualiza a barra
+        let pct = (((atualId - 0) / (maxId - 0)) * 100).toFixed(2);
+        $(".progress").css("width", pct + "%");
+        $(".Value").text(pct + "%");
+
+        processarLotes(res.proximo_id, maxId, cidade, telefone, $btn);
+    }, "json").fail(function(xhr) {
+        console.error("❌ Erro no ID " + atualId + ". Tentando pular...");
+        setTimeout(() => processarLotes(atualId + 50, maxId, cidade, telefone, $btn), 1000);
+    });
 }
-
-
-// AO CLICAR EM LIMPAR IMAGENS ORFANS
+//apagar imagens orfans
 $(document).on("click", "#area_apresent .btn_limpar", function (e) {
     e.preventDefault();
     const $btn = $(this).prop('disabled', true);
+    console.log("🚀 Iniciando Mapeamento de Pastas...");
     
-    // Feedback visual imediato antes da requisição pesada
     $('.progress').css('width', '5%');
-    $('.Value').text('Lendo imgs...');
+    $('.Value').text('Mapeando pastas...');
 
-    $.post("backend/metaTags/get_images_folder.php", function (response) {
-        if (response.status === "ok" && response.imagens.length > 0) {
-            $('.Value').text('0% - Iniciando limpeza...');
-            verificarImagens(response.imagens, $btn);
+    $.getJSON("backend/metaTags/get_images_folder.php", function (res) {
+        if (res.status === "ok") {
+            console.log("📂 Pastas encontradas:", res.pastas);
+            processarFilaDePastas(res.pastas, 0, $btn, 0);
         } else {
-            alert("Nenhuma imagem encontrada ou erro na pasta.");
-            $('.Value').text('0%');
+            console.error("❌ Erro ao listar pastas:", res.mensagem);
             $btn.prop('disabled', false);
         }
-    }, "json").fail(function () {
-        alert("Erro ao buscar imagens da pasta.");
-        $btn.prop('disabled', false);
+    }).fail(function(d) {
+        console.error("❌ Falha crítica ao acessar get_images_folder.php", d.responseText);
     });
 });
 
-function verificarImagens(imagens2, $btn) {
-    let total2 = imagens2.length;
-    let processadas2 = 0;
-
-    function verificarProxima() {
-        if (processadas2 >= total2) {
-            $('.progress').css('width', '100%');
-            $('.Value').text('100%');
-            $btn.prop('disabled', false);
-            alert("Limpeza concluída!");
-            return;
-        }
-
-        let imagemAtual = imagens2[processadas2];
-
-        $.post("backend/metaTags/verificar_apagar.php", { imagem: imagemAtual }, function (response) {
-            processadas2++;
-            let p = ((processadas2 / total2) * 100).toFixed(2);
-            $('.progress').css('width', p + '%');
-            $('.Value').text(p + '%');
-            
-            // Chama a próxima da fila (Recursividade controlada)
-            verificarProxima();
-        }, "json").fail(function () {
-            processadas2++;
-            verificarProxima();
-        });
+function processarFilaDePastas(fila, index, $btn, totalApagados) {
+    if (index >= fila.length) {
+        console.log("✅ PROCESSO FINALIZADO!");
+        console.log("📊 Total Geral de Imagens Apagadas:", totalApagados);
+        $('.progress').css('width', '100%');
+        $('.Value').text('100% - Concluído!');
+        alert("Limpeza concluída! Total apagado: " + totalApagados);
+        $btn.prop('disabled', false);
+        return;
     }
 
-    verificarProxima();
+    let pastaAtual = fila[index];
+    console.log(`⏳ Processando pasta [${index + 1}/${fila.length}]: product_images/${pastaAtual}`);
+    $('.Value').text(`Pasta: ${pastaAtual} (${index + 1}/${fila.length})`);
+
+    $.post("backend/metaTags/verificar_apagar.php", { pasta: pastaAtual }, function (res) {
+        if (res.status === "ok") {
+            console.log(`   - ✅ Sucesso em: ${res.pasta}`);
+            console.log(`   - 🗑️ Apagados: ${res.apagados} | 📦 Mantidos: ${res.mantidos} | ⚠️ Erros: ${res.erros}`);
+            totalApagados += res.apagados;
+        } else {
+            console.warn(`   - ⚠️ Pasta ${pastaAtual} retornou status: ${res.status}`);
+        }
+
+        index++;
+        let p = ((index / fila.length) * 100).toFixed(2);
+        $('.progress').css('width', p + '%');
+        
+        // Chamada da próxima pasta
+        processarFilaDePastas(fila, index, $btn, totalApagados);
+
+    }, "json").fail(function (xhr) {
+        console.error(`   - ❌ Erro ao processar pasta ${pastaAtual}. Status: ${xhr.status}`);
+        index++;
+        processarFilaDePastas(fila, index, $btn, totalApagados);
+    });
 }

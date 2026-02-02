@@ -1,31 +1,31 @@
 <?php
 header('Content-Type: application/json');
-set_time_limit(120); // Previne timeout em pastas grandes
+$root = rtrim($_SERVER['DOCUMENT_ROOT'], '/\\');
+$basePath = $root . DIRECTORY_SEPARATOR . 'product_images';
 
-// Caminho absoluto para a pasta de imagens
-$basePath = realpath(__DIR__ . "/../../../../product_images");
-
-if (!$basePath || !is_dir($basePath)) {
-    echo json_encode(["status" => "erro", "mensagem" => "Pasta de imagens não encontrada."]);
+if (!is_dir($basePath)) {
+    echo json_encode(["status" => "erro", "mensagem" => "Pasta product_images nao encontrada."]);
     exit;
 }
 
-function listarImagens($diretorioBase) {
-    $imagens = [];
-    $dir = new RecursiveDirectoryIterator($diretorioBase, RecursiveDirectoryIterator::SKIP_DOTS);
-    $iterator = new RecursiveIteratorIterator($dir);
+$pastas = [];
+// Criamos um iterador que varre subpastas de subpastas infinitamente
+$diretorios = new RecursiveIteratorIterator(
+    new RecursiveDirectoryIterator($basePath, RecursiveDirectoryIterator::SKIP_DOTS),
+    RecursiveIteratorIterator::SELF_FIRST
+);
 
-    foreach ($iterator as $arquivo) {
-        // Regex atualizada para incluir .webp
-        if ($arquivo->isFile() && preg_match('/\.(jpg|jpeg|png|webp)$/i', $arquivo->getFilename())) {
-            $caminhoRelativo = str_replace($diretorioBase . DIRECTORY_SEPARATOR, '', $arquivo->getPathname());
-            // Padroniza barras para o formato do banco de dados (/)
-            $caminhoRelativo = str_replace("\\", "/", $caminhoRelativo); 
-            $imagens[] = $caminhoRelativo;
-        }
+foreach ($diretorios as $nome => $objeto) {
+    if ($objeto->isDir()) {
+        // Pega o caminho relativo (ex: a/309)
+        $relativo = str_replace($basePath . DIRECTORY_SEPARATOR, '', $objeto->getPathname());
+        $pastas[] = $relativo;
     }
-    return $imagens;
 }
 
-$imagens = listarImagens($basePath);
-echo json_encode(["status" => "ok", "imagens" => $imagens]);
+// Adiciona a raiz e remove duplicatas
+array_unshift($pastas, "");
+$pastas = array_unique($pastas);
+sort($pastas); // Organiza em ordem alfabetica
+
+echo json_encode(["status" => "ok", "pastas" => array_values($pastas)]);

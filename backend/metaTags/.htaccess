@@ -1,0 +1,14 @@
+# Desativa o ModSecurity (Firewall) para evitar erro 403 em requisições de limpeza
+<IfModule mod_security.c>
+  SecFilterEngine Off
+  SecFilterScanPOST Off
+</IfModule>
+
+# Garante que o servidor permita os métodos GET e POST
+<Limit GET POST>
+  Order allow,deny
+  Allow from all
+</Limit>
+
+# Opcional: Impede que as pessoas listem seus arquivos se acessarem a pasta pelo navegador
+Options -Indexes
