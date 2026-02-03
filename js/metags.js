@@ -1,159 +1,35 @@
-/**
- * ARQUIVO: metags.js
- * Gerenciamento de Modal, Campos Dinâmicos e Processamento SSE
- */
-
+// Inicializa contadores
 let numC = 1;
 let numT = 1;
 
-$(document).ready(function () {
-    // 1. CARREGAMENTO INICIAL
-    carregarCategoriasTags();
-
-    // 2. CONTROLE DO MODAL
-    $(document).on('click', '#btnAbrirFiltro', function (e) {
-        e.preventDefault();
-        $('#modalCategorias').fadeIn(200);
-    });
-
-    $(document).on('click', '.close-modal, .btn-confirmar-filtro', function () {
-        $('#modalCategorias').fadeOut(200);
-        atualizarLabelFiltro();
-    });
-
-    $(window).on('click', function (event) {
-        if ($(event.target).is('#modalCategorias')) {
-            $('#modalCategorias').fadeOut(200);
-            atualizarLabelFiltro();
-        }
-    });
-
-    // 3. SELEÇÃO INTELIGENTE (Checkboxes)
-    
-    // Marcar/Desmarcar Todas
-    $(document).on('change', '#selectAllCats', function() {
-        const marcado = $(this).is(':checked');
-        $('#categoriasContainerTags input[name="categoria[]"]').prop('checked', marcado);
-        atualizarLabelFiltro();
-    });
-
-    // Atualiza contador ao clicar em qualquer checkbox individual
-    $(document).on('change', '#categoriasContainerTags input[name="categoria[]"]', function() {
-        atualizarLabelFiltro();
-    });
-
-    // 4. CAMPOS DINÂMICOS (Cidades e Telefones)
-    $(document).on('click', '.btn-add-city', function () {
+// Evento delegativo: Adiciona cidade
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('btn-add-city')) {
         numC++;
-        $('#cidade .campos').append(`
-            <div style="margin-top:5px;">
-                <input type="text" name="cidade${numC}" placeholder="Digite a cidade ${numC}">
-            </div>`);
-    });
-
-    $(document).on('click', '.btn-add-phone', function () {
-        numT++;
-        $('#numero .campos').append(`
-            <div style="margin-top:5px;">
-                <input type="text" name="telefone${numT}" placeholder="Digite o telefone ${numT}">
-            </div>`);
-    });
-});
-
-/**
- * Busca as categorias respeitando a hierarquia enviada pelo PHP
- */
-function carregarCategoriasTags() {
-    $('#categoriasContainerTags').html('<div class="loading">Sincronizando categorias...</div>');
-    // Adicionado timestamp para evitar cache do navegador
-    $.get(`backend/metaTags/getCategorias.php?t=${Date.now()}`, function (html) {
-        $('#categoriasContainerTags').html(html);
-        atualizarLabelFiltro();
-    });
-}
-
-/**
- * Atualiza o número de categorias selecionadas na Home
- */
-function atualizarLabelFiltro() {
-    const selecionadas = $('#categoriasContainerTags input[name="categoria[]"]:checked').length;
-    $('#infoFiltro').text(selecionadas);
-    
-    // Ajuste de cor conforme seleção
-    if (selecionadas > 0) {
-        $('#infoFiltro').css({'color': '#4CAF50', 'font-weight': 'bold'});
-    } else {
-        $('#infoFiltro').css({'color': '#666', 'font-weight': 'normal'});
+        const campos = document.querySelector('#cidade .campos');
+        if (campos) {
+            campos.insertAdjacentHTML('beforeend', `
+                    <div>
+                        <input type="text" name="cidade${numC}" placeholder="Digite a cidade ${numC}">
+                    </div>`);
+        }
     }
-}
-
-/**
- * Dispara o processamento via Server-Sent Events (SSE)
- */
-function iniciarProcessamentoTags(urlBase, $btn) {
-    $btn.prop('disabled', true);
-    
-    // Coleta Cidades (pega todos os inputs de texto dentro da div #cidade)
-    const cidades = [];
-    $('#cidade input[type="text"]').each(function() {
-        const v = $(this).val().trim();
-        if (v) cidades.push(v);
-    });
-
-    // Coleta Telefones
-    const telefones = [];
-    $('#numero input[type="text"]').each(function() {
-        const v = $(this).val().trim();
-        if (v) telefones.push(v);
-    });
-
-    // Coleta IDs das Categorias
-    const selecionadas = $('#categoriasContainerTags input[name="categoria[]"]:checked')
-        .map(function () { return this.value; }).get();
-
-    const params = $.param({
-        cidades: JSON.stringify(cidades),
-        telefones: JSON.stringify(telefones),
-        id_categorias: JSON.stringify(selecionadas)
-    });
-
-    $('.progress').css('width', '0%');
-    $('.Value').text('0%');
-
-    const evt = new EventSource(`${urlBase}?${params}`);
-
-    evt.addEventListener('progress', e => {
-        const pct = parseInt(e.data, 10);
-        $('.progress').css('width', pct + '%');
-        $('.Value').text(pct + '%');
-    });
-
-    evt.addEventListener('complete', () => {
-        $('.progress').css('width', '100%');
-        $('.Value').text('100%');
-        evt.close();
-        $btn.prop('disabled', false);
-        alert('Processamento concluído!');
-    });
-
-    evt.addEventListener('error', e => {
-        console.error('Erro SSE:', e);
-        evt.close();
-        $btn.prop('disabled', false);
-        alert('Houve um erro na conexão. Tente novamente.');
-    });
-}
-
-// GATILHOS DOS BOTÕES
-$(document).on('click', '.botaoprod', function (e) {
-    e.preventDefault();
-    iniciarProcessamentoTags('backend/metaTags/recebeTags.php', $(this));
 });
 
-$(document).on('click', '.botaocat', function (e) {
-    e.preventDefault();
-    iniciarProcessamentoTags('backend/metaTags/recebeTagsCat.php', $(this));
+// Evento delegativo: Adiciona telefone
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('btn-add-phone')) {
+        numT++;
+        const campos = document.querySelector('#numero .campos');
+        if (campos) {
+            campos.insertAdjacentHTML('beforeend', `
+                    <div>
+                        <input type="text" name="telefone${numT}" placeholder="Digite o telefone ${numT}">
+                    </div>`);
+        }
+    }
 });
+
 
 
 //AO CLICAR EM TRANSFORMAR CATEGORIAS EM PRODUTOS DESTAQUES
@@ -273,144 +149,123 @@ $(document).on('click', '#area_apresent .botaosec2cat', function (e) {
 
 $(document).on('click', '#area_apresent .botaodesc', function (e) {
     e.preventDefault();
-    
-    // 1. Coleta a descrição
     const d = $('#desc').val().trim();
     if (!d) {
         alert('Digite uma descrição.');
         return;
     }
+    const evt = new EventSource(
+        'backend/metaTags/recebeTagsRootCat.php?desc=' + encodeURIComponent(d)
+    );
+    evt.addEventListener('progress', e => {
+        const pct = parseInt(e.data, 10);
+        $('main#principal #right .progress').css('width', pct + '%');
+        $('main#principal #right .Value').text(pct + '%');
+    });
+    evt.addEventListener('complete', () => {
+        $('main#principal #right .progress').css('width', '100%');
+        $('main#principal #right .Value').text('100%');
+        evt.close();
 
-    // 2. Coleta as categorias selecionadas no modal
-    const selecionadas = $('#categoriasContainerTags input[name="categoria[]"]:checked')
-        .map(function () { return this.value; }).get();
+        alert('Operação concluída!');
+    });
+    evt.addEventListener('error', () => {
+        evt.close();
+        alert('Erro ao atualizar.');
+    });
+});
 
-    if (selecionadas.length === 0) {
-        alert('Selecione ao menos uma categoria no filtro antes de cadastrar a descrição.');
-        return;
+
+// AO CLICAR CADASTRAR META-SEARCH PRODUTO
+$(document).on('click', '#area_apresent .botaoprod', function (e) {
+    e.preventDefault();
+    const $btn = $(this).prop('disabled', true);
+
+    // coleta arrays
+    const cidades = [];
+    for (let i = 1; i <= numC; i++) {
+        const v = $(`[name=cidade${i}]`).val().trim();
+        if (v) cidades.push(v);
+    }
+    const telefones = [];
+    for (let i = 1; i <= numT; i++) {
+        const v = $(`[name=telefone${i}]`).val().trim();
+        if (v) telefones.push(v);
     }
 
-    // 3. Prepara os parâmetros (descrição + array de IDs)
+    // abre SSE passando tudo via query string
     const params = $.param({
-        desc: d,
-        id_categorias: JSON.stringify(selecionadas)
+        num1: cidades.length,
+        num2: telefones.length,
+        cidades: JSON.stringify(cidades),
+        telefones: JSON.stringify(telefones)
     });
-
-    console.log("🚀 Iniciando atualização de Meta Description para categorias selecionadas...");
-
-    const evt = new EventSource('backend/metaTags/recebeTagsRootCat.php?' + params);
+    const evt = new EventSource('backend/metaTags/recebeTags.php?' + params);
 
     evt.addEventListener('progress', e => {
         const pct = parseInt(e.data, 10);
         $('main#principal #right .progress').css('width', pct + '%');
         $('main#principal #right .Value').text(pct + '%');
     });
+    evt.addEventListener('complete', e => {
+        $('main#principal #right .progress').css('width', '100%');
+        $('main#principal #right .Value').text('100%');
+        evt.close();
+        $btn.prop('disabled', false);
 
+        alert('Operação concluída!');
+    });
+    evt.addEventListener('error', e => {
+        console.error('SSE error:', e);
+        evt.close();
+        $btn.prop('disabled', false);
+    });
+});
+
+// AO CLICAR CADASTRAR META-SEARCH CATEGORIA
+$(document).on('click', '#area_apresent .botaocat', function (e) {
+    e.preventDefault();
+    const $btn = $(this).prop('disabled', true);
+
+    // Coleta cidades e telefones
+    const cidades = [];
+    for (let i = 1; i <= numC; i++) {
+        const v = $(`[name=cidade${i}]`).val().trim();
+        if (v) cidades.push(v);
+    }
+    const telefones = [];
+    for (let i = 1; i <= numT; i++) {
+        const v = $(`[name=telefone${i}]`).val().trim();
+        if (v) telefones.push(v);
+    }
+
+    // Abre SSE para progresso
+    const params = $.param({
+        num1: cidades.length,
+        num2: telefones.length,
+        cidades: JSON.stringify(cidades),
+        telefones: JSON.stringify(telefones)
+    });
+    const evt = new EventSource('backend/metaTags/recebeTagsCat.php?' + params);
+
+    evt.addEventListener('progress', e => {
+        const pct = parseInt(e.data, 10);
+        $('main#principal #right .progress').css('width', pct + '%');
+        $('main#principal #right .Value').text(pct + '%');
+    });
     evt.addEventListener('complete', () => {
         $('main#principal #right .progress').css('width', '100%');
         $('main#principal #right .Value').text('100%');
         evt.close();
-        alert('Meta-descrições atualizadas com sucesso!');
-    });
+        $btn.prop('disabled', false);
 
-    evt.addEventListener('error', e => {
-        console.error('Erro SSE:', e);
+        alert('Operação concluída!');
+    });
+    evt.addEventListener('error', () => {
         evt.close();
-        alert('Erro ao atualizar. Verifique a conexão.');
+        $btn.prop('disabled', false);
     });
 });
-
-
-// // AO CLICAR CADASTRAR META-SEARCH PRODUTO
-// $(document).on('click', '#area_apresent .botaoprod', function (e) {
-//     e.preventDefault();
-//     const $btn = $(this).prop('disabled', true);
-
-//     // coleta arrays
-//     const cidades = [];
-//     for (let i = 1; i <= numC; i++) {
-//         const v = $(`[name=cidade${i}]`).val().trim();
-//         if (v) cidades.push(v);
-//     }
-//     const telefones = [];
-//     for (let i = 1; i <= numT; i++) {
-//         const v = $(`[name=telefone${i}]`).val().trim();
-//         if (v) telefones.push(v);
-//     }
-
-//     // abre SSE passando tudo via query string
-//     const params = $.param({
-//         num1: cidades.length,
-//         num2: telefones.length,
-//         cidades: JSON.stringify(cidades),
-//         telefones: JSON.stringify(telefones)
-//     });
-//     const evt = new EventSource('backend/metaTags/recebeTags.php?' + params);
-
-//     evt.addEventListener('progress', e => {
-//         const pct = parseInt(e.data, 10);
-//         $('main#principal #right .progress').css('width', pct + '%');
-//         $('main#principal #right .Value').text(pct + '%');
-//     });
-//     evt.addEventListener('complete', e => {
-//         $('main#principal #right .progress').css('width', '100%');
-//         $('main#principal #right .Value').text('100%');
-//         evt.close();
-//         $btn.prop('disabled', false);
-
-//         alert('Operação concluída!');
-//     });
-//     evt.addEventListener('error', e => {
-//         console.error('SSE error:', e);
-//         evt.close();
-//         $btn.prop('disabled', false);
-//     });
-// });
-
-// // AO CLICAR CADASTRAR META-SEARCH CATEGORIA
-// $(document).on('click', '#area_apresent .botaocat', function (e) {
-//     e.preventDefault();
-//     const $btn = $(this).prop('disabled', true);
-
-//     // Coleta cidades e telefones
-//     const cidades = [];
-//     for (let i = 1; i <= numC; i++) {
-//         const v = $(`[name=cidade${i}]`).val().trim();
-//         if (v) cidades.push(v);
-//     }
-//     const telefones = [];
-//     for (let i = 1; i <= numT; i++) {
-//         const v = $(`[name=telefone${i}]`).val().trim();
-//         if (v) telefones.push(v);
-//     }
-
-//     // Abre SSE para progresso
-//     const params = $.param({
-//         num1: cidades.length,
-//         num2: telefones.length,
-//         cidades: JSON.stringify(cidades),
-//         telefones: JSON.stringify(telefones)
-//     });
-//     const evt = new EventSource('backend/metaTags/recebeTagsCat.php?' + params);
-
-//     evt.addEventListener('progress', e => {
-//         const pct = parseInt(e.data, 10);
-//         $('main#principal #right .progress').css('width', pct + '%');
-//         $('main#principal #right .Value').text(pct + '%');
-//     });
-//     evt.addEventListener('complete', () => {
-//         $('main#principal #right .progress').css('width', '100%');
-//         $('main#principal #right .Value').text('100%');
-//         evt.close();
-//         $btn.prop('disabled', false);
-
-//         alert('Operação concluída!');
-//     });
-//     evt.addEventListener('error', () => {
-//         evt.close();
-//         $btn.prop('disabled', false);
-//     });
-// });
 
 
 // AO CLICAR EM UPLOAD PLANILHA EXCEL
@@ -518,107 +373,85 @@ $(document).on('click', '#area_apresent .btn_codifica', function (e) {
 });
 
 // AO CLICAR EM RENOMEAR IMAGENS
-$(document).on("click", ".btn_rename_img", function () {
-    const cidade = $("#renamecidade").val().trim();
-    const telefone = $("#renametelefone").val().trim();
-    const $btn = $(this).prop('disabled', true);
 
-    if (!cidade || !telefone) {
-        alert("Preencha cidade e telefone.");
-        $btn.prop('disabled', false); return;
-    }
+$(document).on("click", ".btn_rename_img", function (e) {
+    e.preventDefault();
+    const c = $("#renamecidade").val().trim();
+    const t = $("#renametelefone").val().trim();
+    
+    console.log("%c--- INICIANDO SISTEMA DE FRAÇÕES ---", "color: yellow; font-weight: bold;");
 
-    console.log("%c🚀 Iniciando Renomeação por Frações de ID...", "color: yellow; font-weight: bold;");
-
-    $.getJSON("backend/metaTags/get_images.php", function (data) {
-        if (data.status === "ok") {
-            processarLotes(data.min_id, data.max_id, cidade, telefone, $btn);
-        }
-    });
+    // Começamos do ID 1 sem perguntar nada ao servidor antes
+    processarFraçãoPorID(1, c, t);
 });
 
-function processarLotes(atualId, maxId, cidade, telefone, $btn) {
-    if (atualId > maxId) {
-        console.log("%c🏁 Concluído!", "color: green; font-weight: bold;");
-        $(".Value").text("100%");
-        $btn.prop('disabled', false);
-        return;
-    }
+function processarFraçãoPorID(idAtual, cidade, telefone) {
+    // LOG DE TEMPO REAL: Mostra no console antes de enviar
+    console.log(`%c[Fração] Solicitando lote a partir do ID: ${idAtual}`, "color: cyan;");
 
     $.post("backend/metaTags/renomear.php", {
-        p1: atualId,
+        p1: idAtual, 
         p2: cidade,
         p3: telefone
     }, function (res) {
-        if (res.logs) res.logs.forEach(l => console.log(l));
-        
-        // Atualiza a barra
-        let pct = (((atualId - 0) / (maxId - 0)) * 100).toFixed(2);
-        $(".progress").css("width", pct + "%");
-        $(".Value").text(pct + "%");
+        if (res.status === "ok") {
+            // IMPRESSÃO DOS LOGS DA EXECUÇÃO NO CONSOLE
+            if (res.logs && res.logs.length > 0) {
+                res.logs.forEach(msg => console.log(msg));
+            }
 
-        processarLotes(res.proximo_id, maxId, cidade, telefone, $btn);
-    }, "json").fail(function(xhr) {
-        console.error("❌ Erro no ID " + atualId + ". Tentando pular...");
-        setTimeout(() => processarLotes(atualId + 50, maxId, cidade, telefone, $btn), 1000);
+            if (res.encontrou_algo) {
+                // Raciocínio: Se achou algo, vai para o próximo ID sugerido pelo PHP
+                processarFraçãoPorID(res.proximo_id, cidade, telefone);
+            } else {
+                console.log("%c--- FIM DA VARREDURA: Não há mais registros ---", "color: green; font-weight: bold;");
+            }
+        }
+    }, "json").fail(function (xhr) {
+        // Se a fração falhar (timeout), pula um bloco e continua
+        console.error(`%c[ERRO] Falha na fração do ID ${idAtual}. Resposta: ${xhr.responseText}`, "color: red;");
+        setTimeout(() => processarFraçãoPorID(idAtual + 10, cidade, telefone), 2000);
     });
 }
-//apagar imagens orfans
+// AO CLICAR EM LIMPAR IMAGENS ORFANS
+
+
 $(document).on("click", "#area_apresent .btn_limpar", function (e) {
     e.preventDefault();
     const $btn = $(this).prop('disabled', true);
-    console.log("🚀 Iniciando Mapeamento de Pastas...");
-    
-    $('.progress').css('width', '5%');
-    $('.Value').text('Mapeando pastas...');
+    $('.Value').text('Mapeando estrutura de pastas...');
 
     $.getJSON("backend/metaTags/get_images_folder.php", function (res) {
         if (res.status === "ok") {
-            console.log("📂 Pastas encontradas:", res.pastas);
-            processarFilaDePastas(res.pastas, 0, $btn, 0);
-        } else {
-            console.error("❌ Erro ao listar pastas:", res.mensagem);
-            $btn.prop('disabled', false);
+            processarPastaPorPasta(res.pastas, 0, $btn);
         }
-    }).fail(function(d) {
-        console.error("❌ Falha crítica ao acessar get_images_folder.php", d.responseText);
     });
 });
 
-function processarFilaDePastas(fila, index, $btn, totalApagados) {
-    if (index >= fila.length) {
-        console.log("✅ PROCESSO FINALIZADO!");
-        console.log("📊 Total Geral de Imagens Apagadas:", totalApagados);
+function processarPastaPorPasta(listaPastas, index, $btn) {
+    if (index >= listaPastas.length) {
         $('.progress').css('width', '100%');
-        $('.Value').text('100% - Concluído!');
-        alert("Limpeza concluída! Total apagado: " + totalApagados);
+        $('.Value').text('100% - Limpeza Geral Concluída!');
         $btn.prop('disabled', false);
+        alert("Processo finalizado com sucesso!");
         return;
     }
 
-    let pastaAtual = fila[index];
-    console.log(`⏳ Processando pasta [${index + 1}/${fila.length}]: product_images/${pastaAtual}`);
-    $('.Value').text(`Pasta: ${pastaAtual} (${index + 1}/${fila.length})`);
+    let pastaAtual = listaPastas[index];
+    $('.Value').text(`Processando pasta: product_images/${pastaAtual}`);
 
     $.post("backend/metaTags/verificar_apagar.php", { pasta: pastaAtual }, function (res) {
-        if (res.status === "ok") {
-            console.log(`   - ✅ Sucesso em: ${res.pasta}`);
-            console.log(`   - 🗑️ Apagados: ${res.apagados} | 📦 Mantidos: ${res.mantidos} | ⚠️ Erros: ${res.erros}`);
-            totalApagados += res.apagados;
-        } else {
-            console.warn(`   - ⚠️ Pasta ${pastaAtual} retornou status: ${res.status}`);
-        }
-
         index++;
-        let p = ((index / fila.length) * 100).toFixed(2);
+        let p = ((index / listaPastas.length) * 100).toFixed(2);
         $('.progress').css('width', p + '%');
         
-        // Chamada da próxima pasta
-        processarFilaDePastas(fila, index, $btn, totalApagados);
+        // Pequena pausa para o servidor "respirar" entre pastas
+        setTimeout(() => {
+            processarPastaPorPasta(listaPastas, index, $btn);
+        }, 100); 
 
-    }, "json").fail(function (xhr) {
-        console.error(`   - ❌ Erro ao processar pasta ${pastaAtual}. Status: ${xhr.status}`);
+    }, "json").fail(function() {
         index++;
-        processarFilaDePastas(fila, index, $btn, totalApagados);
+        processarPastaPorPasta(listaPastas, index, $btn);
     });
 }

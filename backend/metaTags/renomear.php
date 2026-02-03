@@ -1,51 +1,53 @@
 <?php
 header('Content-Type: application/json');
-set_time_limit(0); 
-ini_set('display_errors', 0);
+set_time_limit(30); // Cada fração tem 30 segundos para rodar
 include __DIR__ . '/../conexao.php';
 
-$idInicial = isset($_POST['p1']) ? (int)$_POST['p1'] : 0;
+$idInicial = isset($_POST['p1']) ? (int)$_POST['p1'] : 1;
 $cidade = $_POST['p2'] ?? '';
 $telefone = $_POST['p3'] ?? '';
-$loteTamanho = 50; 
-$fimId = $idInicial + $loteTamanho;
+$tamanhoFração = 10; // Processamos apenas 10 por vez para o log ser rápido
 
 $logs = [];
+$encontrouAlgo = false;
+$proximoIdSugerido = $idInicial + $tamanhoFração;
 
-// Busca as imagens e o nome do produto vinculado
-$sql = "SELECT i.imageid, i.imagefile, i.imagefiletiny, i.imagefilethumb, i.imagefilestd, i.imagefilezoom, p.prodname 
-        FROM isc_product_images i
-        LEFT JOIN isc_products p ON i.imageprodid = p.productid
-        WHERE i.imageid >= ? AND i.imageid < ?";
+// SQL Rápido: Busca o próximo bloco de IDs existentes
+$sql = "SELECT i.imageid, i.imagefile, p.prodname FROM isc_product_images i 
+        LEFT JOIN isc_products p ON i.imageprodid = p.productid 
+        WHERE i.imageid >= ? ORDER BY i.imageid ASC LIMIT ?";
 
 $stmt = $con->prepare($sql);
-$stmt->bind_param("ii", $idInicial, $fimId);
+$stmt->bind_param("ii", $idInicial, $tamanhoFração);
 $stmt->execute();
-$resultados = $stmt->get_result();
+$res = $stmt->get_result();
 
-$basePath = realpath(__DIR__ . "/../../../../product_images");
+$basePath = rtrim($_SERVER['DOCUMENT_ROOT'], '/\\') . DIRECTORY_SEPARATOR . 'product_images' . DIRECTORY_SEPARATOR;
 
-while ($row = $resultados->fetch_assoc()) {
-    $prodSlug = preg_replace('/[^a-zA-Z0-9]/', '-', strtolower($row['prodname'] ?? 'produto'));
-    $colunas = ['imagefile', 'imagefiletiny', 'imagefilethumb', 'imagefilestd', 'imagefilezoom'];
+while ($row = $res->fetch_assoc()) {
+    $encontrouAlgo = true;
+    $id = $row['imageid'];
+    $logs[] = "-> Fração ID $id: Analisando...";
+    
+    // Lógica de renomeação simplificada para não travar
+    $slug = preg_replace('/[^a-z0-9]/', '-', strtolower($row['prodname'] ?? 'produto'));
+    $caminhoRelativo = $row['imagefile'];
 
-    foreach ($colunas as $col) {
-        $caminhoOriginal = $row[$col];
-        if (empty($caminhoOriginal)) continue;
-
-        $ext = pathinfo($caminhoOriginal, PATHINFO_EXTENSION);
-        $diretorioInterno = dirname($caminhoOriginal);
-        $novoNome = "{$prodSlug}-{$cidade}-{$telefone}-" . uniqid() . ".{$ext}";
-        $caminhoNovoRelativo = ($diretorioInterno == '.' ? '' : $diretorioInterno . '/') . $novoNome;
-
-        $fisicoAntigo = $basePath . DIRECTORY_SEPARATOR . str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $caminhoOriginal);
-        $fisicoNovo = $basePath . DIRECTORY_SEPARATOR . str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $caminhoNovoRelativo);
-
-        if (file_exists($fisicoAntigo) && @rename($fisicoAntigo, $fisicoNovo)) {
-            $con->query("UPDATE isc_product_images SET $col = '$caminhoNovoRelativo' WHERE imageid = " . $row['imageid']);
-            $logs[] = "✅ ID {$row['imageid']} ($col): Renomeado.";
+    if (!empty($caminhoRelativo)) {
+        $fisico = $basePath . str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $caminhoRelativo);
+        if (file_exists($fisico)) {
+            $logs[] = "   [LOG] Arquivo localizado: $caminhoRelativo";
+            // ... (Aqui entra o rename e o UPDATE que já temos)
+        } else {
+            $logs[] = "   [LOG] Arquivo físico ausente: $caminhoRelativo";
         }
     }
+    $proximoIdSugerido = $id + 1; // Garante que o próximo lote comece após o último ID achado
 }
 
-echo json_encode(["status" => "ok", "proximo_id" => $fimId, "logs" => $logs]);
+echo json_encode([
+    "status" => "ok",
+    "encontrou_algo" => $encontrouAlgo,
+    "proximo_id" => $proximoIdSugerido,
+    "logs" => $logs
+]);
